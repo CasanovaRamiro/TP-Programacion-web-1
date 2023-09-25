@@ -1,0 +1,165 @@
+
+    header{
+        position: relative;
+        width: 75%;
+        height: 120px;
+        margin-left: 20%;
+        border: 1px solid black;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    .buscador{
+        position: relative;
+        top: -60%;
+    }
+
+    .buscadorinput{
+        width: 300px;
+    }
+    
+    h2{
+        display: block;
+        position: relative;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 30%;
+        top: -50%;
+    }
+    
+    .cerrarsesion{
+        display: inline-block;
+        position: absolute;
+        margin-right: 2px;
+        width: auto;
+        left: 50%;
+        top: 40%;
+    }
+    
+    .imgperfil{
+        border: 1px solid black;
+        display: block;
+        position: absolute;
+        right: 10%;
+        top: 1%;
+        width: 9%;
+    }
+    
+    nav{
+        position: absolute;
+        width: 19%;
+        top: 1px;
+        height:20%;
+        margin-bottom: 0%;
+        z-index: 2;
+    }
+    
+    ul{
+        border: 1px solid black;
+        height: 50%;
+        margin: 0;
+    }
+
+    ul:hover {
+        background-color: #992323; /* Cambia el color de fondo al pasar el mouse por encima */
+    }
+    
+    li{
+        list-style-type: none;
+        margin-left: -14%;
+        margin-top: 10%;
+    }
+    
+    .sectionimgbajonav{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        border: 1px black solid;
+        margin-top: 15%;
+        width: 19%;
+        height: 300px;
+        z-index: 1;
+        overflow: auto;
+    }
+    
+    .imagenbajonav{
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+    
+    
+    
+    .albumes {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas de tamaño igual */
+        grid-template-rows: repeat(4, 1fr); /* 4 filas de tamaño igual */
+        margin-left: 20%;
+        margin-top: -33%;
+        gap: 10%;
+        height: 400px;
+        width: 80%;
+        overflow: auto;
+        gap: 10px;
+        z-index: 1;
+        border: 1px solid black;
+    }
+    
+    .article-img {
+        position: relative;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding: 18px;
+        text-align: center;
+        display: grid;
+        gap: 1px 1px;
+    }
+    
+    .img-albumes {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .reproductor{
+        border: 1px solid black;
+        margin-bottom:10%;
+        margin-left: 23%;
+        width: 75%;
+        height: 100px;
+        z-index: 2;
+    }
+    
+    .play{
+        position: absolute;
+        margin-top: 2%;
+        margin-left: 2%;
+    }
+    
+    .circle{
+        position: absolute;
+        margin-top: 2%;
+        margin-left: 30%;
+    }
+    
+    .square{
+        position: absolute;
+        margin-top: 2%;
+        margin-left: 70%;
+    }
+
+    
+    .estrella-cancion{
+        position: absolute;
+        right: 1%;
+        top: 3%;
+    }
+    
+    .estrella-album{
+        position: absolute;
+        right: 10%;
+        top: 10%;
+    }

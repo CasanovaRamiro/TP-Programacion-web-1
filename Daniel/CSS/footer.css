@@ -1,0 +1,18 @@
+
+footer{
+    position: fixed;
+    justify-items: center;
+    text-align: center;
+    border: 1px solid black;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+.integrantes{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+

@@ -1,0 +1,160 @@
+header{
+    position: relative;
+    width: 75%;
+    height: 120px;
+    margin-left: 20%;
+    border: 1px solid black;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.buscador{
+    position: relative;
+    top: -60%;
+}
+
+.buscadorinput{
+    width: 300px;
+}
+
+h2{
+    display: block;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 30%;
+    top: -50%;
+}
+
+.cerrarsesion{
+    display: inline-block;
+    position: absolute;
+    margin-right: 2px;
+    width: auto;
+    left: 50%;
+    top: 40%;
+}
+
+.imgperfil{
+    border: 1px solid black;
+    display: block;
+    position: absolute;
+    right: 10%;
+    top: 1%;
+    width: 9%;
+}
+
+nav{
+    position: absolute;
+    width: 19%;
+    top: 1px;
+    height:20%;
+    margin-bottom: 0%;
+    z-index: 2;
+}
+
+ul{
+    border: 1px solid black;
+    height: 50%;
+    margin: 0;
+}
+
+ul:hover {
+    background-color: #992323; /* Cambia el color de fondo al pasar el mouse por encima */
+}
+
+li{
+    list-style-type: none;
+    margin-left: -14%;
+    margin-top: 10%;
+}
+
+.sectionimgbajonav{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px black solid;
+    margin-top: 15%;
+    width: 19%;
+    height: 300px;
+    z-index: 1;
+    overflow: auto;
+}
+
+.imagenbajonav{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.canciones {
+    position: relative;
+    display: grid;
+    grid-template-columns: 10% 40% 30% 10% 10%;
+    grid-template-rows: repeat(10, 10%);
+    margin-left: 20%;
+    margin-top: -33%; /* Esto puede variar según tu diseño */
+    height: 400px; /* Esto limita la altura del contenedor */
+    width: 80%;
+    overflow-y: scroll; /* Agrega una barra de desplazamiento vertical */
+    gap: 0px; /* Separación entre las celdas */
+    z-index: 1;
+    border: 1px solid black;
+}
+
+.article-canciones {
+    border: 1px solid red;
+    position: relative;
+    text-align: center;
+}
+
+.play-cancion{
+    position: absolute;
+    right: 50%;
+    top: 20%;
+}
+
+.estrella-cancion{
+    position: absolute;
+    right: 10%;
+}
+
+.reproductor{
+    border: 1px solid black;
+    margin-bottom:10%;
+    margin-left: 23%;
+    width: 75%;
+    height: 100px;
+    z-index: 2;
+}
+
+.play{
+    position: absolute;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+.circle{
+    position: absolute;
+    margin-top: 2%;
+    margin-left: 30%;
+}
+
+.square{
+    position: absolute;
+    margin-top: 2%;
+    margin-left: 70%;
+}
+
+.estrella-cancion{
+    position: absolute;
+    right: 1%;
+    top: 3%;
+}
+
+

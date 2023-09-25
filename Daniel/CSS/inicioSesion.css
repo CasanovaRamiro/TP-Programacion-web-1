@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    margin: 0;
+}
+
+.contenedor {
+    margin-top: 150px; 
+}
+
+label, input {
+    display: block;
+    margin-bottom: 10px; 
+}
+
+input {
+    height: 50px;
+    width: 300px;
+}
+
+a {
+    margin-top: 20px;
+}
+
+.boton{
+    height: 30px;
+    width: 305px;
+}
+
+
+
