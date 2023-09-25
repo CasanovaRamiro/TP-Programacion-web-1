@@ -1,27 +1,5 @@
-h1{
-    position: relative;
-    text-align: right;
-    margin-right: 10%;
-    height: 20px;
-}
-
-.cerrarsesion{
-    display: block;
-    position: relative;
-    margin-left: 73%;
-    width: max-content;
-}
-
 .imgperfil{
-    border: 1px solid black;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin-top: 1%;
-    margin-right: 2%;
-    width: 100px;
-    height: 100px;
+    width: 80px;
 }
 
 label{
@@ -60,7 +38,7 @@ input{
     grid-template-rows: 50px;
     gap: 50px;
     text-align: center;
-    margin-left: 500px;
+    justify-content: center;
 }
 
 .botones a button {
@@ -68,5 +46,31 @@ input{
     height: 100%; 
     padding: 20px; 
 }
+
+.headerPerfil {
+    display: grid;
+    grid-template-columns: repeat(2, auto); /* Dos columnas del mismo ancho */
+    grid-template-rows: auto auto; /* Dos filas del mismo alto */
+    gap: 10px; /* Espacio entre las celdas */
+    justify-content: end; /* Alinea al final de la pagina */
+  }
+  
+  .nombreUsuario {
+    grid-column: 1; /* Ocupa dos columnas completas */
+  }
+  
+  .imagenPerfil {
+    grid-column: 2; /* Ocupa la primera columna */
+    display: flex; /* Para manejar la imagen dentro del 'a' */
+    align-content: center; /* Para centrar la imagen del perfil */
+    padding-left: 15px; 
+    padding-right: 15px;
+  }
+  
+  .cerrarSesion {
+    grid-column: 1; /* Ocupa la segunda columna */
+    grid-row: 2; /* Ocupa la segunda fila */
+  }
+
 
 
