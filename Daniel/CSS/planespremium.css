@@ -1,55 +1,75 @@
-h1{
-    position: relative;
-    text-align: right;
-    margin-right: 10%;
-    height: 20px;
+.imgperfil {
+    width: 80px;
 }
 
-.cerrarsesion{
-    display: block;
-    position: relative;
-    margin-left: 73%;
-    width: max-content;
+.imgPremium {
+    width: 200px;
+    height: 200px;
 }
 
-.imgperfil{
-    border: 1px solid black;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin-top: 1%;
-    margin-right: 2%;
-    width: 100px;
-    height: 100px;
-}
-
-.planes{
-    margin-top: 5%;
-    margin-left: 20%;
-    width: 80%;
-}
-.formulario{
+.formulario {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 110px 110px 110px;
+    gap: 10%;
+    text-align: center;
+    justify-content: center;
 }
 
-.formulario, img{
-    width: 70%;
+.articuloPremium {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
 }
 
-input{
-    display: block;
+.botones {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 50px;
+    gap: 50px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 30px;
 }
 
-.botones{
-    margin-top: 2%;
-    margin-left: 7%;
+.botones a button {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
 }
 
-.boton{
-    width: 300px;
-    padding: 10px;
-    margin: 1%;
+
+.headerPerfil {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    /* Dos columnas del mismo ancho */
+    grid-template-rows: auto auto;
+    /* Dos filas del mismo alto */
+    gap: 10px;
+    /* Espacio entre las celdas */
+    justify-content: end;
+    /* Alinea al final de la pagina */
 }
 
+.nombreUsuario {
+    grid-column: 1;
+    /* Ocupa dos columnas completas */
+}
+
+.imagenPerfil {
+    grid-column: 2;
+    /* Ocupa la primera columna */
+    display: flex;
+    /* Para manejar la imagen dentro del 'a' */
+    align-content: center;
+    /* Para centrar la imagen del perfil */
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.cerrarSesion {
+    grid-column: 1;
+    /* Ocupa la segunda columna */
+    grid-row: 2;
+    /* Ocupa la segunda fila */
+}
