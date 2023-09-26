@@ -1,0 +1,11 @@
+.contenedor_header {
+    position: absolute;
+    right: 0%;
+    display: grid;
+    grid-template-areas: "header_item1    header_item1                                header_item3"
+                         "header_item2                                                header_item3";
+}
+
+.header_item1 { grid-area: header_item1;}
+.header_item2 { grid-area: header_item2;}
+.header_item3 { grid-area: header_item3; width: 10px; height: auto; border-radius: 50%;}
