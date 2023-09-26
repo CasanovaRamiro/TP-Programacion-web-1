@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagar</title>
+</head>
+<body>
+    <header>
+        <div>Nombre usuario</div>
+        <a href="index.html">Cerrar sesión</a>
+        <a href="vista_perfil"><img src="Img/Messi.jpg" alt="Avatar"></a>
+        <! -- corregir ambas ref cuando esten las vistas disponibles -->
+    </header>
+    <main>
+        <section>
+            <h1>Elegiste el plan Infinito</h1>
+            <img src="Img/Oro.jpg" alt="Plan Infinito">
+            <p>U$s 50000 por única vez</p>
+            <ul>
+                <li>Música sin anuncios</li>
+                <li>Reproducción on-demand</li>
+                <li>Escuchá tus canciones en cualquier lugar, incluso sin conexión</li>
+            </ul>
+        </section>
+        <form action="index.html" method="post">
+            <label for="Tarjeta">Tarjeta</label>
+            <input pattern="[0-9]{16}" name="Tarjeta" id="NRO_Tarjeta">
+            <label for="VTO">VTO</label>
+            <input type="date" name="VTO" id="VTO_Tarjeta">
+            <label for="CVC">CVC</label>
+            <input type="number" name="CVC" id="CVC">
+            <label for="Nombre y Apellido">Nombre y Apellido</label>
+            <input type="text" name="Nombre y Apellido" id="Nombre_Apellido" size="30">
+            <a href="index.html"><input type="button" value="Cancelar"></a>
+            <input type="submit" value="Pagar">
+        </form>
+
+
+    </main>
+    <footer>
+        <div>Ralowiec Federico Alberto DNI 33347115</div>
+        <div>Mario Alberto Vazquez Espindola DNI 42471083</div>
+
+    </footer>
+</body>
+</html>
