@@ -22,17 +22,23 @@ h2 {
 }
 
 .formulario {
-    text-align: center;
-    margin-top: 1%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 50px;
+}
+
+input {
+    width: 40%;
+    padding: 5px;
 }
 
 article {
+    display:flex;
+    justify-content:space-around;
     margin-bottom: 1%;
 }
 
-
-
-
+/*
 .tarjeta {
     position: absolute;
     margin-left: 20%;
@@ -78,18 +84,11 @@ article {
     width: 200px;
     height: 20px;
 }
-
-.botones {
-    position: absolute;
-    margin-left: 25%;
-    margin-top: 10%;
-    margin-bottom: 10%;
-}
-
-.boton {
-    margin-right: 10px;
-    height: 40px;
-    width: 400px;
+*/
+.botonesPagar {
+    width: 200px;
+    height: 50px;
+    margin-top: 50px;
 }
 
 .headerPerfil {
