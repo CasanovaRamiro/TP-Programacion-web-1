@@ -7,24 +7,27 @@
     <link rel="stylesheet" href="css/vista_03_pagar.css">
 </head>
 <body>
-    <header class="contenedor_header">
+    <header >
+        <section class="contenedor_header">
         <div class="header_item1">Nombre usuario</div>
         <a class="header_item2" href="index.html">Cerrar sesión</a>
-        <a class="header_item3" href="vista_perfil"><img src="Img/Messi.jpg" alt="Avatar"></a>
+        <a href="vista_perfil">
+            <img class="header_item3" src="Img/Messi.jpg" alt="Avatar"></a>
+        </section>
         <! -- corregir ambas ref cuando esten las vistas disponibles -->
     </header>
-    <main>
+    <main class="contenedor_main">
         <section>
-            <h1>Elegiste el plan Infinito</h1>
-            <img src="Img/Oro.jpg" alt="Plan Infinito">
-            <p>U$s 50000 por única vez</p>
+            <h1 class="plan">Elegiste el plan Infinito</h1>
+            <img class="imagen" src="Img/Oro.jpg" alt="Plan Infinito">
+            <p class="descripcion">U$s 50000 por única vez</p>
             <ul>
                 <li>Música sin anuncios</li>
                 <li>Reproducción on-demand</li>
                 <li>Escuchá tus canciones en cualquier lugar, incluso sin conexión</li>
             </ul>
         </section>
-        <form action="index.html" method="post">
+        <form class="formulario" action="index.html" method="post">
             <label for="Tarjeta">Tarjeta</label>
             <input pattern="[0-9]{16}" name="Tarjeta" id="NRO_Tarjeta">
             <label for="VTO">VTO</label>
@@ -33,13 +36,13 @@
             <input type="number" name="CVC" id="CVC">
             <label for="Nombre y Apellido">Nombre y Apellido</label>
             <input type="text" name="Nombre y Apellido" id="Nombre_Apellido" size="30">
-            <a href="index.html"><input type="button" value="Cancelar"></a>
-            <input type="submit" value="Pagar">
+            <a href="index.html"><input class="boton" type="button" value="Cancelar"></a>
+            <input class="boton" type="submit" value="Pagar">
         </form>
 
 
     </main>
-    <footer>
+    <footer class="contenedor_footer">
         <div>Ralowiec Federico Alberto DNI 33347115</div>
         <div>Mario Alberto Vazquez Espindola DNI 42471083</div>
 
