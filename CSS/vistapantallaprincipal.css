@@ -11,6 +11,7 @@
         padding: 0 20px;
     }
 
+
     .buscador{
         position: relative;
         top: -60%;
@@ -163,3 +164,192 @@
         right: 10%;
         top: 10%;
     }
+
+    /* Estilos para pantallas más pequeñas (tabletas) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+    }
+
+    h1 {
+        display: none;
+    }
+
+    h2 {
+        width: 100%;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .cerrarsesion {
+        display: block;
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    .imgperfil {
+        right: 5%;
+        top: 5%;
+        width: 15%;
+        height: 90%;
+    }
+
+    .buscador {
+        position: absolute;
+        top: 0; /* Vuelve a la posición normal en tabletas */
+        left: 0%;
+        text-align: left; /* Centra el buscador */
+    }
+
+    .buscadorinput {
+        width: 50%; /* Hacer que el campo de búsqueda ocupe todo el ancho disponible */
+    }
+
+    nav {
+        position: relative;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    ul {
+        margin-top: 0;
+    }
+
+    li {
+        margin-left: 0;
+        margin-top: 5%;
+    }
+
+    .sectionimgbajonav {
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    .albumes {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 0;
+        margin-top: 0;
+        gap: 5px;
+    }
+
+    .reproductor {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    footer {
+        display: none;
+    }
+
+    .sectionimgbajonav {
+        order: 3;
+        margin-top: 20px;
+    }
+
+
+}
+
+/* Estilos para pantallas aún más pequeñas (smartphones) */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    h1 {
+        display: none;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .cerrarsesion {
+        display: block;
+        margin: 10px auto;
+    }
+
+    .imgperfil {
+        right: 5%;
+        top: 5%;
+        width: 15%;
+    }
+
+    .buscador {
+        top: 0; /* Vuelve a la posición normal en smartphones */
+        text-align: left; /* Centra el buscador */
+    }
+
+    .buscadorinput {
+        width: 50%; /* Hacer que el campo de búsqueda ocupe todo el ancho disponible */
+    }
+
+    nav {
+        position: relative;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    ul {
+        margin-top: 0;
+    }
+
+    li {
+        margin-left: 0;
+        margin-top: 5%;
+    }
+
+    .sectionimgbajonav {
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    .albumes {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 5px;
+    }
+
+    .reproductor {
+        width: 100%;
+    }
+
+    footer {
+        display: none;
+    }
+
+    .sectionimgbajonav {
+        order: 3;
+        margin-top: 20px;
+    }
+}
+
+/* Estilos generales que aplican a todas las resoluciones */
+/* Agrega aquí tus estilos generales que aplican en todas las resoluciones */
+
+/* Colores principales */
+body {
+    background-color: black; /* Fondo negro */
+    color: purple; /* Texto en morado */
+}
+
+/* Estilos para los botones */
+input[type="button"] {
+    background-color: purple; /* Fondo morado */
+    color: black; /* Texto en negro */
+}
+
+/* Estilos para los enlaces */
+a {
+    color: purple; /* Color morado para enlaces */
+}
+
+/* Resto de estilos específicos para esta vista */
+/* Agrega aquí los estilos específicos para esta vista */

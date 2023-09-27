@@ -157,4 +157,155 @@ li{
     top: 3%;
 }
 
+/* Estilos para tablet (ancho máximo de 768px) */
+@media screen and (max-width: 768px) {
+    header {
+      width: 100%; /* Cambiar el ancho del encabezado para ocupar toda la pantalla */
+      margin-left: 0; /* Eliminar el margen izquierdo */
+      justify-content: center; /* Centrar elementos en el encabezado */
+    }
+  
+    h2 {
+      width: auto; /* Reestablecer el ancho del nombre de usuario */
+      margin-top: 10px; /* Agregar un espacio entre el título y el nombre de usuario */
+    }
+  
+    .cerrarsesion {
+      position: relative; /* Cambiar la posición a relativa */
+      left: auto; /* Eliminar la posición izquierda */
+      top: auto; /* Eliminar la posición superior */
+      margin-top: 10px; /* Agregar un espacio entre el nombre de usuario y "Cerrar sesión" */
+    }
+  
+    .imgperfil {
+      width: 50px; /* Redimensionar la imagen de perfil */
+      top: 10px; /* Aumentar la distancia superior */
+    }
+  
+    nav {
+      width: 100%; /* Cambiar el ancho de la barra de navegación */
+      position: static; /* Cambiar la posición a estática */
+    }
+  
+    ul {
+      width: 100%; /* Asegurarse de que las listas ocupen todo el ancho */
+      height: auto; /* Cambiar la altura a automática */
+    }
+  
+    li {
+      margin-left: 0; /* Eliminar el margen izquierdo */
+      margin-top: 0; /* Eliminar el margen superior */
+    }
+  
+    .sectionimgbajonav {
+      width: 100%; /* Cambiar el ancho de la sección de imagen */
+      margin-top: 0; /* Eliminar el margen superior */
+    }
+  
+    .canciones {
+      margin-left: 0; /* Eliminar el margen izquierdo */
+      margin-top: 0; /* Eliminar el margen superior */
+      width: 100%; /* Cambiar el ancho de la sección de canciones */
+      height: auto; /* Cambiar la altura a automática */
+    }
 
+    footer{
+        display: none;
+    }
+  }
+  
+  /* Estilos para smartphone (ancho máximo de 480px) */
+  @media screen and (max-width: 480px) {
+    header {
+      height: 80px; /* Reducir la altura del encabezado */
+    }
+  
+    h1 {
+      font-size: 24px; /* Reducir el tamaño del título principal */
+    }
+  
+    h2 {
+      font-size: 16px; /* Reducir el tamaño del nombre de usuario */
+    }
+  
+    .cerrarsesion {
+      font-size: 14px; /* Reducir el tamaño del enlace "Cerrar sesión" */
+    }
+  
+    .imgperfil {
+      width: 30px; /* Redimensionar la imagen de perfil */
+    }
+  
+    nav {
+      height: auto; /* Cambiar la altura de la barra de navegación a automática */
+    }
+  
+    ul {
+      height: auto; /* Cambiar la altura de las listas a automática */
+    }
+  
+    li {
+      margin-left: 0; /* Eliminar el margen izquierdo */
+      margin-top: 5px; /* Agregar un espacio entre los elementos de la lista */
+    }
+  
+    .sectionimgbajonav {
+      margin-top: 10px; /* Agregar un espacio entre la sección de imagen y la lista de canciones */
+    }
+  
+    .canciones {
+      margin-top: 0; /* Eliminar el margen superior */
+      height: auto; /* Cambiar la altura de la sección de canciones a automática */
+    }
+  
+    .article-canciones {
+      font-size: 12px; /* Reducir el tamaño del texto de las canciones */
+    }
+  
+    .play-cancion {
+      top: 15px; /* Ajustar la posición de los íconos de reproducción */
+    }
+  
+    .estrella-cancion {
+      top: 5px; /* Ajustar la posición de los íconos de estrella */
+    }
+
+    footer{
+        display: none;
+    }
+  }
+  
+
+
+  body {
+    background-color: #000; /* Fondo negro */
+    color: #800080; /* Texto en púrpura */
+}
+
+header {
+    background-color: #800080; /* Fondo púrpura */
+    color: #000; /* Texto en negro */
+    border-color: #000; /* Borde en negro */
+}
+
+
+.sectionimgbajonav {
+    border: 1px solid #800080; /* Borde en púrpura */
+}
+
+.canciones {
+    border: 1px solid #800080; /* Borde en púrpura */
+}
+
+.reproductor {
+    background-color: #800080; /* Fondo púrpura */
+    border-color: #000; /* Borde en negro */
+}
+
+.play, .circle, .square {
+  color: #000; /* Iconos en negro */
+}
+
+ul{
+  border: 1px solid #800080;
+}

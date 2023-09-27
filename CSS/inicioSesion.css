@@ -29,5 +29,58 @@ a {
     width: 305px;
 }
 
+/* Estilos para pantallas más pequeñas (tabletas) */
+@media (max-width: 768px) {
+    .contenedor {
+        margin-top: 100px; /* Reducir el margen superior */
+    }
+
+    input {
+        width: 100%; /* Hacer que los campos de entrada ocupen todo el ancho disponible */
+    }
+
+    .boton {
+        width: 100%; /* Hacer que el botón ocupe todo el ancho disponible */
+    }
+
+    footer {
+        display: none; /* Ocultar el footer en tabletas */
+    }
+}
+
+/* Estilos para pantallas aún más pequeñas (smartphones) */
+@media (max-width: 480px) {
+    .contenedor {
+        margin-top: 50px; /* Reducir aún más el margen superior */
+    }
+
+    footer {
+        display: none; /* Ocultar el footer en smartphones */
+    }
+}
+
+
+/* Cambia el fondo del formulario a morado y el texto a blanco */
+form {
+    background-color: purple;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Cambia el color de fondo del botón de inicio de sesión a negro */
+.boton {
+    background-color: black;
+    color: white;
+}
+
+/* Cambia el color de fondo del enlace "Registrarme" a morado */
+a[href="vistaperfil.html"] {
+    background-color: purple;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
 
 

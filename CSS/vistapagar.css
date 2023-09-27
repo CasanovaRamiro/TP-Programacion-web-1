@@ -1,8 +1,32 @@
-.imgperfil {
-    width: 80px;
+h1{
+    position: relative;
+    text-align: right;
+    margin-right: 10%;
+    height: 20px;
 }
 
-.infoplan {
+.cerrarsesion{
+    display: block;
+    position: relative;
+    margin-left: 73%;
+    width: max-content;
+    color: #fff;
+    text-decoration: none; 
+}
+
+.imgperfil{
+    border: 1px solid black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 1%;
+    margin-right: 2%;
+    width: 100px;
+    height: 100px;
+}
+
+.infoplan{
     display: flex;
     flex-direction: column;
     position: relative;
@@ -10,118 +34,246 @@
     margin-top: 1%;
 }
 
-h2 {
+h2{
     margin-right: 32%;
+    color: #800080;
 }
 
-.imgplan {
+.imgplan{
     text-align: center;
     width: 50%;
     height: 200px;
     margin-left: 25%;
 }
 
-.formulario {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-top: 50px;
+.formulario{
+    text-align: center;
+    margin-top: 1%;
+    height: 110px;
 }
 
-input {
-    width: 40%;
-    padding: 5px;
-}
-
-article {
-    display:flex;
-    justify-content:space-around;
+article{
     margin-bottom: 1%;
 }
 
-/*
-.tarjeta {
+
+
+
+.tarjeta{
     position: absolute;
     margin-left: 20%;
+    color: #fff;
 }
 
-.inputtarjeta {
+.inputtarjeta{
     margin-left: 10px;
     width: 200px;
     height: 20px;
 }
 
-.cvc {
+.cvc{
     position: absolute;
-    margin-left: 20%;
+    margin-left: 20% ;
     margin-top: 5%;
+    color: #fff;
 }
 
-.inputcvc {
+.inputcvc{
     margin-left: 10px;
     width: 200px;
-    height: 20px;
+    height: 20px; 
 }
 
-.vto {
+.vto{
     position: absolute;
     margin-left: 60%;
+    color: #fff;
 }
 
-.inputvto {
+.inputvto{
     margin-left: 100px;
     width: 200px;
     height: 20px;
 }
 
-.nombre {
+.nombre{
     position: absolute;
     margin-left: 60%;
-    margin-top: 5%;
+    margin-top: 5% ;
+    color: #fff;
 }
 
-.inputnombre {
+.inputnombre{
     margin-left: 10px;
     width: 200px;
     height: 20px;
 }
-*/
-.botonesPagar {
-    width: 200px;
-    height: 50px;
-    margin-top: 50px;
+
+.botones{
+    position: absolute;
+    margin-left: 25%;
+    margin-top: 10%;
+    margin-bottom: 10%; 
 }
 
-.headerPerfil {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    /* Dos columnas del mismo ancho */
-    grid-template-rows: auto auto;
-    /* Dos filas del mismo alto */
-    gap: 10px;
-    /* Espacio entre las celdas */
-    justify-content: end;
-    /* Alinea al final de la pagina */
+.boton{
+    margin-right: 10px;
+    height: 40px;
+    width: 400px;
+    background-color: #800080; /* Fondo púrpura */
+    color: #fff; /* Texto en blanco */
+    border: none; /* Eliminar borde */
+    cursor: pointer; /* Cambiar cursor al pasar el mouse */
+    border: 2px solid #000;
 }
 
-.nombreUsuario {
-    grid-column: 1;
-    /* Ocupa dos columnas completas */
+
+
+/* Estilos para tablet (ancho máximo de 768px) */
+@media screen and (max-width: 768px) {
+    h1 {
+      text-align: center; /* Centrar el nombre de usuario */
+      margin-right: 0; /* Eliminar el margen derecho */
+      margin-top: 20px; /* Ajustar espacio superior */
+    }
+  
+    .cerrarsesion {
+      margin-left: 10px; /* Ajustar posición de "Cerrar sesión" */
+      margin-right: 10px; /* Ajustar margen derecho */
+      width: 100%; /* Ocupar todo el ancho disponible */
+    }
+  
+    .imgperfil {
+      width: 50px; /* Redimensionar la imagen de perfil */
+      height: 50px; /* Redimensionar la imagen de perfil */
+      top: 10px; /* Ajustar posición superior */
+      right: 10px; /* Ajustar posición derecha */
+    }
+  
+    .infoplan {
+      text-align: center; /* Centrar el contenido */
+      margin-top: 20px; /* Ajustar espacio superior */
+    }
+  
+    h2 {
+      margin-right: 0; /* Eliminar margen derecho */
+    }
+  
+    .imgplan {
+      width: 70%; /* Redimensionar la imagen del plan */
+      height: auto; /* Ajustar altura automáticamente */
+      margin-left: 15%; /* Ajustar margen izquierdo */
+    }
+  
+    .formulario {
+      margin-top: 20px; /* Ajustar espacio superior */
+    }
+  
+    .tarjeta,
+    .cvc,
+    .vto,
+    .nombre {
+      position: relative; /* Volver a posición relativa */
+      margin-left: 0; /* Eliminar margen izquierdo */
+      margin-top: 0; /* Eliminar margen superior */
+    }
+  
+    .inputtarjeta,
+    .inputcvc,
+    .inputvto,
+    .inputnombre {
+      margin-left: 0; /* Eliminar margen izquierdo */
+      width: 100%; /* Ocupar todo el ancho disponible */
+      height: 30px; /* Ajustar altura */
+    }
+  
+    .botones {
+      position: relative; /* Volver a posición relativa */
+      margin-left: 0; /* Eliminar margen izquierdo */
+      margin-top: 20px; /* Ajustar espacio superior */
+      margin-bottom: 20px; /* Ajustar espacio inferior */
+      text-align: center; /* Centrar botones */
+    }
+  
+    .boton {
+      width: 100%; /* Ocupar todo el ancho disponible */
+      margin-right: 0; /* Eliminar margen derecho */
+      height: 40px; /* Ajustar altura */
+    }
+
+  
+  }
+  
+  /* Estilos para smartphone (ancho máximo de 480px) */
+  @media screen and (max-width: 480px) {
+    h1 {
+      margin-top: 10px; /* Ajustar espacio superior en teléfono */
+    }
+  
+    .cerrarsesion {
+      margin-left: 10px; /* Ajustar posición de "Cerrar sesión" */
+      margin-right: 10px; /* Ajustar margen derecho */
+      width: 100%; /* Ocupar todo el ancho disponible */
+    }
+  
+    .imgperfil {
+      width: 30px; /* Redimensionar la imagen de perfil */
+      height: 30px; /* Redimensionar la imagen de perfil */
+      top: 10px; /* Ajustar posición superior */
+      right: 10px; /* Ajustar posición derecha */
+    }
+  
+    .infoplan {
+      text-align: center; /* Centrar el contenido */
+      margin-top: 20px; /* Ajustar espacio superior */
+    }
+  
+    h2 {
+      margin-right: 0; /* Eliminar margen derecho */
+    }
+  
+    .imgplan {
+      width: 70%; /* Redimensionar la imagen del plan */
+      height: auto; /* Ajustar altura automáticamente */
+      margin-left: 15%; /* Ajustar margen izquierdo */
+    }
+  
+    .formulario {
+      margin-top: 20px; /* Ajustar espacio superior */
+    }
+  
+    .tarjeta,
+    .cvc,
+    .vto,
+    .nombre {
+      position: relative; /* Volver a posición relativa */
+      margin-left: 0; /* Eliminar margen izquierdo */
+      margin-top: 0; /* Eliminar margen superior */
+    }
+  
+    .inputtarjeta,
+    .inputcvc,
+    .inputvto,
+    .inputnombre {
+      margin-left: 0; /* Eliminar margen izquierdo */
+      width: 100%; /* Ocupar todo el ancho disponible */
+      height: 30px; /* Ajustar altura */
+    }
+  
+    .botones {
+      position: relative;
+    }
+
 }
 
-.imagenPerfil {
-    grid-column: 2;
-    /* Ocupa la primera columna */
-    display: flex;
-    /* Para manejar la imagen dentro del 'a' */
-    align-content: center;
-    /* Para centrar la imagen del perfil */
-    padding-left: 15px;
-    padding-right: 15px;
+body {
+  background-color: #333; /* Fondo negro */
+  color: #800080; /* Texto en púrpura */
+  height: 70vh;
 }
 
-.cerrarSesion {
-    grid-column: 1;
-    /* Ocupa la segunda columna */
-    grid-row: 2;
-    /* Ocupa la segunda fila */
+header {
+  background-color: #800080; /* Fondo púrpura */
+  color: #fff; /* Texto en blanco */
+  border-color: #333; /* Borde en negro */
 }

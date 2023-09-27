@@ -16,3 +16,18 @@ footer{
 
 
 
+footer {
+    background-color: purple;
+    color: white;
+    padding: 1px;
+    text-align: center;
+}
+
+/* Cambia el fondo de los artículos de integrantes a negro y el texto a blanco */
+.integrante {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+}

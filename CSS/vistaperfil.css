@@ -1,11 +1,36 @@
+h1{
+    position: relative;
+    text-align: right;
+    margin-right: 10%;
+    height: 20px;
+    color: #800080;
+}
+
+.cerrarsesion{
+    display: block;
+    position: relative;
+    margin-left: 73%;
+    width: max-content;
+    color: #000;
+}
+
 .imgperfil{
-    width: 80px;
+    border: 1px solid black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 1%;
+    margin-right: 2%;
+    width: 100px;
+    height: 100px;
 }
 
 label{
     display: inline-block;
     width: 200px;
     margin-bottom: 30px;
+    color: #800080;
 }
 
 .fechanacimiento{
@@ -14,22 +39,26 @@ label{
 
 input{
     height: 30px;
+    border: 1px solid #800080;
 }
 
 .inputfecha{
     height: 20px;
     width: 170px;
+    border: 1px solid #800080;
 }
 
 .linkpremium{
     display: block;
     margin-top: 30px;
     margin-bottom: 20px;
+    color: #800080;
 }
 
 .linkeliminarusuario{
     display: block;
     margin-bottom: 20px;
+    color: #800080;
 }
 
 .botones{
@@ -38,39 +67,136 @@ input{
     grid-template-rows: 50px;
     gap: 50px;
     text-align: center;
-    justify-content: center;
+    margin-left: 500px;
 }
 
 .botones a button {
     width: 100%; 
     height: 100%; 
     padding: 20px; 
+    background-color: #800080; /* Fondo púrpura */
+    color: #000; /* Texto negro */
+    border: 2px solid #000; /* Borde de 2px en negro */
+    cursor: pointer; /* Cambiar cursor al pasar el mouse */
 }
 
-.headerPerfil {
-    display: grid;
-    grid-template-columns: repeat(2, auto); /* Dos columnas del mismo ancho */
-    grid-template-rows: auto auto; /* Dos filas del mismo alto */
-    gap: 10px; /* Espacio entre las celdas */
-    justify-content: end; /* Alinea al final de la pagina */
+/* Estilos para tablet (ancho máximo de 768px) */
+@media screen and (max-width: 768px) {
+    h1 {
+      text-align: center; /* Centrar el nombre de usuario */
+      margin-right: 0; /* Eliminar el margen derecho */
+      margin-top: 20px; /* Agregar espacio superior */
+    }
+  
+    .cerrarsesion {
+      margin-left: 10px; /* Ajustar la posición de "Cerrar sesión" */
+      margin-right: 10px; /* Ajustar el margen derecho */
+      width: 100%; /* Ocupar todo el ancho disponible */
+    }
+  
+    .imgperfil {
+      width: 50px; /* Redimensionar la imagen de perfil */
+      height: 50px; /* Redimensionar la imagen de perfil */
+      top: 10px; /* Ajustar la posición superior */
+      right: 10px; /* Ajustar la posición derecha */
+    }
+  
+    label {
+      width: 100%; /* Ocupar todo el ancho disponible */
+      margin-bottom: 10px; /* Reducir el espacio entre etiquetas */
+    }
+  
+    .fechanacimiento {
+      margin-top: 10px; /* Ajustar la posición de la fecha de nacimiento */
+    }
+  
+    input {
+      height: 30px; /* Ajustar la altura de los campos de entrada */
+    }
+  
+    .inputfecha {
+      height: 30px; /* Ajustar la altura del campo de fecha */
+      width: 100%; /* Ocupar todo el ancho disponible */
+    }
+  
+    .linkpremium,
+    .linkeliminarusuario {
+      margin-top: 10px; /* Ajustar el espacio entre enlaces */
+    }
+  
+    .botones {
+      display: flex; /* Cambiar a un diseño flexible */
+      flex-direction: column; /* Cambiar la dirección de las columnas */
+      text-align: center;
+      margin-left: 0; /* Eliminar el margen izquierdo */
+    }
+  
+    .botones a button {
+      width: 100%; /* Ocupar todo el ancho disponible */
+      margin-bottom: 10px; /* Espacio entre botones */
+    }
+
+    footer{
+        display: none;
+    }
   }
   
-  .nombreUsuario {
-    grid-column: 1; /* Ocupa dos columnas completas */
+  /* Estilos para smartphone (ancho máximo de 480px) */
+  @media screen and (max-width: 480px) {
+    h1 {
+      margin-top: 10px; /* Ajustar espacio superior en teléfono */
+    }
+  
+    .cerrarsesion {
+      margin-left: 10px; /* Ajustar la posición de "Cerrar sesión" */
+      margin-right: 10px; /* Ajustar el margen derecho */
+      width: 100%; /* Ocupar todo el ancho disponible */
+    }
+  
+    .imgperfil {
+      width: 30px; /* Redimensionar la imagen de perfil */
+      height: 30px; /* Redimensionar la imagen de perfil */
+      top: 10px; /* Ajustar la posición superior */
+      right: 10px; /* Ajustar la posición derecha */
+    }
+  
+    label {
+      width: 100%; /* Ocupar todo el ancho disponible */
+      margin-bottom: 5px; /* Reducir el espacio entre etiquetas */
+    }
+  
+    .fechanacimiento {
+      margin-top: 10px; /* Ajustar la posición de la fecha de nacimiento */
+    }
+  
+    input {
+      height: 20px; /* Ajustar la altura de los campos de entrada */
+    }
+  
+    .inputfecha {
+      height: 20px; /* Ajustar la altura del campo de fecha */
+      width: 100%; /* Ocupar todo el ancho disponible */
+    }
+  
+    .linkpremium,
+    .linkeliminarusuario {
+      margin-top: 10px; /* Ajustar el espacio entre enlaces */
+    }
+  
+    .botones {
+      display: flex; /* Cambiar a un diseño flexible */
+      flex-direction: column; /* Cambiar la dirección de las columnas */
+      text-align: center;
+      margin-left: 0; /* Eliminar el margen izquierdo */
+    }
+  
+    .botones a button {
+      width: 100%; /* Ocupar todo el ancho disponible */
+      margin-bottom: 10px; /* Espacio entre botones */
+    }
+
+    footer{
+        display: none;
+    }
   }
   
-  .imagenPerfil {
-    grid-column: 2; /* Ocupa la primera columna */
-    display: flex; /* Para manejar la imagen dentro del 'a' */
-    align-content: center; /* Para centrar la imagen del perfil */
-    padding-left: 15px; 
-    padding-right: 15px;
-  }
-  
-  .cerrarSesion {
-    grid-column: 1; /* Ocupa la segunda columna */
-    grid-row: 2; /* Ocupa la segunda fila */
-  }
-
-
-
