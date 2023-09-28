@@ -5,6 +5,16 @@ h1{
     height: 20px;
 }
 
+h3{
+  font-size: large;
+  font-style: oblique;
+}
+
+.imagenplan{
+  height: 33%;
+  width: 33%;
+}
+
 .cerrarsesion{
     display: block;
     position: relative;
