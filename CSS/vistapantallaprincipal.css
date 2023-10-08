@@ -83,7 +83,7 @@
         width: 19%;
         height: 300px;
         z-index: 1;
-        overflow: auto;
+        overflow: hidden;
     }
     
     .imagenbajonav{
@@ -127,7 +127,6 @@
     
     .reproductor{
         border: 1px solid black;
-        margin-bottom:10%;
         margin-left: 23%;
         width: 75%;
         height: 100px;
@@ -349,6 +348,10 @@ input[type="button"] {
 /* Estilos para los enlaces */
 a {
     color: purple; /* Color morado para enlaces */
+    display: flex;
+    height: 100%;
+    align-items: start;
+    vertical-align: center;
 }
 
 /* Resto de estilos específicos para esta vista */
