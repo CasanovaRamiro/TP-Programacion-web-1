@@ -104,6 +104,7 @@
         position: relative;
         border: 1px black solid;
         margin-top: 15%;
+        margin-bottom: 10%;
         width: 19%;
         height: 300px;
         z-index: 1;
@@ -124,7 +125,7 @@
         grid-template-columns: repeat(3, 1fr); /* 3 columnas de tamaño igual */
         grid-template-rows: repeat(4, 1fr); /* 4 filas de tamaño igual */
         margin-left: 20%;
-        margin-top: -33%;
+        margin-top: -40%;
         gap: 10%;
         height: 480px;
         width: 80%;
@@ -172,7 +173,7 @@
     }
 
     /* Estilos para pantallas más pequeñas (tabletas) */
-@media (max-width: 768px) {
+@media (max-width: 1055px) {
     header {
         flex-direction: column;
         width: 100%;
@@ -232,14 +233,17 @@
     }
 
     .sectionimgbajonav {
-        width: 100%;
+        width: 80%;
         margin-top: 5%;
+        margin-left: 10%;
+        margin-right: 10%;
     }
 
     .albumes {
         grid-template-columns: repeat(2, 1fr);
         margin-left: 0;
         margin-top: 0;
+        width: 100%;
         gap: 5px;
     }
 
@@ -314,8 +318,10 @@
     }
 
     .sectionimgbajonav {
-        width: 100%;
+        width: 80%;
         margin-top: 5%;
+        margin-left: 10%;
+        margin-right: 10%;
     }
 
     .albumes {
@@ -324,7 +330,7 @@
     }
 
     .reproductor {
-        width: 100%;
+        width: 80%;
     }
 
     footer {
