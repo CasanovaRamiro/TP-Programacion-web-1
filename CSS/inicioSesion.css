@@ -4,20 +4,22 @@ body {
     align-items: center; 
     justify-content: center; 
     margin: 0;
+    background-color: black;
+    font-family: sans-serif;
 }
 
 .contenedor {
-    margin-top: 150px; 
+    margin-top: 10%; 
 }
 
 label, input {
     display: block;
-    margin-bottom: 10px; 
+    margin-bottom: 1%; 
 }
 
 input {
-    height: 50px;
-    width: 300px;
+    height: auto;
+    width: 90%;
 }
 
 a {
@@ -25,8 +27,8 @@ a {
 }
 
 .boton{
-    height: 30px;
-    width: 305px;
+    height: auto;
+    width: 90%;
 }
 
 /* Estilos para pantallas más pequeñas (tabletas) */

@@ -1,0 +1,214 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    background-color: black;
+    width: 100%;
+    margin-left: auto;
+    font-family:sans-serif;
+    margin-top:-1px;
+    margin-bottom:1px;
+}
+html{
+    background-color: black;
+    height:auto;
+}
+main{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+aside{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    text-align: justify;
+    width: 120%;
+    padding: 5%;
+    color:white;
+}
+section{
+    display:inline;
+}
+footer{
+    background-color: purple;
+    width: 100%;
+    height: auto;
+}
+button{
+    width: 100%;
+    height: 2em;
+    border-radius: 1em 1em 1em 1em;
+    border: none;
+    background-color: purple;
+}
+button:hover{
+    background-color: blueviolet;
+    color: white;
+}
+a{
+    color: black;
+    text-decoration: none;
+    height: auto;
+}
+h2{
+    margin: 1px;
+}
+p{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1px;
+    text-align: end;
+}
+p:hover{
+    color: white;
+    text-decoration: none;
+}
+input{
+    width: 90%;
+    border-radius: 1em 1em 1em 1em;
+    border: none;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: purple;
+    height: 3em;
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 2em;
+}
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+.payment-section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: black;
+    height: 20em;
+}
+
+.imgperfil{
+    border-radius: 100%;
+    margin: 4px 4px 1px 1px;
+    padding:1%;
+    height: 90%;
+}
+.fotoPlanElegido{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60%;
+    padding: 1%;
+}
+.inputs{
+    padding: 1%;
+}
+.integrantes{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    height: 10%;
+    padding: 5% 0% 2% 0%;
+    margin-bottom: 1px;
+}
+  
+/* Cambia el fondo de los artículos de integrantes a negro y el texto a blanco */
+.integrante {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+}
+.container-grid2{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 2em 2em 2em 2em;
+    background-color: black;
+    width: 100%;
+    margin: auto;
+    color: white;
+}
+.item-1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    background-color: black;
+    justify-self: stretch;
+    text-align: center;
+}
+.item-2{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    background-color: black;
+    text-align: center;
+}
+.item-3{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    background-color: black;
+}
+.item-4{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    background-color: black;
+}
+.item-5{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    background-color: black;
+    text-align: center;
+}
+.item-6{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    background-color: black;
+    place-items: center;
+    
+}
+.item-7{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    background-color: black;
+    text-align: center;
+}
+.item-8{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    padding: 1% 1%;
+    background-color: black;
+}
+.item-9{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    justify-self: stretch;
+    padding: 1%;
+    background-color: black;
+}
+.item-10{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    padding: 1%;
+    background-color: black;
+}

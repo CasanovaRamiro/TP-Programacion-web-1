@@ -81,7 +81,7 @@ li{
     width: 19%;
     height: 300px;
     z-index: 1;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .imagenbajonav{
@@ -126,7 +126,6 @@ li{
 
 .reproductor{
     border: 1px solid black;
-    margin-bottom:10%;
     margin-left: 23%;
     width: 75%;
     height: 100px;
@@ -307,5 +306,12 @@ header {
 }
 
 ul{
-  border: 1px solid #800080;
+  border: 1px solid black;
+}
+
+a {
+  display: flex;
+  height: 100%;
+  align-items: start;
+  vertical-align: center;
 }

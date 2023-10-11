@@ -5,7 +5,9 @@
         height: 120px;
         margin-left: 20%;
         border: 1px solid black;
-        display: flex;
+        display: grid;
+        grid-template-columns: 55% 35% 10%;
+        grid-template-rows: 50% 50%;
         align-items: flex-end;
         justify-content: space-between;
         padding: 0 20px;
@@ -14,39 +16,61 @@
 
     .buscador{
         position: relative;
-        top: -60%;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
     }
 
     .buscadorinput{
         width: 300px;
     }
+
+    h1{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        vertical-align: middle;
+    }
     
     h2{
-        display: block;
         position: relative;
         white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        width: 30%;
+        overflow-x: visible;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
         top: -50%;
+        align-items: end;
+        text-align: end;
+        vertical-align: middle;
     }
     
     .cerrarsesion{
-        display: inline-block;
+        display: inline;
         position: absolute;
-        margin-right: 2px;
         width: auto;
-        left: 50%;
-        top: 40%;
+        padding-left: 40%;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        text-align: end;
+        align-items: end;
     }
     
     .imgperfil{
         border: 1px solid black;
-        display: block;
         position: absolute;
-        right: 10%;
-        top: 1%;
-        width: 9%;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        width: 80%;
+        height: auto;
+        align-items: end;
     }
     
     nav{
@@ -83,7 +107,7 @@
         width: 19%;
         height: 300px;
         z-index: 1;
-        overflow: auto;
+        overflow: hidden;
     }
     
     .imagenbajonav{
@@ -102,7 +126,7 @@
         margin-left: 20%;
         margin-top: -33%;
         gap: 10%;
-        height: 400px;
+        height: 480px;
         width: 80%;
         overflow: auto;
         gap: 10px;
@@ -127,7 +151,6 @@
     
     .reproductor{
         border: 1px solid black;
-        margin-bottom:10%;
         margin-left: 23%;
         width: 75%;
         height: 100px;
@@ -349,6 +372,10 @@ input[type="button"] {
 /* Estilos para los enlaces */
 a {
     color: purple; /* Color morado para enlaces */
+    display: flex;
+    height: 100%;
+    align-items: start;
+    vertical-align: center;
 }
 
 /* Resto de estilos específicos para esta vista */
