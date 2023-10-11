@@ -31,11 +31,14 @@ h2{
 }
 
 .imgperfil{
-  border: 1px solid black;
   height: 50px;
   width: 50px;
   align-items: end;
   padding: 10px;
+}
+
+.imgperfil img {
+  border: #000 2px solid;
 }
 
 .buscador{

@@ -5,6 +5,7 @@
         margin-left: 21%;
         border: 1px solid black;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
     }
@@ -32,11 +33,14 @@
     }
     
     .imgperfil{
-        border: 1px solid black;
         height: 50px;
         width: 50px;
         align-items: end;
         padding: 10px;
+    }
+
+    .imgperfil img {
+        border: #000 2px solid;
     }
 
     .buscador{
@@ -152,35 +156,10 @@
 
     /* Estilos para pantallas más pequeñas (tabletas) */
 @media (max-width: 1055px) {
-    header {
-        flex-direction: column;
-        width: 100%;
-        height: auto;
-        margin-left: 0;
-    }
+    
+    header{
+        margin-left: 5px;
 
-    h1 {
-        display: none;
-    }
-
-    h2 {
-        width: 100%;
-        white-space: normal;
-        text-align: center;
-        top: -50%;
-    }
-
-    .cerrarsesion {
-        display: block;
-        text-align: center;
-        margin: 10px auto;
-    }
-
-    .imgperfil {
-        right: 5%;
-        top: 5%;
-        width: 15%;
-        height: 90%;
     }
 
     .buscador {
@@ -245,29 +224,10 @@
 
 /* Estilos para pantallas aún más pequeñas (smartphones) */
 @media (max-width: 480px) {
-    header {
-        flex-direction: column;
-        height: auto;
-        text-align: center;
-    }
-
-    h1 {
-        display: none;
-    }
-
-    h2 {
-        font-size: 16px;
-    }
-
-    .cerrarsesion {
-        display: block;
-        margin: 10px auto;
-    }
-
-    .imgperfil {
-        right: 5%;
-        top: 5%;
-        width: 15%;
+    header{
+        margin-bottom: 15%;
+        justify-content: center;
+        align-items: center;
     }
 
     .buscador {
