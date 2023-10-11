@@ -1,18 +1,43 @@
 
     header{
         position: relative;
-        width: 75%;
         height: 120px;
-        margin-left: 20%;
+        margin-left: 21%;
         border: 1px solid black;
-        display: grid;
-        grid-template-columns: 55% 35% 10%;
-        grid-template-rows: 50% 50%;
-        align-items: flex-end;
+        display: flex;
+        align-items: center;
         justify-content: space-between;
-        padding: 0 20px;
     }
 
+    header span {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+    }
+
+    h1{
+        flex: 1;
+        vertical-align: middle;
+    }
+    
+    h2{
+        white-space: nowrap;
+        vertical-align: middle;
+    }
+    
+    .cerrarsesion{
+        vertical-align: middle;
+        width: auto;
+    }
+    
+    .imgperfil{
+        border: 1px solid black;
+        height: 50px;
+        width: 50px;
+        align-items: end;
+        padding: 10px;
+    }
 
     .buscador{
         position: relative;
@@ -25,54 +50,7 @@
     .buscadorinput{
         width: 300px;
     }
-
-    h1{
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 3;
-        vertical-align: middle;
-    }
-    
-    h2{
-        position: relative;
-        white-space: nowrap;
-        overflow-x: visible;
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 2;
-        top: -50%;
-        align-items: end;
-        text-align: end;
-        vertical-align: middle;
-    }
-    
-    .cerrarsesion{
-        display: inline;
-        position: absolute;
-        width: auto;
-        padding-left: 40%;
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 3;
-        text-align: end;
-        align-items: end;
-    }
-    
-    .imgperfil{
-        border: 1px solid black;
-        position: absolute;
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 1;
-        grid-row-end: 3;
-        width: 80%;
-        height: auto;
-        align-items: end;
-    }
-    
+ 
     nav{
         position: absolute;
         width: 19%;
@@ -189,6 +167,7 @@
         width: 100%;
         white-space: normal;
         text-align: center;
+        top: -50%;
     }
 
     .cerrarsesion {

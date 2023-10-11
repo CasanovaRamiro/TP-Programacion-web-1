@@ -1,13 +1,41 @@
 header{
-    position: relative;
-    width: 75%;
-    height: 120px;
-    margin-left: 20%;
-    border: 1px solid black;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    padding: 0 20px;
+  position: relative;
+  height: 120px;
+  margin-left: 21%;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header span {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+}
+
+h1{
+  flex: 1;
+  vertical-align: middle;
+}
+
+h2{
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.cerrarsesion{
+  vertical-align: middle;
+  width: auto;
+}
+
+.imgperfil{
+  border: 1px solid black;
+  height: 50px;
+  width: 50px;
+  align-items: end;
+  padding: 10px;
 }
 
 .buscador{
@@ -19,33 +47,6 @@ header{
     width: 300px;
 }
 
-h2{
-    display: block;
-    position: relative;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 30%;
-    top: -50%;
-}
-
-.cerrarsesion{
-    display: inline-block;
-    position: absolute;
-    margin-right: 2px;
-    width: auto;
-    left: 50%;
-    top: 40%;
-}
-
-.imgperfil{
-    border: 1px solid black;
-    display: block;
-    position: absolute;
-    right: 10%;
-    top: 1%;
-    width: 9%;
-}
 
 nav{
   position: absolute;
@@ -151,6 +152,7 @@ li{
     h2 {
       width: auto; /* Reestablecer el ancho del nombre de usuario */
       margin-top: 10px; /* Agregar un espacio entre el título y el nombre de usuario */
+      top: -50%;
     }
   
     .cerrarsesion {
