@@ -34,7 +34,8 @@ h1{
 label{
     display: inline-block;
     width: 200px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
     color: #800080;
 }
 
@@ -54,7 +55,6 @@ input{
 }
 
 .linkpremium{
-    display: block;
     margin-top: 30px;
     margin-bottom: 20px;
     color: #800080;
@@ -117,6 +117,7 @@ input{
   
     input {
       height: 30px; /* Ajustar la altura de los campos de entrada */
+      width: 100%;
     }
   
     .inputfecha {
@@ -176,6 +177,7 @@ input{
   
     input {
       height: 20px; /* Ajustar la altura de los campos de entrada */
+      width: 100%;
     }
   
     .inputfecha {
