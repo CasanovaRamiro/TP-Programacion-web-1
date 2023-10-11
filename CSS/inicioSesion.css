@@ -7,7 +7,10 @@ body {
     background-color: black;
     font-family: sans-serif;
 }
-
+iframe{
+    position: absolute;
+    bottom: 0px;
+}
 .contenedor {
     margin-top: 10%; 
 }
@@ -44,10 +47,7 @@ a {
     .boton {
         width: 100%; /* Hacer que el botón ocupe todo el ancho disponible */
     }
-
-    footer {
-        display: none; /* Ocultar el footer en tabletas */
-    }
+   
 }
 
 /* Estilos para pantallas aún más pequeñas (smartphones) */
@@ -56,9 +56,6 @@ a {
         margin-top: 50px; /* Reducir aún más el margen superior */
     }
 
-    footer {
-        display: none; /* Ocultar el footer en smartphones */
-    }
 }
 
 
