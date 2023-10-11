@@ -1,29 +1,87 @@
+header{
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: #800080; /* Fondo púrpura */
+  color: #fff; /* Texto en blanco */
+  border-color: #333; /* Borde en negro */
+}
+
+body {
+  background-color: #333; /* Fondo negro */
+  color: #800080; /* Texto en púrpura */
+  height: auto;
+}
+
 h1{
-    position: relative;
-    text-align: right;
-    margin-right: 10%;
-    height: 20px;
+  position: relative;
+  text-align: right;
+  height: 20px;
+  font-family: sans-serif;
+}
+
+h2{
+  margin-right: 32%;
+  color: #800080;
+  font-family: sans-serif;
+}
+
+footer {
+  display:flex;
+  flex-direction: column;
+  justify-content: stretch;
+  text-align: center;
+  width: 100%;
+  margin: -5px;
+  position: absolute;
+  background-color: purple;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.integrantes{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+}
+
+/* Cambia el fondo de los artículos de integrantes a negro y el texto a blanco */
+.integrante {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+}
+.usuario{
+  display: flex;
+  flex-direction: column;
+  text-align: right;
 }
 
 .cerrarsesion{
-    display: block;
-    position: relative;
-    margin-left: 73%;
+    display: flex;
+    flex-direction:row;
+    justify-content:flex-end;
+    margin-left: 5%;
     width: max-content;
+    height: 5%;
     color: #fff;
-    text-decoration: none; 
+    text-decoration: none;
+    font-family: sans-serif;
 }
 
 .imgperfil{
-    border: 1px solid black;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
+    display: flex;
+    flex-direction:row;
+    justify-content:flex-end;
+    position: relative;
     margin-top: 1%;
     margin-right: 2%;
-    width: 100px;
-    height: 100px;
+    width: 5em;
+    height: 5em;
+    border-radius: 100%;
 }
 
 .infoplan{
@@ -32,11 +90,7 @@ h1{
     position: relative;
     text-align: center;
     margin-top: 1%;
-}
-
-h2{
-    margin-right: 32%;
-    color: #800080;
+    font-family: sans-serif;
 }
 
 .imgplan{
@@ -50,14 +104,12 @@ h2{
     text-align: center;
     margin-top: 1%;
     height: 110px;
+    font-family: sans-serif;
 }
 
 article{
-    margin-bottom: 1%;
+    /* margin-bottom: 1%; */
 }
-
-
-
 
 .tarjeta{
     position: absolute;
@@ -117,14 +169,14 @@ article{
 }
 
 .boton{
+  display: inline-block;
     margin-right: 10px;
-    height: 40px;
-    width: 400px;
     background-color: #800080; /* Fondo púrpura */
     color: #fff; /* Texto en blanco */
     border: none; /* Eliminar borde */
     cursor: pointer; /* Cambiar cursor al pasar el mouse */
     border: 2px solid #000;
+    font-family: sans-serif;
 }
 
 
@@ -132,22 +184,21 @@ article{
 /* Estilos para tablet (ancho máximo de 768px) */
 @media screen and (max-width: 768px) {
     h1 {
-      text-align: center; /* Centrar el nombre de usuario */
-      margin-right: 0; /* Eliminar el margen derecho */
-      margin-top: 20px; /* Ajustar espacio superior */
+      display:flex;
+      flex-direction: row;
+      justify-content: flex-end;
     }
   
     .cerrarsesion {
-      margin-left: 10px; /* Ajustar posición de "Cerrar sesión" */
-      margin-right: 10px; /* Ajustar margen derecho */
+      display: inline-block;
       width: 100%; /* Ocupar todo el ancho disponible */
     }
   
     .imgperfil {
-      width: 50px; /* Redimensionar la imagen de perfil */
-      height: 50px; /* Redimensionar la imagen de perfil */
-      top: 10px; /* Ajustar posición superior */
-      right: 10px; /* Ajustar posición derecha */
+      display:flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      border-radius: 100%;
     }
   
     .infoplan {
@@ -193,6 +244,7 @@ article{
       margin-top: 20px; /* Ajustar espacio superior */
       margin-bottom: 20px; /* Ajustar espacio inferior */
       text-align: center; /* Centrar botones */
+      font-family: sans-serif;
     }
   
     .boton {
@@ -264,16 +316,4 @@ article{
       position: relative;
     }
 
-}
-
-body {
-  background-color: #333; /* Fondo negro */
-  color: #800080; /* Texto en púrpura */
-  height: 70vh;
-}
-
-header {
-  background-color: #800080; /* Fondo púrpura */
-  color: #fff; /* Texto en blanco */
-  border-color: #333; /* Borde en negro */
 }
