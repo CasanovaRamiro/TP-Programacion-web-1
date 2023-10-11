@@ -1,13 +1,44 @@
 header{
-    position: relative;
-    width: 75%;
-    height: 120px;
-    margin-left: 20%;
-    border: 1px solid black;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    padding: 0 20px;
+  position: relative;
+  height: 120px;
+  margin-left: 21%;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header span {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+}
+
+h1{
+  flex: 1;
+  vertical-align: middle;
+}
+
+h2{
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.cerrarsesion{
+  vertical-align: middle;
+  width: auto;
+}
+
+.imgperfil{
+  height: 50px;
+  width: 50px;
+  align-items: end;
+  padding: 10px;
+}
+
+.imgperfil img {
+  border: #000 2px solid;
 }
 
 .buscador{
@@ -19,57 +50,30 @@ header{
     width: 300px;
 }
 
-h2{
-    display: block;
-    position: relative;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 30%;
-    top: -50%;
-}
-
-.cerrarsesion{
-    display: inline-block;
-    position: absolute;
-    margin-right: 2px;
-    width: auto;
-    left: 50%;
-    top: 40%;
-}
-
-.imgperfil{
-    border: 1px solid black;
-    display: block;
-    position: absolute;
-    right: 10%;
-    top: 1%;
-    width: 9%;
-}
 
 nav{
-    position: absolute;
-    width: 19%;
-    top: 1px;
-    height:20%;
-    margin-bottom: 0%;
-    z-index: 2;
+  position: absolute;
+  width: 19%;
+  top: 1px;
+  height:20%;
+  margin-bottom: 0%;
+  z-index: 2;
 }
 
 ul{
-    border: 1px solid black;
-    height: 50%;
-    margin: 0;
+  border: 1px solid black;
+  height: 50%;
+  margin: 0;
 }
 
 ul:hover {
-    background-color: #992323; /* Cambia el color de fondo al pasar el mouse por encima */
+  background-color: #992323; /* Cambia el color de fondo al pasar el mouse por encima */
 }
 
 li{
-    list-style-type: none;
-    margin-left: -14%;
-    margin-top: 10%;
+  list-style-type: none;
+  margin-left: -14%;
+  margin-top: 10%;
 }
 
 .sectionimgbajonav{
@@ -126,29 +130,13 @@ li{
 
 .reproductor{
     border: 1px solid black;
-    margin-left: 23%;
+    margin-left: auto;
     width: 75%;
-    height: 100px;
-    z-index: 2;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.play{
-    position: absolute;
-    margin-top: 2%;
-    margin-left: 2%;
-}
-
-.circle{
-    position: absolute;
-    margin-top: 2%;
-    margin-left: 30%;
-}
-
-.square{
-    position: absolute;
-    margin-top: 2%;
-    margin-left: 70%;
-}
 
 .estrella-cancion{
     position: absolute;
@@ -167,6 +155,7 @@ li{
     h2 {
       width: auto; /* Reestablecer el ancho del nombre de usuario */
       margin-top: 10px; /* Agregar un espacio entre el título y el nombre de usuario */
+      top: -50%;
     }
   
     .cerrarsesion {
@@ -182,24 +171,26 @@ li{
     }
   
     nav {
-      width: 100%; /* Cambiar el ancho de la barra de navegación */
-      position: static; /* Cambiar la posición a estática */
-    }
-  
-    ul {
-      width: 100%; /* Asegurarse de que las listas ocupen todo el ancho */
-      height: auto; /* Cambiar la altura a automática */
-    }
-  
-    li {
-      margin-left: 0; /* Eliminar el margen izquierdo */
-      margin-top: 0; /* Eliminar el margen superior */
-    }
-  
-    .sectionimgbajonav {
-      width: 100%; /* Cambiar el ancho de la sección de imagen */
-      margin-top: 0; /* Eliminar el margen superior */
-    }
+      position: relative;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+  }
+
+  ul {
+      margin-top: 0;
+  }
+
+  li {
+      margin-left: 0;
+      margin-top: 5%;
+  }
+
+  .sectionimgbajonav {
+      width: 100%;
+      margin-top: 5%;
+  }
   
     .canciones {
       margin-left: 0; /* Eliminar el margen izquierdo */
@@ -210,6 +201,10 @@ li{
 
     footer{
         display: none;
+    }
+    .reproductor{
+      width: 80%;
+      margin-right: auto;
     }
   }
   
@@ -272,6 +267,7 @@ li{
     footer{
         display: none;
     }
+   
   }
   
 

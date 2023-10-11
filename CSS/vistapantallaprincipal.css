@@ -1,18 +1,47 @@
 
     header{
         position: relative;
-        width: 75%;
         height: 120px;
-        margin-left: 20%;
+        margin-left: 21%;
         border: 1px solid black;
-        display: grid;
-        grid-template-columns: 55% 35% 10%;
-        grid-template-rows: 50% 50%;
-        align-items: flex-end;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
         justify-content: space-between;
-        padding: 0 20px;
     }
 
+    header span {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+    }
+
+    h1{
+        flex: 1;
+        vertical-align: middle;
+    }
+    
+    h2{
+        white-space: nowrap;
+        vertical-align: middle;
+    }
+    
+    .cerrarsesion{
+        vertical-align: middle;
+        width: auto;
+    }
+    
+    .imgperfil{
+        height: 50px;
+        width: 50px;
+        align-items: end;
+        padding: 10px;
+    }
+
+    .imgperfil img {
+        border: #000 2px solid;
+    }
 
     .buscador{
         position: relative;
@@ -25,54 +54,7 @@
     .buscadorinput{
         width: 300px;
     }
-
-    h1{
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 3;
-        vertical-align: middle;
-    }
-    
-    h2{
-        position: relative;
-        white-space: nowrap;
-        overflow-x: visible;
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 2;
-        top: -50%;
-        align-items: end;
-        text-align: end;
-        vertical-align: middle;
-    }
-    
-    .cerrarsesion{
-        display: inline;
-        position: absolute;
-        width: auto;
-        padding-left: 40%;
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 3;
-        text-align: end;
-        align-items: end;
-    }
-    
-    .imgperfil{
-        border: 1px solid black;
-        position: absolute;
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 1;
-        grid-row-end: 3;
-        width: 80%;
-        height: auto;
-        align-items: end;
-    }
-    
+ 
     nav{
         position: absolute;
         width: 19%;
@@ -104,6 +86,7 @@
         position: relative;
         border: 1px black solid;
         margin-top: 15%;
+        margin-bottom: 10%;
         width: 19%;
         height: 300px;
         z-index: 1;
@@ -124,7 +107,7 @@
         grid-template-columns: repeat(3, 1fr); /* 3 columnas de tamaño igual */
         grid-template-rows: repeat(4, 1fr); /* 4 filas de tamaño igual */
         margin-left: 20%;
-        margin-top: -33%;
+        margin-top: -40%;
         gap: 10%;
         height: 480px;
         width: 80%;
@@ -148,31 +131,14 @@
         width: 100%;
         height: 100%;
     }
-    
+
     .reproductor{
         border: 1px solid black;
-        margin-left: 23%;
+        margin-left: auto;
         width: 75%;
-        height: 100px;
-        z-index: 2;
-    }
-    
-    .play{
-        position: absolute;
-        margin-top: 2%;
-        margin-left: 2%;
-    }
-    
-    .circle{
-        position: absolute;
-        margin-top: 2%;
-        margin-left: 30%;
-    }
-    
-    .square{
-        position: absolute;
-        margin-top: 2%;
-        margin-left: 70%;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
     }
 
     
@@ -189,35 +155,11 @@
     }
 
     /* Estilos para pantallas más pequeñas (tabletas) */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        width: 100%;
-        height: auto;
-        margin-left: 0;
-    }
+@media (max-width: 1055px) {
+    
+    header{
+        margin-left: 5px;
 
-    h1 {
-        display: none;
-    }
-
-    h2 {
-        width: 100%;
-        white-space: normal;
-        text-align: center;
-    }
-
-    .cerrarsesion {
-        display: block;
-        text-align: center;
-        margin: 10px auto;
-    }
-
-    .imgperfil {
-        right: 5%;
-        top: 5%;
-        width: 15%;
-        height: 90%;
     }
 
     .buscador {
@@ -249,20 +191,23 @@
     }
 
     .sectionimgbajonav {
-        width: 100%;
+        width: 80%;
         margin-top: 5%;
+        margin-left: 10%;
+        margin-right: 10%;
     }
 
     .albumes {
         grid-template-columns: repeat(2, 1fr);
         margin-left: 0;
         margin-top: 0;
+        width: 100%;
         gap: 5px;
     }
 
-    .reproductor {
-        margin-left: 0;
-        width: 100%;
+    .reproductor{
+        width: 80%;
+        margin-right: auto;
     }
 
     footer {
@@ -279,29 +224,10 @@
 
 /* Estilos para pantallas aún más pequeñas (smartphones) */
 @media (max-width: 480px) {
-    header {
-        flex-direction: column;
-        height: auto;
-        text-align: center;
-    }
-
-    h1 {
-        display: none;
-    }
-
-    h2 {
-        font-size: 16px;
-    }
-
-    .cerrarsesion {
-        display: block;
-        margin: 10px auto;
-    }
-
-    .imgperfil {
-        right: 5%;
-        top: 5%;
-        width: 15%;
+    header{
+        margin-bottom: 15%;
+        justify-content: center;
+        align-items: center;
     }
 
     .buscador {
@@ -331,8 +257,10 @@
     }
 
     .sectionimgbajonav {
-        width: 100%;
+        width: 80%;
         margin-top: 5%;
+        margin-left: 10%;
+        margin-right: 10%;
     }
 
     .albumes {
@@ -341,7 +269,7 @@
     }
 
     .reproductor {
-        width: 100%;
+        width: 80%;
     }
 
     footer {

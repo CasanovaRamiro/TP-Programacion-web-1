@@ -16,6 +16,10 @@ form{
     width: 100%;
     /* height: 30%; */
 }
+iframe{
+    position: absolute;
+    bottom: 0px;
+}
 .contenedor {
     display: flex;
     flex-direction: column;
@@ -92,10 +96,7 @@ a:hover{
         align-self: center;
         padding: none;
     }
-
-    footer {
-        display: none; /* Ocultar el footer en tabletas */
-    }
+   
 }
 
 /* Estilos para pantallas aún más pequeñas (smartphones) */
