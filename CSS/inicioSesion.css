@@ -2,46 +2,95 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center; 
-    justify-content: center; 
+    justify-content: flex-end; 
     margin: 0;
     background-color: black;
+    height: 100vh;
+    font-family: sans-serif;
 }
-
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* height: 30%; */
+}
 .contenedor {
-    margin-top: 10%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: purple;
+    border-radius: 1em 1em 1em 1em;
+    margin: 10% 0% 10% 0%;
+    height: 50%;
+    width:50%;
+    text-align: center;
 }
 
 label, input {
     display: block;
-    margin-bottom: 1%; 
+    border-radius: 1em 1em 1em 1em;
+    width: 100%;
+    height: 3em;
+    border:none;
+    margin: 0em 0em 1em 0em;
 }
 
 input {
-    height: auto;
-    width: 90%;
+    width: 95%;
 }
-
+p{
+    display:inline;
+    margin: 0px;
+}
 a {
-    margin-top: 20px;
+    color: black;
+    text-decoration: none;
+    font-family: sans-serif;
 }
-
+a:hover{
+    color: black;
+}
 .boton{
-    height: auto;
-    width: 90%;
+    background-color: black;
+    color: white;
+    height: 2em;
+    width: 10em;
+    /* padding:1em 1em 1em 1em; */
+    border:none;
+    border-radius:2em 2em 2em 2em;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2em;
 }
-
+.boton:hover{
+    background-color: white;
+    color: black;
+    border: none;
+    text-decoration: none;
+}
+.registro{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0px;
+}
 /* Estilos para pantallas más pequeñas (tabletas) */
-@media (max-width: 768px) {
+@media (max-width: 820px) {
     .contenedor {
         margin-top: 100px; /* Reducir el margen superior */
     }
 
     input {
-        width: 100%; /* Hacer que los campos de entrada ocupen todo el ancho disponible */
+        width: 90%; /* Hacer que los campos de entrada ocupen todo el ancho disponible */
     }
 
     .boton {
-        width: 100%; /* Hacer que el botón ocupe todo el ancho disponible */
+        width: 120%; /* Hacer que el botón ocupe todo el ancho disponible */
+        font-size: medium;
+        align-self: center;
+        padding: none;
     }
 
     footer {
@@ -51,29 +100,32 @@ a {
 
 /* Estilos para pantallas aún más pequeñas (smartphones) */
 @media (max-width: 480px) {
-    .contenedor {
-        margin-top: 50px; /* Reducir aún más el margen superior */
-    }
-
     footer {
         display: none; /* Ocultar el footer en smartphones */
     }
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: purple;
+        border-radius: 1em 1em 1em 1em;
+        margin: 10% 0% 10% 0%;
+        height: 50%;
+        width:100%;
+        text-align: center;
+    }
+    input {
+        width: 95%;
+    }
+    /* Cambia el color de fondo del botón de inicio de sesión a negro */
+    .boton {
+        background-color: black;
+        color: white;
+    }
 }
 
 
-/* Cambia el fondo del formulario a morado y el texto a blanco */
-form {
-    background-color: purple;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-}
 
-/* Cambia el color de fondo del botón de inicio de sesión a negro */
-.boton {
-    background-color: black;
-    color: white;
-}
 
 /* Cambia el color de fondo del enlace "Registrarme" a morado */
 a[href="vistaperfil.html"] {
