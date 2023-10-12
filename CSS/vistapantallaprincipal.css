@@ -159,7 +159,7 @@
     }
 
     /* Estilos para pantallas más pequeñas (tabletas) */
-@media (max-width: 1055px) {
+@media (max-width: 768px) {
     
     header{
         margin-left: 5px;
@@ -227,12 +227,29 @@
 }
 
 /* Estilos para pantallas aún más pequeñas (smartphones) */
-@media (max-width: 480px) {
-    header{
-        margin-bottom: 15%;
-        justify-content: center;
-        align-items: center;
-    }
+@media screen and (max-width: 480px) {
+    header {
+      height: 80px; /* Reducir la altura del encabezado */
+        }
+    h1 {
+        font-size: 24px; /* Reducir el tamaño del título principal */
+        }
+    
+    h2 {
+        font-size: 16px; /* Reducir el tamaño del nombre de usuario */
+        }
+    
+    .cerrarsesion {
+        font-size: 14px; /* Reducir el tamaño del enlace "Cerrar sesión" */
+      }
+    
+    .imgperfil {
+        width: 30px; /* Redimensionar la imagen de perfil */
+      }
+    
+    nav {
+        height: auto; /* Cambiar la altura de la barra de navegación a automática */
+      }
 
     .buscador {
         top: 0; /* Vuelve a la posición normal en smartphones */
