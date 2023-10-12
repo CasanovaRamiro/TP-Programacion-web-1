@@ -115,6 +115,10 @@
         gap: 10px;
         z-index: 1;
         border: 1px solid black;
+        overflow-y:auto;
+    }
+    .albumes::-webkit-scrollbar{
+        display: none;
     }
     
     .article-img {

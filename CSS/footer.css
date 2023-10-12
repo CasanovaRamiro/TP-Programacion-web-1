@@ -1,10 +1,19 @@
-
+body{
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-end;
+    width:auto;
+    overflow-x: hidden;
+}
 footer{
-    position: fixed;
+    background-color: purple;
+    width: 100%;
+    color: white;
+    text-align: center;
+    position: relative;
+    padding: 1px;
     justify-items: center;
     text-align: center;
-    border: 1px solid black;
-    bottom: 10px;
     left: 10px;
     right: 10px;
 }
@@ -12,15 +21,6 @@ footer{
 .integrantes{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-}
-
-
-
-footer {
-    background-color: purple;
-    color: white;
-    padding: 1px;
-    text-align: center;
 }
 
 /* Cambia el fondo de los artículos de integrantes a negro y el texto a blanco */

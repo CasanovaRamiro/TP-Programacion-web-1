@@ -26,8 +26,8 @@ iframe{
     justify-content: center;
     background-color: purple;
     border-radius: 1em 1em 1em 1em;
-    margin: 10% 0% 10% 0%;
-    height: 50%;
+    margin: 10% 0% 20% 0%;
+    height: 100%;
     width:50%;
     text-align: center;
 }
@@ -54,7 +54,7 @@ a {
     font-family: sans-serif;
 }
 a:hover{
-    color: black;
+    color: white;
 }
 .boton{
     background-color: black;
@@ -82,8 +82,26 @@ a:hover{
 }
 /* Estilos para pantallas más pequeñas (tabletas) */
 @media (max-width: 820px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center; 
+        margin: 0;
+        background-color: black;
+        height: 100vh;
+        font-family: sans-serif;
+    }
     .contenedor {
-        margin-top: 100px; /* Reducir el margen superior */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: purple;
+        border-radius: 1em 1em 1em 1em;
+        margin: 10% 0% 20% 0%;
+        height: 50%;
+        width:50%;
+        text-align: center;
     }
 
     input {
@@ -110,8 +128,8 @@ a:hover{
         justify-content: center;
         background-color: purple;
         border-radius: 1em 1em 1em 1em;
-        margin: 10% 0% 10% 0%;
-        height: 50%;
+        margin: 30% 0% 70% 0%;
+        height: 30%;
         width:100%;
         text-align: center;
     }

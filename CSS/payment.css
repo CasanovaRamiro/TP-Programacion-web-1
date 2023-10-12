@@ -8,6 +8,7 @@ body{
     font-family:sans-serif;
     margin-top:-1px;
     margin-bottom:1px;
+    overflow-x: hidden;
 }
 html{
     background-color: black;
@@ -71,6 +72,11 @@ input{
     border-radius: 1em 1em 1em 1em;
     border: none;
 }
+iframe{
+    position: absolute;
+    margin:50em 1em 1em -1em; 
+    width: 100%;
+  }
 .header{
     display: flex;
     flex-direction: row;
