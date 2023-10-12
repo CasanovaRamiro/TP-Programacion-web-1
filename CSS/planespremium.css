@@ -61,11 +61,7 @@ input{
     margin-left: 7%;
 }
 
-.boton{
-    width: 300px;
-    padding: 10px;
-    margin: 1%;
-}
+
 
 
 /* Estilos para tablet (ancho máximo de 768px) */
@@ -92,7 +88,7 @@ input{
     .planes {
       margin-top: 5%; /* Ajustar espacio superior */
       margin-left: 10%; /* Ajustar margen izquierdo */
-      width: 80%; /* Ajustar ancho */
+      width: 100%; /* Ajustar ancho */
     }
   
     .formulario {
@@ -119,10 +115,7 @@ input{
       align-items: center; /* Centrar botones */
     }
   
-    .boton {
-      width: 100%; /* Ocupar todo el ancho disponible */
-      margin: 10px 0; /* Agregar espacio vertical entre botones */
-    }
+    
 
     iframe{
        position: relative;
@@ -151,7 +144,7 @@ input{
     .planes {
       margin-top: 5%; /* Ajustar espacio superior */
       margin-left: 5%; /* Ajustar margen izquierdo */
-      width: 90%; /* Ajustar ancho */
+      width: 100%; /* Ajustar ancho */
     }
   
     .formulario {
@@ -176,16 +169,13 @@ input{
       display: flex; /* Cambiar a un diseño flexible */
       flex-direction: column; /* Cambiar dirección de columnas */
       align-items: center; /* Centrar botones */
+      width: 100%;
     }
   
-    .boton {
-      width: 100%; /* Ocupar todo el ancho disponible */
-      margin: 10px 0; /* Agregar espacio vertical entre botones */
-    }
-
     footer{
         display: none;
     }
+   
   }
   
 
