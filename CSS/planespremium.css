@@ -1,221 +1,180 @@
-body{
-  height: 100%;
-}
-/* iframe{
-  position: relative;
-  height:auto;
-  width: 100%;
-  margin: 20% 1% 1% 1%;
-} */
-iframe{
-  display:flex;
-  flex-direction:column;
-  justify-content: flex-end;
-  margin-top: 25%;
-}
-h1{
-    position: relative;
-    text-align: right;
-    margin-right: 10%;
-    height: 20px;
-}
 
-h3{
-  font-size: large;
-  font-style: oblique;
-}
-
-.imagenplan{
-  height: 33%;
-  width: 33%;
-}
-
-.cerrarsesion{
-    display: block;
-    position: relative;
-    margin-left: 73%;
-    width: max-content;
-}
-
-.imgperfil{
-    border: 1px solid black;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin-top: 1%;
-    margin-right: 2%;
-    width: 100px;
-    height: 100px;
-}
-
-.planes{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0% 20% 0% 20%;
+html{
     height: 100%;
-    width: 80%;
-}
-.formulario{
-    display: grid;
-    grid-template-columns: auto auto auto;
-}
+    width: auto;
+    overflow-x: hidden;
+    }
+    body{
+        background-color: black;
+        color: purple;
+        height: auto;
+        margin: 0px;
+        width: 100%;
+        }
+    header {
+        grid-area: a;
+    }
+    main{
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: center;
+        padding: 1%;
+        height: 70%;
+    }
+    article{
+        padding: 1%;
+    }
 
-.formulario, img{
-    width: 100%;
-}
-
-input{
-    display: block;
-}
-
-.botones{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-
-
-
-/* Estilos para tablet (ancho máximo de 768px) */
-@media screen and (max-width: 768px) {
-    h1 {
-      text-align: center; /* Centrar el nombre de usuario */
-      margin-right: 0; /* Eliminar el margen derecho */
-      margin-top: 20px; /* Ajustar espacio superior */
+    iframe {
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        height: 30%;
+        margin: 2% 0%;
     }
-  
-    .cerrarsesion {
-      margin-left: 10px; /* Ajustar posición de "Cerrar sesión" */
-      margin-right: 10px; /* Ajustar margen derecho */
-      width: 100%; /* Ocupar todo el ancho disponible */
-    }
-  
-    .imgperfil {
-      width: 50px; /* Redimensionar la imagen de perfil */
-      height: 50px; /* Redimensionar la imagen de perfil */
-      top: 10px; /* Ajustar posición superior */
-      right: 10px; /* Ajustar posición derecha */
-    }
-  
-    .planes {
-      margin-top: 5%; /* Ajustar espacio superior */
-      margin-left: 10%; /* Ajustar margen izquierdo */
-      width: 100%; /* Ajustar ancho */
-    }
-  
-    .formulario {
-      display: flex; /* Cambiar a un diseño flexible */
-      flex-direction: column; /* Cambiar dirección de columnas */
-      align-items: center; /* Centrar elementos del formulario */
-    }
-  
-    .formulario img {
-      width: 50%; /* Redimensionar las imágenes de los planes */
-      margin-bottom: 10px; /* Agregar espacio entre las imágenes */
-    }
-  
-    input {
-      display: block;
-      margin-bottom: 10px; /* Agregar espacio entre campos de radio */
-    }
-  
-    .botones {
-      margin-top: 20px; /* Ajustar espacio superior */
-      margin-left: 0; /* Eliminar margen izquierdo */
-      display: flex; /* Cambiar a un diseño flexible */
-      flex-direction: column; /* Cambiar dirección de columnas */
-      align-items: center; /* Centrar botones */
-    }
-  
     
+    /* Header */
+    header{
+        position: relative;
+        width: 100%;
+        border: 1px solid black;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    header span {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+    }
+    
+    h1{
+        flex: 1;
+        vertical-align: middle;
+    }
+    
+    .premium{
+        color: white;
+        font-size: 2em;
+    }
 
-    iframe{
-       position: relative;
-       margin:10% 0% 1% 0%;
-       width:100%;
-       height:auto;
+    h3{
+        color: gray;
     }
-  }
-  
-  /* Estilos para smartphone (ancho máximo de 480px) */
-  @media screen and (max-width: 480px) {
-    h1 {
-      margin-top: 10px; /* Ajustar espacio superior en teléfono */
+    button{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-color: purple;
+        color: white;
+        height: auto;
+        width: auto;
+        border:none;
+        border-radius:2em 2em 2em 2em;
+        text-align: center;
+        align-items: center;
+        text-decoration: none;
+        padding: 1em 1em 1em 1em;
     }
-  
-    .cerrarsesion {
-      margin-left: 10px; /* Ajustar posición de "Cerrar sesión" */
-      margin-right: 10px; /* Ajustar margen derecho */
-      width: 100%; /* Ocupar todo el ancho disponible */
+    
+    button:hover{
+        background-color: white;
+        color: purple;
     }
-  
-    .imgperfil {
-      width: 30px; /* Redimensionar la imagen de perfil */
-      height: 30px; /* Redimensionar la imagen de perfil */
-      top: 10px; /* Ajustar posición superior */
-      right: 10px; /* Ajustar posición derecha */
+    .botones{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        text-align: center;
+        align-items: center;
+        margin:1em;
     }
-  
-    .planes {
-      margin-top: 5%; /* Ajustar espacio superior */
-      margin-left: 5%; /* Ajustar margen izquierdo */
-      width: 100%; /* Ajustar ancho */
+    
+    .cerrarsesion{
+        vertical-align: middle;
+        width: auto;
     }
-  
-    .formulario {
-      display: flex; /* Cambiar a un diseño flexible */
-      flex-direction: column; /* Cambiar dirección de columnas */
-      align-items: center; /* Centrar elementos del formulario */
+    
+    .imgperfil{
+        height: 50px;
+        width: 50px;
+        align-items: end;
+        padding: 10px;
     }
-  
-    .formulario img {
-      width: 50%; /* Redimensionar las imágenes de los planes */
-      margin-bottom: 10px; /* Agregar espacio entre las imágenes */
+    
+    .imgperfil img {
+        border: #000 2px solid;
     }
-  
-    input {
-      display: block;
-      margin-bottom: 10px; /* Agregar espacio entre campos de radio */
+    .formulario{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
     }
-  
-    .botones {
-      margin-top: 20px; /* Ajustar espacio superior */
-      margin-left: 0; /* Eliminar margen izquierdo */
-      display: flex; /* Cambiar a un diseño flexible */
-      flex-direction: column; /* Cambiar dirección de columnas */
-      align-items: center; /* Centrar botones */
-      width: 100%;
+        
+        /* Estilos para los enlaces */
+    a {
+    color: purple;
+    display: block;
     }
-  
-    footer{
-        display: none;
+    a:hover{
+        color: white;
     }
-   
-  }
-  
-
-  /* Colores principales */
-body {
-  background-color: black; /* Fondo negro */
-  color: purple; /* Texto en morado */
-}
-
-/* Estilos para los botones */
-.boton1 {
-  background-color: purple; /* Fondo morado */
-  color: black; /* Texto en negro */
-}
-
-.boton2 {
-  background-color: black; /* Fondo negro */
-  color: purple; /* Texto en morado */
-}
-
-/* Estilos para los enlaces */
-a {
-  color: purple; /* Color morado para enlaces */
-}
-
+    
+    /* Estilos para pantallas más pequeñas (tabletas) */
+    @media (max-width: 821px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        font-size: 2em;
+        overflow-x: hidden;
+    }
+    .formulario{
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+    }
+    .imagenplan img{
+        height: 10em;
+        width: 10em;
+    }
+    
+    }
+    
+    /* Estilos para pantallas aún más pequeñas (smartphones) */
+    @media screen and (max-width: 480px) {
+    
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+    
+    header span {
+        align-items: center;
+    }
+    
+    .albumes {
+        grid-template-columns: repeat(1, 1fr); 
+        grid-template-rows: repeat(6, 1fr); 
+    }
+    
+    }
+    
+    /* Estilos generales que aplican a todas las resoluciones */
+    /* Agrega aquí tus estilos generales que aplican en todas las resoluciones */
+    
+    
+    
+    /* Resto de estilos específicos para esta vista */
+    /* Agrega aquí los estilos específicos para esta vista */
+    

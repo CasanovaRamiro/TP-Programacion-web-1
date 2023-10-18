@@ -1,6 +1,7 @@
 
 html{
 height: auto;
+overflow-x: hidden;
 }
 body{
     background-color: black;
