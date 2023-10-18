@@ -232,6 +232,10 @@
         width: 23%;
     }
     
+    .albumes {
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: repeat(3, 1fr); 
+    }
 
 }
 
@@ -252,10 +256,11 @@
         align-items: center;
     }
 
-   .albumes {
-        grid-template-columns: repeat(2, 1fr); /* 3 columnas de tamaño igual */
-        grid-template-rows: repeat(3, 1fr); /* 4 filas de tamaño igual */
+    .albumes {
+        grid-template-columns: repeat(1, 1fr); 
+        grid-template-rows: repeat(6, 1fr); 
     }
+   
 }
 
 /* Estilos generales que aplican a todas las resoluciones */
