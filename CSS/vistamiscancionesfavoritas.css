@@ -1,118 +1,17 @@
-header{
-  position: relative;
-  height: 120px;
-  margin-left: 21%;
-  border: 1px solid black;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 
-header span {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: space-between;
-}
-
-h1{
-  flex: 1;
-  vertical-align: middle;
-}
-
-h2{
-  white-space: nowrap;
-  vertical-align: middle;
-}
-
-.cerrarsesion{
-  vertical-align: middle;
-  width: auto;
-}
-
-.imgperfil{
-  height: 50px;
-  width: 50px;
-  align-items: end;
-  padding: 10px;
-}
-
-.imgperfil img {
-  border: #000 2px solid;
-}
-
-.buscador{
-    position: relative;
-    top: -60%;
-}
-
-.buscadorinput{
-    width: 300px;
-}
-
-
-nav{
-  position: absolute;
-  width: 19%;
-  top: 1px;
-  height:20%;
-  margin-bottom: 0%;
-  z-index: 2;
-}
-
-ul{
-  border: 1px solid black;
-  height: 50%;
-  margin: 0;
-}
-
-ul:hover {
-  background-color: #992323; /* Cambia el color de fondo al pasar el mouse por encima */
-}
-
-li{
-  list-style-type: none;
-  margin-left: -14%;
-  margin-top: 10%;
-}
-
-.sectionimgbajonav{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    border: 1px black solid;
-    margin-top: 15%;
-    width: 19%;
-    height: 300px;
-    z-index: 1;
-    overflow: hidden;
-}
-
-.imagenbajonav{
-    position: relative;
-    height: 100%;
-    width: 100%;
-}
-
-
-
+.navegador {margin-right: 20px;}
 .canciones {
-    position: relative;
     display: grid;
     grid-template-columns: 10% 40% 30% 10% 10%;
     grid-template-rows: repeat(10, 10%);
-    margin-left: 20%;
-    margin-top: -33%; /* Esto puede variar según tu diseño */
-    height: 400px; /* Esto limita la altura del contenedor */
-    width: 80%;
+    height: 480px; /* Esto limita la altura del contenedor */
+    width: 80vw;
     overflow-y: scroll; /* Agrega una barra de desplazamiento vertical */
     gap: 0px; /* Separación entre las celdas */
-    z-index: 1;
-    border: 1px solid black;
 }
 
 .article-canciones {
-    border: 1px solid red;
+    border: 1px solid rgba(255, 0, 0, 0.596);
     position: relative;
     text-align: center;
 }
@@ -128,15 +27,6 @@ li{
     right: 10%;
 }
 
-.reproductor{
-    border: 1px solid black;
-    margin-left: auto;
-    width: 75%;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-}
-
 
 .estrella-cancion{
     position: absolute;
@@ -144,170 +34,20 @@ li{
     top: 3%;
 }
 
+.reproductor{
+    width: 90%;
+}
+
 /* Estilos para tablet (ancho máximo de 768px) */
 @media screen and (max-width: 768px) {
-    header {
-      width: 100%; /* Cambiar el ancho del encabezado para ocupar toda la pantalla */
-      margin-left: 0; /* Eliminar el margen izquierdo */
-      justify-content: center; /* Centrar elementos en el encabezado */
-    }
-  
-    h2 {
-      width: auto; /* Reestablecer el ancho del nombre de usuario */
-      margin-top: 10px; /* Agregar un espacio entre el título y el nombre de usuario */
-      top: -50%;
-    }
-  
-    .cerrarsesion {
-      position: relative; /* Cambiar la posición a relativa */
-      left: auto; /* Eliminar la posición izquierda */
-      top: auto; /* Eliminar la posición superior */
-      margin-top: 10px; /* Agregar un espacio entre el nombre de usuario y "Cerrar sesión" */
-    }
-  
-    .imgperfil {
-      width: 50px; /* Redimensionar la imagen de perfil */
-      top: 10px; /* Aumentar la distancia superior */
-    }
-  
-    nav {
-      position: relative;
-      top: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-around;
-  }
-
-  ul {
-      margin-top: 0;
-  }
-
-  li {
-      margin-left: 0;
-      margin-top: 5%;
-  }
-
-  .sectionimgbajonav {
-      width: 100%;
-      margin-top: 5%;
-  }
   
     .canciones {
       margin-left: 0; /* Eliminar el margen izquierdo */
       margin-top: 0; /* Eliminar el margen superior */
       width: 100%; /* Cambiar el ancho de la sección de canciones */
       height: auto; /* Cambiar la altura a automática */
+      margin: 20px;
     }
-
-    footer{
-        display: none;
-    }
-    .reproductor{
-      width: 80%;
-      margin-right: auto;
-    }
+  
   }
   
-  /* Estilos para smartphone (ancho máximo de 480px) */
-  @media screen and (max-width: 480px) {
-    header {
-      height: 80px; /* Reducir la altura del encabezado */
-    }
-  
-    h1 {
-      font-size: 24px; /* Reducir el tamaño del título principal */
-    }
-  
-    h2 {
-      font-size: 16px; /* Reducir el tamaño del nombre de usuario */
-    }
-  
-    .cerrarsesion {
-      font-size: 14px; /* Reducir el tamaño del enlace "Cerrar sesión" */
-    }
-  
-    .imgperfil {
-      width: 30px; /* Redimensionar la imagen de perfil */
-    }
-  
-    nav {
-      height: auto; /* Cambiar la altura de la barra de navegación a automática */
-    }
-  
-    ul {
-      height: auto; /* Cambiar la altura de las listas a automática */
-    }
-  
-    li {
-      margin-left: 0; /* Eliminar el margen izquierdo */
-      margin-top: 5px; /* Agregar un espacio entre los elementos de la lista */
-    }
-  
-    .sectionimgbajonav {
-      margin-top: 10px; /* Agregar un espacio entre la sección de imagen y la lista de canciones */
-    }
-  
-    .canciones {
-      margin-top: 0; /* Eliminar el margen superior */
-      height: auto; /* Cambiar la altura de la sección de canciones a automática */
-    }
-  
-    .article-canciones {
-      font-size: 12px; /* Reducir el tamaño del texto de las canciones */
-    }
-  
-    .play-cancion {
-      top: 15px; /* Ajustar la posición de los íconos de reproducción */
-    }
-  
-    .estrella-cancion {
-      top: 5px; /* Ajustar la posición de los íconos de estrella */
-    }
-
-    footer{
-        display: none;
-    }
-   
-  }
-  
-
-
-  body {
-    background-color: #000; /* Fondo negro */
-    color: #800080; /* Texto en púrpura */
-}
-
-header {
-    background-color: #800080; /* Fondo púrpura */
-    color: #000; /* Texto en negro */
-    border-color: #000; /* Borde en negro */
-}
-
-
-.sectionimgbajonav {
-    border: 1px solid #800080; /* Borde en púrpura */
-}
-
-.canciones {
-    border: 1px solid #800080; /* Borde en púrpura */
-}
-
-.reproductor {
-    background-color: #800080; /* Fondo púrpura */
-    border-color: #000; /* Borde en negro */
-}
-
-.play, .circle, .square {
-  color: #000; /* Iconos en negro */
-}
-
-ul{
-  border: 1px solid black;
-}
-
-a {
-  display: flex;
-  height: 100%;
-  align-items: start;
-  vertical-align: center;
-}
