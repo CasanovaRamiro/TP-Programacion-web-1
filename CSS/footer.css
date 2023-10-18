@@ -1,21 +1,14 @@
-body{
-    display:flex;
-    flex-direction:column;
-    justify-content: flex-end;
-    width:auto;
-    overflow-x: hidden;
-}
 footer{
     background-color: purple;
     width: 100%;
+    margin: auto;
     color: white;
     text-align: center;
-    position: relative;
     padding: 1px;
     justify-items: center;
     text-align: center;
-    left: 10px;
-    right: 10px;
+    overflow: scroll;
+
 }
 
 .integrantes{
@@ -30,4 +23,8 @@ footer{
     padding: 5px;
     margin: 5px;
     border-radius: 5px;
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+    max-height: 20px;
 }
