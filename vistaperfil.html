@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/vistaperfil.css">
     <link rel="stylesheet" href="CSS/footer.css">
-    <title>Vista Perfil</title>
+    <title>Pantalla Principal</title>
 </head>
-
-<body>
+<body class="body">
     <header>
-    <h1></h1>
+        <h1> </h1>
         <span>
             <h2>Nombre de usuario</h2>
             <a class="cerrarsesion" href="index.html">Cerrar sesion</a> 
@@ -20,7 +18,7 @@
     </header>
     <main>
         <section class="formulario">
-            <form action="">
+            <form action="#" method="post">
                 <article>
                     <label for="usuario">Usuario</label>
                     <input type="text" name=usuario id="usuario" placeholder="Usuario">
@@ -42,15 +40,16 @@
                     <input type="email" name="email" id="email" placeholder="e-mail">
                 </article>
             </form>
-            <a class="linkpremium" href="planespremium.html">Premium</a>
-            <a class="linkeliminarusuario" href="index.html">Eliminar usuario</a>
+            <a href="planespremium.html">Premium</a>
+            <a href="index.html">Eliminar usuario</a>
         </section>
         <section class="botones">
-            <a href="vistapantallaprincipa.html"><button>Volver al home</button></a>
-            <a href=""><button>Guardar</button></a>
+            <a class = "boton" href="vistapantallaprincipa.html"><button>Volver al home</button></a>
+            <a class = "boton" href=""><button>Guardar</button></a>
         </section>
     </main>
-    <!-- Footer -->
-    <iframe src="./reusables/footer.html" frameborder="0" scrolling="no" width="100%" height="200"></iframe></body></body>
 
+<!-- Footer -->
+<iframe src="./reusables/footer.html" frameborder="0" scrolling="no" width="100%" height="auto"></iframe>    <script src="https://kit.fontawesome.com/258f4c98cc.js" crossorigin="anonymous"></script>
+</body>
 </html>
