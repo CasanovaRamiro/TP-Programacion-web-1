@@ -135,19 +135,17 @@ i{
 .estrella{
     display: grid;
     grid-column: 2;
-    /* width:100%;
-    height: 10%; */
     position: absolute;
-    align-self: center;
-    /* right: 35%;
-    top: 5%; */
+    align-self: start;
+    margin: 2em 1em 1em 27em;
 }
 .estrella-album{
-    /* background-color: blueviolet; */
+    background-color: pink;
     display: grid;
     grid-column: 2;
     width: 100%;
-    margin: 5% 300% 1220% 1250%;
+    height: 10%;
+    position: absolute;
 }
 .estrella-cancion{
     position: absolute;
@@ -236,6 +234,14 @@ i{
         height: 100px;
         width: 100px;
     }
+    .imagen{
+        display: flex;
+        position: relative;
+        align-self: center;
+    }
+    .image{
+        width: 100%;
+    }
     img{
         width: 100%;
     }
@@ -287,6 +293,13 @@ i{
         overflow-x: hidden;
         gap: 0px; /* Separación entre las celdas */
         margin: 0px 0px;
+    }
+    .estrella{
+        display: grid;
+        grid-column: 2;
+        position: absolute;
+        align-self: start;
+        margin: 2em 1em 1em 19em;
     }
     .reproductor{
         display: flex;
