@@ -31,8 +31,9 @@ html{
         display: flex;
         flex-direction: column;
         justify-content: stretch;
-        height: 30%;
         margin: 2% 0%;
+        position: absolute;
+        bottom: 0%;
     }
     
     /* Header */

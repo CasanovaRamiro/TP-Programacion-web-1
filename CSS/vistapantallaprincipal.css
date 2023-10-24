@@ -128,7 +128,7 @@
 
     .sectionimgbajonav article {
         max-height: 200px;
-        overflow: scroll;
+        overflow: hidden;
     }
     
     /* Fin NAV */
