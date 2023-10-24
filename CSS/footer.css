@@ -1,14 +1,23 @@
+html{
+    height: 100%;
+}
+body{
+    margin: auto;
+    height: 100%;
+}
 footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: purple;
     width: 100%;
-    margin: auto;
+    height: 100%;
     color: white;
     text-align: center;
-    padding: 1px;
     justify-items: center;
     text-align: center;
-    overflow: scroll;
-
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .integrantes{
@@ -24,7 +33,26 @@ footer{
     margin: 5px;
     border-radius: 5px;
     white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+    text-overflow: ellipsis;
     max-height: 20px;
+}
+@media screen and (max-width: 768px) {
+    .integrantes{
+        display: flex;
+        flex-direction:column;
+        justify-content: flex-end;
+    }
+    .integrante {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: black;
+        color: white;
+        padding: 5px;
+        margin: 5px;
+        border-radius: 5px;
+        white-space: nowrap;
+        text-overflow:clip;
+        max-height: 20px;
+    }
 }
