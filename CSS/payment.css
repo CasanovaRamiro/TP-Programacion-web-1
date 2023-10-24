@@ -73,11 +73,8 @@ input{
     border: none;
 }
 iframe{
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
     position: absolute;
-    bottom: 0%;
+    margin:50em 1em 1em -1em; 
     width: 100%;
   }
 .header{

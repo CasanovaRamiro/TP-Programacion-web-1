@@ -30,8 +30,6 @@ iframe {
     display: flex;
     flex-direction: column;
     justify-content: stretch;
-    position: absolute;
-    bottom: 0%;
 }
 
 /* Header */
