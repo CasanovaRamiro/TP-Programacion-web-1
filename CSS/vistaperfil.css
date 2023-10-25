@@ -82,10 +82,19 @@ button:hover{
 .botones{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     text-align: center;
     align-items: center;
-    margin:1em;
+    gap : 10px;
+    margin: 20px;
+}
+.botones a {
+    width: 130px;
+    max-width: 30%;
+}
+
+.botones a button{
+    width: 100%;
 }
 
 .cerrarsesion{
@@ -115,19 +124,47 @@ button:hover{
 } 
 /* Fin Cuerpo Principal */
 
+/* Formulario */
 
-
-/* Estilos para los botones */
-/* input[type="button"] {
-    background-color: purple; 
-    color: black; 
-    } */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:20px
+}
+.formulario form {
+    max-width: 500px;
+    padding: 12px;
+    background-color: purple;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+} 
+.formulario article {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.formulario article label {
+    color: #000;
+    width: 30%;
+    text-align: left;
+    flex: 1;
+    padding-right: 1%;
+}
+.formulario article input {
+    padding: 1%;
+}
     
     /* Estilos para los enlaces */
 a {
 color: purple;
 display: block;
 }
+
 a:hover{
     color: white;
 }
