@@ -1,12 +1,17 @@
 
 html{
-height: auto;
+height: 100%;
 overflow-x: hidden;
+/* overflow-y: hidden; */
 }
 body{
     background-color: black;
     color: purple;
-    height: auto;
+    margin: 0px;
+    }
+.body{
+    height: 100%;
+    width: 100%;
     margin: 0px;
     }
 header {
@@ -16,20 +21,20 @@ main{
     background-color: black;
     display: flex;
     flex-direction: column;
-    justify-content: stretch;
-    padding: 5%;
-    height: 100%;
+    justify-content: center;
+    height: 70%;
 }
 article{
     padding: 1%;
 }
-footer{
+/* footer{
     margin-top: 5%;
-}
+} */
 iframe {
     display: flex;
     flex-direction: column;
-    justify-content: stretch;
+    justify-content: center;
+    height: 25%;
 }
 
 /* Header */
@@ -171,14 +176,38 @@ a:hover{
 
 /* Estilos para pantallas más pequeñas (tabletas) */
 @media (max-width: 768px) {
-.body {
-    display: grid;
-    grid-template-areas: "a"
-                        "b"
-                        "c"
-                        "d";
+.formulario form {
+    width: 100%;
+    padding: 12px;
+    background-color: purple;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+}
+.formulario article input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1%;
+    flex: 0%;
+    height: 2em;
+}
+label {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    text-align: left;
+    flex: 1;
+    padding-right: 1%;
 }
 
+iframe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 35%;
+}
 .buscadorinput{
     width: 70%;
 }
