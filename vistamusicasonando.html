@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/musicasonando.css">
-    <!-- <link rel="stylesheet" href="CSS/vistapantallaprincipal.css"> -->
+    <link rel="stylesheet" href="CSS/vistapantallaprincipal.css">
     <link rel="stylesheet" href="CSS/footer.css">
     <title>Musica sonando</title>
 </head>
-<body>
+<body class ="body">
     <header>
-        <h1>SPOTILAM</h1>
+        <h1>Musica sonando</h1>
         <span>
             <h2>Nombre de usuario</h2>
             <a class="cerrarsesion" href="index.html">Cerrar sesion</a> 
@@ -20,29 +20,23 @@
     <section class="navegador">
         <nav>
             <ul>
-                <a href="vistapantallaprincipa.html"><li>Home</li></a>
-            </ul>
-            <ul>
-                <a href="vistabuscar.html"><li>Buscar</li></a>
-            </ul>
-            <ul>
-                <a href="vistamisalbumes.html"><li>Mis albums</li></a>
-            </ul>
-            <ul>
-                <a href="vistamiscancionesfavoritass.html"><li>Mis favoritas</li></a>
+                <li><a href="vistapantallaprincipa.html">Home</a></li>
+            
+                <li><a href="vistabuscar.html">Buscar</a></li>
+            
+                <li><a href="vistamisalbumes.html">Mis albums</a></li>
+            
+                <li><a href="vistamiscancionesfavoritass.html">Mis favoritas</a></li>
             </ul>
         </nav>
         <section class="sectionimgbajonav">
-            <h1>Musica sonando</h1>
-            <div class="imagen">
-                <img class="image" src="Img/Seven spires.jpg" alt="seven spires" />
-                <div class ="estrella"><span class="estrella-album"><i class="fa-regular fa-star fa-2xl"></i></span></div>
-            </div>
+            <img class="imagenbajonav" src="Img/Seven spires.jpg" alt="">
+            <span class="estrella-cancion"><i class="fa-regular fa-star fa-2xl"></i></span>
             <article class="lorem">Segundo álbum de estudio de este cuarteto estadounidense que, tras conocerse en la escuela superior de música y saber que tenían gustos similares, iniciaron este proyecto con la idea de crear un nuevo enfoque en el que centrar el metal sinfónico. Mucho más teatral, más cinemático y bebiendo de vertientes musicales tan dispares como el power, death melódico, black, Stoner, doom e incluso música clásica.
             </article>
         </section>
     </section>
-    <div class="container-canciones">
+    <section class="container-canciones">
         <section class="canciones">
             <article class="article-canciones"><strong>Play</strong></article>
             <article class="article-canciones"><strong>Cancion</strong></article>
@@ -104,11 +98,12 @@
             <article class="article-canciones">3:30</article>
             <article class="article-canciones">1600</article>
         </section>
-    </div>
-    <section class="reproductor">
-        <span class="play"><i class="fa-solid fa-play fa-2xl"></i></span>
-        <span class="circle"><i class="fa-solid fa-circle fa-2xl"></i></span>
-        <span class="square"><i class="fa-regular fa-square fa-2xl"></i></span>
+    
+        <section class="reproductor">
+            <span class="play"><i class="fa-solid fa-play fa-2xl"></i></span>
+            <span class="circle"><i class="fa-solid fa-circle fa-2xl"></i></span>
+            <span class="square"><i class="fa-regular fa-square fa-2xl"></i></span>
+        </section>
     </section>
     <!-- Footer -->
     <iframe src="./reusables/footer.html" frameborder="0" scrolling="no" width="100%" height="200"></iframe></body>
