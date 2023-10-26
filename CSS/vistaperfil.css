@@ -208,9 +208,6 @@ iframe {
     justify-content: center;
     height: 35%;
 }
-.buscadorinput{
-    width: 70%;
-}
 
 ul {
     display: flex;
@@ -219,11 +216,6 @@ ul {
 
 li {
     width: 23%;
-}
-
-.albumes {
-    grid-template-columns: repeat(2, 1fr); 
-    grid-template-rows: repeat(3, 1fr); 
 }
 
 }

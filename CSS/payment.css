@@ -5,7 +5,6 @@ body{
     background-color: black;
     width: 100%;
     margin-left: auto;
-    font-family:sans-serif;
     margin-top:-1px;
     margin-bottom:1px;
     overflow-x: hidden;
@@ -13,6 +12,7 @@ body{
 html{
     background-color: black;
     height:auto;
+    width: auto;
 }
 main{
     display:flex;
@@ -25,7 +25,7 @@ aside{
     justify-content: flex-start;
     flex-wrap: wrap;
     text-align: justify;
-    width: 120%;
+    width: 100%;
     padding: 5%;
     color:white;
 }
@@ -72,11 +72,13 @@ input{
     border-radius: 1em 1em 1em 1em;
     border: none;
 }
-iframe{
-    position: absolute;
-    margin:50em 1em 1em -1em; 
-    width: 100%;
-  }
+iframe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50%;
+    margin-top: 1%;
+}
 .header{
     display: flex;
     flex-direction: row;
@@ -106,7 +108,6 @@ iframe{
 }
 
 .imgperfil{
-    border-radius: 100%;
     margin: 4px 4px 1px 1px;
     padding:1%;
     height: 90%;
@@ -119,7 +120,7 @@ iframe{
     padding: 1%;
 }
 .inputs{
-    padding: 1%;
+    padding: 10%;
 }
 .integrantes{
     display: grid;
@@ -217,4 +218,90 @@ iframe{
     grid-row-start: 4;
     padding: 1%;
     background-color: black;
+}
+@media screen and (max-width:820px) {
+    .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: purple;
+        color: black;
+        height: 4em;
+    }
+    p{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .fotoPlanElegido img{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 60%;
+        padding: 1%;
+    }
+    img{
+        height: 500px;
+    }
+    .payment-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-color: black;
+        height: 100%;
+        width: 100%;
+    }
+    aside{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        text-align: justify;
+        width: 90%;
+        color:white;
+    }
+    iframe {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 20em;
+        margin-top: 10%;
+    }
+    .container-grid2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: black;
+        width: 100%;
+        margin: 0px;
+        color: white;
+    }
+    .inputs{
+        padding: 1% 1% 10% 1%;
+    }
+    input{
+        height: 2em;
+        width: 100%;
+        margin: 1%;
+    }
+    .item-9{
+        margin-top: 10%;
+    }
+}
+@media screen and (max-width: 480px) {
+    .container-grid2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: black;
+        width: 100%;
+        margin: auto;
+        color: white;
+    }
+    .inputs{
+        padding: 10%;
+    }
+    input{
+        width: 100%;
+    }
 }
