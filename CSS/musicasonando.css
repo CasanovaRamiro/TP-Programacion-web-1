@@ -15,7 +15,12 @@
     position: relative;
     text-align: center;
 }
-
+.imagenbajonav{
+    max-height: 1%;
+    text-align: justify;
+    overflow: scroll;
+    text-wrap: wrap;
+}
 .play-cancion{
     position: absolute;
     right: 50%;
@@ -33,14 +38,24 @@
     right: 1%;
     top: 3%;
 }
-
+.lorem{
+    max-height: 10%;
+    text-align: justify;
+}
 .reproductor{
     width: 90%;
 }
 
 /* Estilos para tablet (ancho máximo de 768px) */
-@media screen and (max-width: 768px) {
-  
+@media screen and (max-width: 820px) {
+    .container-canciones{
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        margin: 0px 0px;
+    }
     .canciones {
       margin-left: 0; /* Eliminar el margen izquierdo */
       margin-top: 0; /* Eliminar el margen superior */
@@ -48,6 +63,12 @@
       height: auto; /* Cambiar la altura a automática */
       margin: 20px;
     }
-  
+    iframe {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 20em;
+        margin-top: 10%;
+    }
   }
   
