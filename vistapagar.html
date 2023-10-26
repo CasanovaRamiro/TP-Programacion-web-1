@@ -7,8 +7,7 @@
     <title>Abona tu membresía</title>
 </head>
 <body>
-    <main>
-        <section class="header">
+    <section class="header">
             <div class="profile">
                 <h2>Nombre Apellido</h2>
                 <a href="index.html"><p>Cerrar sesión</p></a>
@@ -17,6 +16,7 @@
                 <img class="imgperfil" src="https://picsum.photos/50/50" alt="imagen perfil">
             </a>
         </section>
+    <main>
         <section class="title">
             <h1>¡Felicitaciones! Elegiste abonar el plan <...plan...></h1>
         </section>
@@ -29,45 +29,45 @@
             <br />
         </section>
         <section class="inputs">
-            <form action="#" method="post">
+            <form action="vistapantallaprincipa.html" method="post">
                 <div class="container-grid2">
                     <div class="item-1">
                         <label for="nombre">Nombre y apellido</label>
                         
                     </div>
-                    <div class="item-2">
-                        <label for="card-number">Numero tarjeta</label>
-                    </div>
                     <div class="item-3">
                         <input type="text" placeholder="ingresa tu nombre" name="nombre"></input>
+                    </div>
+                    <div class="item-2">
+                        <label for="card-number">Numero tarjeta</label>
                     </div>
                     <div class="item-4">
                         <input type="text" placeholder="ej 1234 1234 1234 1234" name="card-number"></input>
                     </div>
                     <div class="item-5">
-                        Vencimiento
+                        <label for="vencimiento">Vencimiento</label>
                     </div>
                     <div class="item-6">
                         <input type="date" placeholder="ej 23-10-2023" name="vencimiento"></input>
                     </div>
                     <div class="item-7">
-                        CVC
+                        <label for="cvc">CVC</label>
                     </div>
                     <div class="item-8">
                         <input type="text" placeholder="ej 123" name="cvc"></input>
                     </div>
                     <div class="item-9">
-                        <a href="vistapantallaprincipa.html"><input type="button" value="Pagar"></a>
+                        <a href="vistapantallaprincipa.html"><button type="submit">Registrarme</button></a>
                     </div>
                     <div class="item-10">
-                        <a href="vistapantallaprincipa.html"><input type="button" value="Cancelar"></a>
+                        <a href="vistapantallaprincipa.html"><button>Cancelar</button></a>
                     </div>
                 </div>
             </form>
             <br />
         </section>
-        <iframe src="./reusables/footer.html" frameborder="0" scrolling="no"></iframe>
-        <script src="https://kit.fontawesome.com/258f4c98cc.js" crossorigin="anonymous"></script>
     </main>
+    <iframe src="./reusables/footer.html" frameborder="0" scrolling="no" width="100%"></iframe>
+    <script src="https://kit.fontawesome.com/258f4c98cc.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -3,135 +3,219 @@ html{
     height: 100%;
     width: auto;
     overflow-x: hidden;
-    }
-    body{
-        background-color: black;
-        color: purple;
-        height: auto;
-        margin: 0px;
-        width: 100%;
-        }
-    header {
-        grid-area: a;
-    }
-    main{
-        background-color: black;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        text-align: center;
-        padding: 1%;
-        height: 70%;
-    }
-    article{
-        padding: 1%;
-    }
+}
+.body body{
+    background-color: black;
+    color: purple;
+    height: auto;
+    margin: 0px;
+    width: 100%;
+    overflow-y: scroll;
+}
+h2{
+    height: 2%;
+    margin: 1px;
+}
+a #cerrar{
+    margin: 1.5em;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    color: black;
+    text-decoration: none;
+}
+#cerrar:hover{
+    color: white;
+}
+    /* Estilos para los enlaces */
+a {
+    color: purple;
+    text-decoration: none;
+    /* display: block; */
+}
 
-    iframe {
-        display: flex;
-        flex-direction: column;
-        justify-content: stretch;
-        height: 30%;
-        margin: 2% 0%;
-    }
+a:hover{
+    color: white;
+    text-decoration: none;
+}
+p{
+    color: purple;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1px;
+    text-align: center;
+}
+header {
+    background-color: black;
+    color: purple;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: purple;
+    color: black;
+    height: 4em;
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 2em;
+}
+.imgperfil{
+    height: 50px;
+    width: 50px;
+    align-items: end;
+    margin: 4px 4px 1px 1px;
+    height: 90%;
+}
+
+main{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 1%;
+    height: 70%;
+}
+article{
+    padding: 1%;
+}
+
+iframe {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 20%;
+    margin-top: 4%;
+    /* margin: 2% 0%; */
+}
     
-    /* Header */
-    header{
+/* Header */
+
+h1{
+    flex: 1;
+    vertical-align: middle;
+}
+
+.premium{
+    color: white;
+    font-size: 2em;
+}
+h3{
+    color: gray;
+}
+button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: purple;
+    color: white;
+    height: auto;
+    width: auto;
+    border:none;
+    border-radius:2em 2em 2em 2em;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 1em 1em 1em 1em;
+}
+
+button:hover{
+    background-color: white;
+    color: purple;
+}
+.botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    margin:1em;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* Estilos para pantallas más pequeñas (tabletas) */
+@media (max-width: 821px) {
+    h2{
+        height: 2%;
+        margin: 1px;
+    }
+    a #cerrar{
+        margin: 1.5em;
         position: relative;
-        width: 100%;
-        border: 1px solid black;
         display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
+        flex-direction: row;
+        justify-content: flex-end;
+        color: black;
+        text-decoration: none;
+    }
+    #cerrar:hover{
+        color: white;
+    }
+        /* Estilos para los enlaces */
+    a {
+        color: purple;
+        text-decoration: none;
+        /* display: block; */
     }
     
-    header span {
+    a:hover{
+        color: white;
+        text-decoration: none;
+    }
+    p{
+        color: purple;
         display: flex;
         flex-direction: column;
-        align-items: start;
-        justify-content: space-between;
-    }
-    
-    h1{
-        flex: 1;
-        vertical-align: middle;
-    }
-    
-    .premium{
-        color: white;
-        font-size: 2em;
-    }
-
-    h3{
-        color: gray;
-    }
-    button{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        background-color: purple;
-        color: white;
-        height: auto;
-        width: auto;
-        border:none;
-        border-radius:2em 2em 2em 2em;
+        justify-content: center;
+        margin: 1px;
         text-align: center;
-        align-items: center;
-        text-decoration: none;
-        padding: 1em 1em 1em 1em;
     }
-    
-    button:hover{
-        background-color: white;
+    header {
+        background-color: black;
         color: purple;
     }
-    .botones{
+    .header{
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
-        text-align: center;
-        align-items: center;
-        margin:1em;
+        justify-content: flex-end;
+        background-color: purple;
+        color: black;
+        height: 4em;
     }
-    
-    .cerrarsesion{
-        vertical-align: middle;
-        width: auto;
+    .profile{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 2em;
     }
-    
     .imgperfil{
         height: 50px;
         width: 50px;
         align-items: end;
-        padding: 10px;
+        margin: 4px 4px 1px 1px;
+        height: 90%;
     }
-    
-    .imgperfil img {
-        border: #000 2px solid;
-    }
-    .formulario{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-        
-        /* Estilos para los enlaces */
-    a {
-    color: purple;
-    display: block;
-    }
-    a:hover{
-        color: white;
-    }
-    
-    /* Estilos para pantallas más pequeñas (tabletas) */
-    @media (max-width: 821px) {
+    /* span{
+        width: 100%;
+        height: 100%;
+    } */
     body {
         display: flex;
         flex-direction: column;
-        justify-content: stretch;
-        font-size: 2em;
+        justify-content: center;
+        /* font-size: 2em; */
         overflow-x: hidden;
     }
     .formulario{
@@ -143,38 +227,53 @@ html{
         height: 10em;
         width: 10em;
     }
-    
+    iframe {
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 30%;
+        margin-top: 1%;
     }
-    
-    /* Estilos para pantallas aún más pequeñas (smartphones) */
-    @media screen and (max-width: 480px) {
-    
+    main{
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 1%;
+        height: 100%;
+    }
+}
+
+/* Estilos para pantallas aún más pequeñas (smartphones) */
+@media screen and (max-width: 480px) {
+
     header {
         display: flex;
         flex-direction: column;
     }
-    
+
     header h1 {
         width: 100%;
         text-align: center;
     }
-    
+
     header span {
         align-items: center;
     }
-    
-    .albumes {
+
+    /* .albumes {
         grid-template-columns: repeat(1, 1fr); 
         grid-template-rows: repeat(6, 1fr); 
-    }
-    
-    }
-    
-    /* Estilos generales que aplican a todas las resoluciones */
-    /* Agrega aquí tus estilos generales que aplican en todas las resoluciones */
-    
-    
-    
-    /* Resto de estilos específicos para esta vista */
-    /* Agrega aquí los estilos específicos para esta vista */
-    
+    } */
+
+}
+
+/* Estilos generales que aplican a todas las resoluciones */
+/* Agrega aquí tus estilos generales que aplican en todas las resoluciones */
+
+
+
+/* Resto de estilos específicos para esta vista */
+/* Agrega aquí los estilos específicos para esta vista */
