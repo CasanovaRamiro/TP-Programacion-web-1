@@ -45,8 +45,8 @@ button{
     background-color: purple;
 }
 button:hover{
-    background-color: blueviolet;
-    color: white;
+    background-color: white;
+    color: purple;
 }
 a{
     color: black;
