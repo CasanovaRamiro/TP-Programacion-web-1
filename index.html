@@ -14,7 +14,7 @@
             <form action =# action="post">
                 <input type="text" name="usuario" id="usuario" placeholder="Coloca tu Usuario">
                 <input type="password" name="contraseña" id="contraseña" placeholder="Aquí tu Contraseña">
-                <a href="vistapantallaprincipa.html"><input class="boton" type="button" value="Iniciar Sesión"></a>
+                <input class="boton" type="button" value="Iniciar Sesión" onclick="handleLogin()">
             </form>
             <section class="registro">
                 <p>¿No tienes usuario? </p><a href="vistaregistro.html">Registrarse</a>
@@ -22,5 +22,6 @@
         </main>
         <!-- Footer -->
         <iframe src="./reusables/footer.html" frameborder="0" scrolling="no" width="100%" height="auto"></iframe>
+        <script src="./index.js"></script>
     </body>
 </html>
