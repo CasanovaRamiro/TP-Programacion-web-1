@@ -1,4 +1,7 @@
+// import { getUserEnSesion } from '../reusables/getNombreUsuario.js'
 const favoritos = [];
+const USER = JSON.parse(localStorage.getItem("session"));
+const USUARIOS_REGISTRADOS = JSON.parse(localStorage.getItem("usuariosRegistrados"));
 
 document.addEventListener('mouseover', (event) => {
     //SI EL MOUSE SE POSA SOBRE LA ESTRELLA, SE AGITA POR 1 SEG
@@ -24,13 +27,21 @@ document.addEventListener('click', (event) => {
         var star = document.getElementById(event.target.id);
         if(star.classList.contains("fa-solid")){
            star.classList.remove("fa-solid");
-           favoritos.pop('1');
-           console.log(favoritos);
+           USER.albumsFav.splice(favoritos.indexOf(event.target.id), 1);
+           localStorage.setItem('session', JSON.stringify(USER));
+           USUARIOS_REGISTRADOS[USER.usuario] = USER;
+           localStorage.setItem('usuariosRegistrados', JSON.stringify(USUARIOS_REGISTRADOS))
+           console.log(USER);
+           console.log(USUARIOS_REGISTRADOS);
         }
         else{
            star.classList.add("fa-solid");
-           favoritos.push('1');
-           console.log(favoritos);
+           USER.albumsFav.push(event.target.id);
+           localStorage.setItem('session', JSON.stringify(USER));
+           USUARIOS_REGISTRADOS[USER.usuario] = USER;
+           localStorage.setItem('usuariosRegistrados', JSON.stringify(USUARIOS_REGISTRADOS))
+           console.log(USER);
+           console.log(USUARIOS_REGISTRADOS);
         }
      }
 });
