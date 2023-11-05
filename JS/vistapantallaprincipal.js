@@ -1,4 +1,4 @@
-// import { getUserEnSesion } from '../reusables/getNombreUsuario.js'
+
 const favoritos = [];
 const USER = JSON.parse(localStorage.getItem("session"));
 const USUARIOS_REGISTRADOS = JSON.parse(localStorage.getItem("usuariosRegistrados"));
@@ -7,7 +7,9 @@ if(USER.albumsFav.length != 0){
     let albums = USER.albumsFav;
     albums.forEach(element => {
         let star = document.getElementById(element);
-        star.classList.add('fa-solid');
+        if(star != null){
+         star.classList.add('fa-solid');
+        }
     });
 }
 
