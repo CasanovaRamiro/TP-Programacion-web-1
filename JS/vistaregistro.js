@@ -4,7 +4,8 @@ const USERDATA = {
     fechanacimiento: "",
     email: "",
     albumsFav: [],
-    cancionesFav: []
+    cancionesFav: [],
+    logueado: false
 };
 function handleRegistration() {
     // Obtén los datos del formulario
@@ -45,7 +46,8 @@ function handleRegistration() {
         fechanacimiento: fechaNacimiento,
         email: email,
         albumsFav: [],
-        cancionesFav: []
+        cancionesFav: [],
+        logueado: false
     };
 
     // Agrega el usuario a la lista de usuarios registrados

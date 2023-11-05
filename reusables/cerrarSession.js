@@ -2,6 +2,13 @@
 function handleLogout(event) {
     event.preventDefault(); // Evita que el enlace redireccione automáticamente
 
+    let datosUsuario = JSON.parse(localStorage.getItem("session"));
+    let usuariosRegistrados = JSON.parse(localStorage.getItem("usuariosRegistrados"));
+    if(datosUsuario.logueado){
+        datosUsuario.logueado = false;
+        usuariosRegistrados[datosUsuario.usuario] = datosUsuario;
+        localStorage.setItem("usuariosRegistrados", JSON.stringify(usuariosRegistrados));
+    }
     // Elimina los datos de sesión del localStorage
     localStorage.removeItem("session");
 

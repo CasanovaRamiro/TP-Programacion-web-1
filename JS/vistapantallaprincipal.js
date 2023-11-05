@@ -3,6 +3,14 @@ const favoritos = [];
 const USER = JSON.parse(localStorage.getItem("session"));
 const USUARIOS_REGISTRADOS = JSON.parse(localStorage.getItem("usuariosRegistrados"));
 
+if(USER.albumsFav.length != 0){
+    let albums = USER.albumsFav;
+    albums.forEach(element => {
+        let star = document.getElementById(element);
+        star.classList.add('fa-solid');
+    });
+}
+
 document.addEventListener('mouseover', (event) => {
     //SI EL MOUSE SE POSA SOBRE LA ESTRELLA, SE AGITA POR 1 SEG
      if (document.getElementById(event.target.id)) {
@@ -27,12 +35,12 @@ document.addEventListener('click', (event) => {
         var star = document.getElementById(event.target.id);
         if(star.classList.contains("fa-solid")){
            star.classList.remove("fa-solid");
-           USER.albumsFav.splice(favoritos.indexOf(event.target.id), 1);
+           let index = USER.albumsFav.indexOf(event.target.id);
+           USER.albumsFav.splice( index, 1);
            localStorage.setItem('session', JSON.stringify(USER));
            USUARIOS_REGISTRADOS[USER.usuario] = USER;
            localStorage.setItem('usuariosRegistrados', JSON.stringify(USUARIOS_REGISTRADOS))
-           console.log(USER);
-           console.log(USUARIOS_REGISTRADOS);
+           console.log(JSON.stringify(USER));
         }
         else{
            star.classList.add("fa-solid");
@@ -40,8 +48,7 @@ document.addEventListener('click', (event) => {
            localStorage.setItem('session', JSON.stringify(USER));
            USUARIOS_REGISTRADOS[USER.usuario] = USER;
            localStorage.setItem('usuariosRegistrados', JSON.stringify(USUARIOS_REGISTRADOS))
-           console.log(USER);
-           console.log(USUARIOS_REGISTRADOS);
+           console.log(JSON.stringify(USER));
         }
      }
 });
