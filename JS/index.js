@@ -16,7 +16,10 @@ function handleLogin() {
 
         if (contraseñaTransformada === contraseñaAlmacenada) {
             // Iniciar la sesión del usuario en localStorage
+            datosUsuario.logueado = true;
             localStorage.setItem("session", JSON.stringify(datosUsuario));
+
+            localStorage.setItem("usuariosRegistrados", JSON.stringify(usuariosRegistrados))
             // Redirigir a la página principal
             window.location.href = "vistapantallaprincipa.html";
         } else {

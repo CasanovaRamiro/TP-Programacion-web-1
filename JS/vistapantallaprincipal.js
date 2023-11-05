@@ -1,4 +1,17 @@
+
 const favoritos = [];
+const USER = JSON.parse(localStorage.getItem("session"));
+const USUARIOS_REGISTRADOS = JSON.parse(localStorage.getItem("usuariosRegistrados"));
+
+if(USER.albumsFav.length != 0){
+    let albums = USER.albumsFav;
+    albums.forEach(element => {
+        let star = document.getElementById(element);
+        if(star != null){
+         star.classList.add('fa-solid');
+        }
+    });
+}
 
 document.addEventListener('mouseover', (event) => {
     //SI EL MOUSE SE POSA SOBRE LA ESTRELLA, SE AGITA POR 1 SEG
@@ -24,13 +37,20 @@ document.addEventListener('click', (event) => {
         var star = document.getElementById(event.target.id);
         if(star.classList.contains("fa-solid")){
            star.classList.remove("fa-solid");
-           favoritos.pop('1');
-           console.log(favoritos);
+           let index = USER.albumsFav.indexOf(event.target.id);
+           USER.albumsFav.splice( index, 1);
+           localStorage.setItem('session', JSON.stringify(USER));
+           USUARIOS_REGISTRADOS[USER.usuario] = USER;
+           localStorage.setItem('usuariosRegistrados', JSON.stringify(USUARIOS_REGISTRADOS))
+           console.log(JSON.stringify(USER));
         }
         else{
            star.classList.add("fa-solid");
-           favoritos.push('1');
-           console.log(favoritos);
+           USER.albumsFav.push(event.target.id);
+           localStorage.setItem('session', JSON.stringify(USER));
+           USUARIOS_REGISTRADOS[USER.usuario] = USER;
+           localStorage.setItem('usuariosRegistrados', JSON.stringify(USUARIOS_REGISTRADOS))
+           console.log(JSON.stringify(USER));
         }
      }
 });

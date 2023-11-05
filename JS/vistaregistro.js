@@ -1,3 +1,12 @@
+const USERDATA = {
+    usuario: "",
+    contraseña: "",
+    fechanacimiento: "",
+    email: "",
+    albumsFav: [],
+    cancionesFav: [],
+    logueado: false
+};
 function handleRegistration() {
     // Obtén los datos del formulario
     let usuario = document.getElementById("usuario").value;
@@ -35,7 +44,10 @@ function handleRegistration() {
         usuario: usuario,
         contraseña: contraseñaTransformada,
         fechanacimiento: fechaNacimiento,
-        email: email
+        email: email,
+        albumsFav: [],
+        cancionesFav: [],
+        logueado: false
     };
 
     // Agrega el usuario a la lista de usuarios registrados
