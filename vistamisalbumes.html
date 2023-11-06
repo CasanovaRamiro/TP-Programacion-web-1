@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="CSS/vistapantallaprincipal.css">
 	<link rel="stylesheet" href="CSS/footer.css">
+	<link rel="stylesheet" href="CSS/vistaMisAlbumes.css">
 	<title>Mis albumes</title>
 </head>
 <body class="body">
@@ -39,7 +40,10 @@
 	</section>
 	<section class="cuerpo-principal">
 		<section class="albumes">
-			<article class="article-img">
+			<article>
+				<p id="sinAlbums" class="oculto">No existen albumes favoritos.</p>
+			</article>
+			<article class="article-img oculto">
 				<a href="vistamusicasonando.html">
 					<img class="img-albumes" src="Img/2007 - Thrash Anthems 01.jpg" alt="Destruction">
 				</a>
@@ -47,7 +51,7 @@
 					<i class="fa-regular fa-star fa-2xl" id="destruction"></i>
 				</span>
 			</article>
-			<article class="article-img">
+			<article class="article-img oculto">
 				<a href="vistamusicasonando.html">
 					<img class="img-albumes" src="Img/Burning Angel (EP).jpg" alt="Arch Enemy">
 				</a>
@@ -55,7 +59,7 @@
 					<i class="fa-regular fa-star fa-2xl" id="archEnemy"></i>
 				</span>
 			</article>
-			<article class="article-img">
+			<article class="article-img oculto">
 				<a href="vistamusicasonando.html">
 					<img class="img-albumes" src="Img/Countdown to Extinction.jpg" alt="Megadeth">
 				</a>
@@ -63,7 +67,7 @@
 					<i class="fa-regular fa-star fa-2xl" id="megadeth"></i>
 				</span>
 			</article>
-			<article class="article-img">
+			<article class="article-img oculto">
 				<a href="vistamusicasonando.html">
 					<img class="img-albumes" src="Img/Flema.jpeg" alt="Flema">
 				</a>
@@ -71,7 +75,7 @@
 					<i class="fa-regular fa-star fa-2xl" id="flema"></i>
 				</span>
 			</article>
-			<article class="article-img">
+			<article class="article-img oculto">
 				<a href="vistamusicasonando.html">
 					<img class="img-albumes" src="Img/Hermetica.jpg" alt="Hermetica">
 				</a>
@@ -79,7 +83,7 @@
 					<i class="fa-regular fa-star fa-2xl" id="hermetica"></i>
 				</span>
 			</article>
-			<article class="article-img">
+			<article class="article-img oculto">
 				<a href="vistamusicasonando.html">
 					<img class="img-albumes" src="Img/Horcas.jpg" alt="Horcas">
 				</a>
@@ -87,15 +91,15 @@
 					<i class="fa-regular fa-star fa-2xl" id="horcas"></i>
 				</span>
 			</article>
-			<article class="article-img">
+			<article class="article-img oculto">
 				<a href="vistamusicasonando.html">
 					<img class="img-albumes" src="Img/Rancid.jpeg" alt="Rancid">
 				</a>
-				<span class="estrella-album">
+				<span class="estrella-album oculto">
 					<i class="fa-regular fa-star fa-2xl" id="rancid"></i>
 				</span>
 			</article>
-			<article class="article-img">
+			<article class="article-img oculto">
 				<a href="vistamusicasonando.html">
 					<img class="img-albumes" src="Img/Kataklysm.jpg" alt="Katalysm">
 				</a>
@@ -103,7 +107,7 @@
 					<i class="fa-regular fa-star fa-2xl" id="katalysm"></i>
 				</span>
 			</article>
-			<article class="article-img">
+			<article class="article-img oculto">
 				<a href="vistamusicasonando.html">
 					<img class="img-albumes" src="Img/motorhead.jpg" alt="Motorhead">
 				</a>
@@ -111,7 +115,7 @@
 					<i class="fa-regular fa-star fa-2xl" id="motorhead"></i>
 				</span>
 			</article>
-			<article class="article-img">
+			<article class="article-img oculto">
 				<a href="vistamusicasonando.html">
 					<img class="img-albumes" src="Img/Nightwish.jpg" alt="Nightwish">
 				</a>
@@ -119,7 +123,7 @@
 					<i class="fa-regular fa-star fa-2xl" id="nightwish"></i>
 				</span>
 			</article>
-			<article class="article-img">
+			<article class="article-img oculto">
 				<a href="vistamusicasonando.html">
 					<img class="img-albumes" src="Img/Pantera.jpg" alt="Panter">
 				</a>
@@ -127,7 +131,7 @@
 					<i class="fa-regular fa-star fa-2xl" id="pantera"></i>
 				</span>
 			</article>
-			<article class="article-img">
+			<article class="article-img oculto">
 				<a href="vistamusicasonando.html">
 					<img class="img-albumes" src="Img/Sonata artica.jpg" alt="Sonata Artica">
 				</a>
@@ -148,5 +152,6 @@
 	<script src="./reusables/getNombreUsuario.js"></script>
 	<script src="./reusables/cerrarSession.js"></script>
 	<script src="./JS/vistapantallaprincipal.js"></script>
+	<script src="./JS/misAlbumes.js"></script>
 </body>
 </html>
