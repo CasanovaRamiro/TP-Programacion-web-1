@@ -42,7 +42,6 @@ document.addEventListener('click', (event) => {
            localStorage.setItem('session', JSON.stringify(USER));
            USUARIOS_REGISTRADOS[USER.usuario] = USER;
            localStorage.setItem('usuariosRegistrados', JSON.stringify(USUARIOS_REGISTRADOS))
-           console.log(JSON.stringify(USER));
         }
         else{
            star.classList.add("fa-solid");
@@ -50,7 +49,6 @@ document.addEventListener('click', (event) => {
            localStorage.setItem('session', JSON.stringify(USER));
            USUARIOS_REGISTRADOS[USER.usuario] = USER;
            localStorage.setItem('usuariosRegistrados', JSON.stringify(USUARIOS_REGISTRADOS))
-           console.log(JSON.stringify(USER));
         }
      }
 });
