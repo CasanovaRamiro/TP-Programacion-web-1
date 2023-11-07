@@ -1,51 +1,10 @@
-
 const discosDataJson = JSON.parse(JSON.stringify(canciones));
 
-// function handleClickAlbum(discoId){
-    
-//     localStorage.setItem('albumSonando', discoId);
-
-// }
-
 document.addEventListener('click', (event) => {
-    // let images = document.querySelectorAll('.img-albumes');
-    // if(images == null || images.length == 0) return;
 
     let discoId = event.target.alt;
-    // let newParrafo = "";
-    // let newImage = document.createElement("img");
-    // newImage.classList.add('imagenbajonav');
+
     if(discoId != undefined) localStorage.setItem('albumSonando', discoId);
-
-    // for (const album in images) {
-    //     if (Object.hasOwnProperty.call(images, album)) {
-    //         const element = images[album];
-
-    //         let isAlbumSelected = element.alt.toUpperCase() == discoId.toUpperCase();
-    //         if(isAlbumSelected){
-    //             newImage.alt = discoId;
-    //             newImage.src = element.src;
-    //             newParrafo = discosDataJson.discos[album].comment;
-    //         }
-    //     }
-    // }
-    
-    // let seccion = document.getElementById("sectionMusicaSonando");
-    // if(seccion){
-    //     let user  = JSON.parse(localStorage.getItem('session'));
-    //     let discosArray = user.albumsFav;
-    //     let estrella = seccion.childNodes[3].childNodes[1];
-    //     estrella.id = discoId;
-    //     let esFavorito = discosArray.includes(discoId);
-    //     if(esFavorito){
-    //         estrella.classList.add('fa-solid');
-    //     }
-    //     else{estrella.classList.remove('fa-solid');}
-
-    //     let oldImage = seccion.querySelector('#imgNav');
-    //     seccion.childNodes[5].textContent = newParrafo;
-    //     seccion.replaceChild(newImage, oldImage);
-    // }
 
 });
 
