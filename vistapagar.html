@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/payment.css">
     <script src="https://kit.fontawesome.com/258f4c98cc.js" crossorigin="anonymous"></script>
-    
     <title>Abona tu membresía</title>
 </head>
 <body>
@@ -20,13 +19,13 @@
         </section>
     <main>
         <section class="title">
-            <h1>¡Felicitaciones! Elegiste abonar el plan <...plan...></h1>
+            <h1 id = "planElegido"></h1>
         </section>
         <section class = "payment-section">
             
             <img class="fotoPlanElegido" src="Img/planElegido.png" alt="plan elegido">
             <aside>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur, aspernatur. Impedit eligendi nostrum veritatis, nemo quis quasi corporis voluptas temporibus enim saepe ullam necessitatibus consectetur autem natus perspiciatis quibusdam libero?</p>
+                <p id="descripcionPlan"></p>
             </aside>
             <br />
         </section>
@@ -38,25 +37,25 @@
                         
                     </div>
                     <div class="item-3">
-                        <input type="text" placeholder="ingresa tu nombre" name="nombre"></input>
+                        <input type="text" placeholder="ingresa tu nombre" name="nombre" id="nombre-input"></input>
                     </div>
                     <div class="item-2">
                         <label for="card-number">Numero tarjeta</label>
                     </div>
                     <div class="item-4">
-                        <input type="text" placeholder="ej 1234 1234 1234 1234" name="card-number"></input>
+                        <input type="text" placeholder="ej 1234 1234 1234 1234" name="card-number" id="card-number-input"></input>
                     </div>
                     <div class="item-5">
                         <label for="vencimiento">Vencimiento</label>
                     </div>
                     <div class="item-6">
-                        <input type="date" placeholder="ej 23-10-2023" name="vencimiento"></input>
+                        <input type="date" placeholder="ej 23-10-2023" name="vencimiento" id="vencimiento-input"></input>
                     </div>
                     <div class="item-7">
                         <label for="cvc">CVC</label>
                     </div>
                     <div class="item-8">
-                        <input type="text" placeholder="ej 123" name="cvc"></input>
+                        <input type="text" placeholder="ej 123" name="cvc" id="cvc-input"></input>
                     </div>
                     <div class="item-9">
                         <a href="vistapantallaprincipa.html"><button>Registrarme</button></a>
@@ -70,6 +69,7 @@
         </section>
     </main>
     <iframe src="./reusables/footer.html" frameborder="0" scrolling="no" width="100%"></iframe>
+    <script src="JS/vistapagar.js"></script>
     <script src="./reusables/getNombreUsuario.js"></script>
 </body>
 </html>
