@@ -30,28 +30,26 @@ document.addEventListener('mouseover', (event) => {
      }
 });
 
-document.addEventListener('click', addAndRemoveStar);
+document.addEventListener('click', (event) => {
 
-function addAndRemoveStar(event){     
-   if (document.getElementById(event.target.id)) {
-   var star = document.getElementById(event.target.id);
-   if(star.classList.contains("fa-solid")){
-      star.classList.remove("fa-solid");
-      removeFavoriteAlbum(event.target.id)
-   }
-   else{
-      star.classList.add("fa-solid");
-      USER.albumsFav.push(event.target.id);
-      localStorage.setItem('session', JSON.stringify(USER));
-      USUARIOS_REGISTRADOS[USER.usuario] = USER;
-      localStorage.setItem('usuariosRegistrados', JSON.stringify(USUARIOS_REGISTRADOS))
-   }
-}}
+    //AL HACER CLICK EN LA ESTRELLA SE AGREGA AL ARRAY DE FAVORITOS
 
-function removeFavoriteAlbum(targetId){
-      let index = USER.albumsFav.indexOf(targetId);
-      USER.albumsFav.splice( index, 1);
-      localStorage.setItem('session', JSON.stringify(USER));
-      USUARIOS_REGISTRADOS[USER.usuario] = USER;
-      localStorage.setItem('usuariosRegistrados', JSON.stringify(USUARIOS_REGISTRADOS))
-   }
+     if (document.getElementById(event.target.id)) {
+        var star = document.getElementById(event.target.id);
+        if(star.classList.contains("fa-solid")){
+           star.classList.remove("fa-solid");
+           let index = USER.albumsFav.indexOf(event.target.id);
+           USER.albumsFav.splice( index, 1);
+           localStorage.setItem('session', JSON.stringify(USER));
+           USUARIOS_REGISTRADOS[USER.usuario] = USER;
+           localStorage.setItem('usuariosRegistrados', JSON.stringify(USUARIOS_REGISTRADOS))
+        }
+        else{
+           star.classList.add("fa-solid");
+           USER.albumsFav.push(event.target.id);
+           localStorage.setItem('session', JSON.stringify(USER));
+           USUARIOS_REGISTRADOS[USER.usuario] = USER;
+           localStorage.setItem('usuariosRegistrados', JSON.stringify(USUARIOS_REGISTRADOS))
+        }
+     }
+});
