@@ -20,28 +20,28 @@
     <main class="planes">
         <h2 class="premium">Planes Premium</h2>
         <section>
-            <form class="formulario" action="#" method="post">
+            <form class="formulario" action="#" method="post" id="planForm">
                 <article>
                     <h3>Plan mensual</h3>
                     <img src="https://picsum.photos/50/50" alt="plan 1">
                     <p>$1000/Mes Sin descuentos</p>
-                    <input type="radio" name="opcion" value="Plan 1">
+                    <input type="radio" name="opcion" value="mensual" id="plan1">
                 </article>
                 <article>
                     <h3>Plan Semestral</h3> 
                     <img src="https://picsum.photos/50/50" alt="plan 2">
                     <p>$900/Mes 10% de descuento</p>
-                    <input type="radio" name="opcion" value="Plan 2">
+                    <input type="radio" name="opcion" value="semestral" id="plan2">
                 </article>
                 <article>
                     <h3>Plan Anual</h3>
-                    <img src="https://picsum.photos/50/50" alt=" plan 3">
+                    <img src="https://picsum.photos/50/50" alt="plan 3">
                     <p>$800/Mes 20% de descuento</p>
-                    <input type="radio" name="opcion" value="Plan 3">
+                    <input type="radio" name="opcion" value="anual" id="plan3">
                 </article>
             </form>
             <article class="botones">
-                <a href="vistapagar.html"><button class="boton2" type="submit">Avanzar</button></a>
+                <button class="boton2" type="button" id="avanzarButton">Avanzar</button>
                 <a href="vistapantallaprincipa.html"><button class="boton1" type="submit">Cancelar</button></a>
             </article>
         </section>
@@ -49,6 +49,7 @@
 
 <!-- Footer -->
 <iframe src="./reusables/footer.html" frameborder="0" scrolling="no" width="100%" height="auto"></iframe>    
+<script src="JS/planespremium.js"></script>
 <script src="https://kit.fontawesome.com/258f4c98cc.js" crossorigin="anonymous"></script>
 <script src="./reusables/getNombreUsuario.js"></script>
 
