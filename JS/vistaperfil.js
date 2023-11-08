@@ -58,11 +58,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
+            let usuarioQueSeVaAEliminar = usuariosRegistrados[prevUserName];
             // Elimina al usuario anterior del objeto usuariosRegistrados
             delete usuariosRegistrados[prevUserName];
 
             // Crea un nuevo objeto con los datos actualizados
             let usuarioActualizadoData = {
+                ...usuarioQueSeVaAEliminar,
                 usuario: usuarioActualizado,
                 contraseña: contraseñaActualizada,
                 fechanacimiento: fechaNacimientoActualizada,
