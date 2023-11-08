@@ -30,7 +30,7 @@ document.addEventListener('mouseover', (event) => {
 });
 
 document.addEventListener('click', (event) => {
-
+   if(window.location.href.includes('vistabuscar')) return;
     //AL HACER CLICK EN LA ESTRELLA SE AGREGA AL ARRAY DE FAVORITOS
       const idObjetivo = event.target.id;
      if (document.getElementById(idObjetivo)) {
@@ -74,6 +74,7 @@ function addOrRemoveStar(estrella, targetId){
          localStorage.setItem('session', JSON.stringify(USER));
          USUARIOS_REGISTRADOS[USER.usuario] = USER;
          localStorage.setItem('usuariosRegistrados', JSON.stringify(USUARIOS_REGISTRADOS))
+         return true;
       }
    }
    else{
@@ -83,6 +84,7 @@ function addOrRemoveStar(estrella, targetId){
          localStorage.setItem('session', JSON.stringify(USER));
          USUARIOS_REGISTRADOS[USER.usuario] = USER;
          localStorage.setItem('usuariosRegistrados', JSON.stringify(USUARIOS_REGISTRADOS))
+         return true;
       }
    }
 }
