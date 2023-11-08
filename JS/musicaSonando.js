@@ -92,7 +92,7 @@ window.addEventListener("load", (event) => {
         let user  = JSON.parse(localStorage.getItem('session'));
         let discosArray = user.albumsFav;
         let estrella = seccion.childNodes[3].childNodes[1];
-        estrella.id = discoId;
+        estrella.id = `sonando-${discoId}`;
         let esFavorito = discosArray.includes(discoId);
         if(esFavorito){
             estrella.classList.add('fa-solid');
