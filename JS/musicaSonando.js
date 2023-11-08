@@ -1,15 +1,15 @@
+const discosDataJson = JSON.parse(JSON.stringify(canciones));
 
-var discosDataJson = JSON.parse(JSON.stringify(canciones));
+document.addEventListener('click', (event) => {
 
-var discoId = "";
+    let discoId = event.target.alt;
 
-function handleClickAlbum(discoId){
-    
-    localStorage.setItem('imagenMusicaSonando', discoId);
-}
+    if(discoId != undefined) localStorage.setItem('albumSonando', discoId);
+
+});
 
 window.addEventListener("load", (event) => {
-    discoId = localStorage.getItem('imagenMusicaSonando');
+    discoId = localStorage.getItem('albumSonando');
     let newParrafo = "";
     let newImage = document.createElement("img");
     newImage.classList.add('imagenbajonav');
@@ -96,7 +96,6 @@ window.addEventListener("load", (event) => {
         let esFavorito = discosArray.includes(discoId);
         if(esFavorito){
             estrella.classList.add('fa-solid');
-            
         }
         else{estrella.classList.remove('fa-solid');}
 
