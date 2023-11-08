@@ -20,3 +20,10 @@ buscarsearchBox.addEventListener('keyup', event => {
     handleCreacionArticleDeAlbums(newArray, albumes)
     
 });
+
+albumes.addEventListener('click', e=>{
+    let stars = albumes.getElementsByClassName('fa-star');
+    let starId = e.target.id;
+    let estrella = stars[starId];
+    addOrRemoveStar(estrella, starId);
+})

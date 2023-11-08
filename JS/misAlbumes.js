@@ -55,9 +55,14 @@ function handleCreacionArticleDeAlbums(albumList, secAlbumes){
 }
 
 sectionAlbumes.addEventListener('click', event => {
+    if(window.location.href.includes('vistabuscar')) return;
     let identifier= event.target.id;
     if(identifier != null || identifier != undefined){
         let articuleToErase = document.getElementById(`article-${identifier}`);
+        var estrellaDeAlbumFav = articuleToErase.getElementsByTagName('i');
+
+        let salioDeFavoritos = addOrRemoveStar(estrellaDeAlbumFav[0], estrellaDeAlbumFav[0].id);
+
         sectionAlbumes.removeChild(articuleToErase);
         if(sectionAlbumes.children.length == 0){
             let articleNoContent = document.createElement('article');
