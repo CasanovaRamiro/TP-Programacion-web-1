@@ -1,20 +1,16 @@
-//const albums = [
-//    { id: 1: }
-//]
-
-if(USER.albumsFav.length != 0){  
+if (USER.albumsFav.length != 0) {
     let albums = USER.albumsFav;
     albums.forEach(element => {
         let star = document.getElementById(element);
         let articleElement = null;
-        if(star){
-            articleElement  = star.closest('article');
+        if (star) {
+            articleElement = star.closest('article');
         }
-        if(articleElement){
+        if (articleElement) {
             articleElement.classList.remove("oculto")
         }
     });
-}else{
+} else {
     showEmptyList()
 }
 
@@ -25,20 +21,20 @@ document.addEventListener('click', (event) => {
 
 
     if (document.getElementById(event.target.id)) {
-    var star = document.getElementById(event.target.id);
-           const article = star.closest('article')
-           if(article){
-              article.classList.add('oculto');
-           }
-           removeFavoriteAlbum(event.target.id)
-           if(USER.albumsFav.length == 0){
-            showEmptyList()
-           }
+        var star = document.getElementById(event.target.id);
+        const article = star.closest('article')
+        if (article) {
+            article.classList.add('oculto');
         }
-     
+        removeFavoriteAlbum(event.target.id)
+        if (USER.albumsFav.length == 0) {
+            showEmptyList()
+        }
+    }
+
 });
 
-function showEmptyList(){
+function showEmptyList() {
     const mensajeSinAlbumes = document.getElementById("sinAlbums");
     mensajeSinAlbumes.classList.remove("oculto");
 }

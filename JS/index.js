@@ -20,6 +20,11 @@ function handleLogin() {
             localStorage.setItem("session", JSON.stringify(datosUsuario));
 
             localStorage.setItem("usuariosRegistrados", JSON.stringify(usuariosRegistrados))
+            
+
+            let auxiliar = [];
+
+            localStorage.setItem("albumSelected", JSON.stringify(auxiliar));
             // Redirigir a la página principal
             window.location.href = "vistapantallaprincipa.html";
         } else {

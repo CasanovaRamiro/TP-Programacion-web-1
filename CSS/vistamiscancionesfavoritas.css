@@ -33,7 +33,11 @@
     right: 1%;
     top: 3%;
 }
-
+.estrella-album{
+    position: absolute;
+    right: 1%;
+    top: 3%;
+}
 .reproductor{
     width: 90%;
 }

@@ -3,8 +3,16 @@
 .canciones {
     display: grid;
     grid-template-columns: 10% 40% 30% 10% 10%;
-    grid-template-rows: repeat(10, 10%);
-    height: 480px; /* Esto limita la altura del contenedor */
+    height: 45px; /* Esto limita la altura del contenedor */
+    width: 80vw;
+    overflow-y: scroll; /* Agrega una barra de desplazamiento vertical */
+    gap: 0px; /* Separación entre las celdas */
+}
+
+.rowSong{
+    display: grid;
+    grid-template-columns: 10% 40% 30% 10% 10%;
+   height: 45px; /* Esto limita la altura del contenedor */
     width: 80vw;
     overflow-y: scroll; /* Agrega una barra de desplazamiento vertical */
     gap: 0px; /* Separación entre las celdas */
@@ -44,6 +52,12 @@
 }
 .reproductor{
     width: 90%;
+}
+
+.estrella-album{
+    position: absolute;
+    right: 1%;
+    top: 3%;
 }
 
 /* Estilos para tablet (ancho máximo de 768px) */

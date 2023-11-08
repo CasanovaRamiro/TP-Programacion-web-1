@@ -4,6 +4,7 @@ const USERDATA = {
     fechanacimiento: "",
     email: "",
     albumsFav: [],
+    songFav: [],
     cancionesFav: [],
     logueado: false
 };
@@ -46,6 +47,7 @@ function handleRegistration() {
         fechanacimiento: fechaNacimiento,
         email: email,
         albumsFav: [],
+        songFav: [],
         cancionesFav: [],
         logueado: false
     };
