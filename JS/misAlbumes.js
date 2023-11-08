@@ -38,7 +38,7 @@ function handleCreacionArticleDeAlbums(albumList, secAlbumes){
                     let star = document.createElement('i');
                     let starClasses = ['fa-regular', 'fa-star', 'fa-2xl'];
                     starClasses.forEach(s => star.classList.add(s));
-                    if(USUARIO.albumsFav[album] != undefined) 
+                    if(USUARIO.albumsFav[album] == element)
                     {star.classList.add('fa-solid');}
                     star.id = element;
                     // star.before() = null;
