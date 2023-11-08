@@ -1,18 +1,18 @@
 const USUARIO = JSON.parse(localStorage.getItem('session'));
 let sectionAlbumes = document.querySelector('.albumes');
-handleMisAlbumsFav(USUARIO, sectionAlbumes);
+handleCreacionArticleDeAlbums(USUARIO.albumsFav, sectionAlbumes);
 
-function handleMisAlbumsFav(user, secAlbumes){
+function handleCreacionArticleDeAlbums(albumList, secAlbumes){
     
     if(secAlbumes != null | secAlbumes != undefined){
-        let albumsFav = user.albumsFav;
-        
-        if (albumsFav.length > 0) {
+
+        if (albumList.length > 0 && albumList[0] != 'inputBuscador') {
             let articleToBeErased = document.getElementById('article-noContent');
-            sectionAlbumes.removeChild(articleToBeErased);
-            for (const album in albumsFav) {
-                if (Object.hasOwnProperty.call(albumsFav, album)) {
-                    const element = albumsFav[album];
+            if(articleToBeErased){sectionAlbumes.removeChild(articleToBeErased);}
+            for (const album in albumList) {
+                if (Object.hasOwnProperty.call(albumList, album)) {
+                    let element = albumList[album];
+                    element = element.includes('article') ? element.slice(8, element.length) : element;
                     //creamos el article
                     let article = document.createElement('article');
                     article.classList.add('article-img');
@@ -24,7 +24,7 @@ function handleMisAlbumsFav(user, secAlbumes){
                     //creamos la imagen
                     let image = document.createElement('img');
                     image.classList.add('img-albumes');
-                    image.src = getSrcForImage(element, image);
+                    image.src = getSrcForImage(element);
                     image.alt = element;
                     //metemos la imagen en el tag de link
                     //y el link en el article
@@ -36,8 +36,10 @@ function handleMisAlbumsFav(user, secAlbumes){
                     span.className = 'estrella-album';
                     //creamos la estrellita
                     let star = document.createElement('i');
-                    let starClasses = ['fa-regular', 'fa-star', 'fa-2xl', 'fa-solid'];
+                    let starClasses = ['fa-regular', 'fa-star', 'fa-2xl'];
                     starClasses.forEach(s => star.classList.add(s));
+                    if(USUARIO.albumsFav[album] != undefined) 
+                    {star.classList.add('fa-solid');}
                     star.id = element;
                     // star.before() = null;
                     //le metemos la star en el span
@@ -67,15 +69,15 @@ sectionAlbumes.addEventListener('click', event => {
             sectionAlbumes.appendChild(articleNoContent);
         }
 
-        let index = USUARIO.albumsFav.indexOf(event.target.id);
-        USUARIO.albumsFav.splice( index, 1);
+        let index = USUARIO.albumList.indexOf(event.target.id);
+        USUARIO.albumList.splice( index, 1);
         localStorage.setItem('session', JSON.stringify(USUARIO));
         USUARIOS_REGISTRADOS[USUARIO.usuario] = USUARIO;
         localStorage.setItem('usuariosRegistrados', JSON.stringify(USUARIOS_REGISTRADOS))
     }
 });
 
-function getSrcForImage(stringId, newImage){
+function getSrcForImage(stringId){
     switch (stringId){
         case "destruction":{
             return 'Img/2007 - Thrash Anthems 01.jpg';
