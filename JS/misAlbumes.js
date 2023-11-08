@@ -57,6 +57,15 @@ sectionAlbumes.addEventListener('click', event => {
     if(identifier != null || identifier != undefined){
         let articuleToErase = document.getElementById(`article-${identifier}`);
         sectionAlbumes.removeChild(articuleToErase);
+        if(sectionAlbumes.children.length == 0){
+            let articleNoContent = document.createElement('article');
+            articleNoContent.className = 'noContent';
+            articleNoContent.id = 'article-noContent';
+            let h2 = document.createElement('h2');
+            h2.textContent = "Aun no tienes albums favoritos.";
+            articleNoContent.appendChild(h2);
+            sectionAlbumes.appendChild(articleNoContent);
+        }
 
         let index = USUARIO.albumsFav.indexOf(event.target.id);
         USUARIO.albumsFav.splice( index, 1);
