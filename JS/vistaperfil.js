@@ -58,6 +58,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
+            // verifica que algun campo haya sido cambiado
+            if (usuarioActualizado === prevUserName && contraseñaActualizada === userData.contraseña && fechaNacimientoActualizada === userData.fechanacimiento && emailActualizado === userData.email) {
+                alert("No se han realizado cambios.");
+                return;
+            }
+
             let usuarioQueSeVaAEliminar = usuariosRegistrados[prevUserName];
             // Elimina al usuario anterior del objeto usuariosRegistrados
             delete usuariosRegistrados[prevUserName];
@@ -84,6 +90,23 @@ document.addEventListener("DOMContentLoaded", function () {
             localStorage.setItem("session", JSON.stringify(userData));
             localStorage.setItem("usuariosRegistrados", JSON.stringify(usuariosRegistrados));
             prevUserName = usuarioActualizado;
+
+             // Obtén el modal
+            let modal = document.getElementById("modal");
+            modal.showModal();
+
+            // Agrega un evento de clic al botón "Ir a inicio" en el modal
+            let goHome = document.getElementById("goHome");
+            goHome.addEventListener("click", function () {
+                window.location.href = "vistapantallaprincipa.html";
+            });
+
+            // Agrega un evento de clic al botón "Cerrar" en el modal
+            let closeModalButton = document.getElementById("closeModal");
+            closeModalButton.addEventListener("click", function () {
+                // Cierra el modal
+                modal.close()
+            });
         });
     }
 });
