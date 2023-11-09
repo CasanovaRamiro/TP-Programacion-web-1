@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }); 
     
     registrarmeButton.addEventListener("click", function(event) {
+        console.log("Botón clickeado")
         if (
             nombreInput.value.trim() === "" ||
             cardNumberInput.value.trim() === "" ||
@@ -77,6 +78,42 @@ document.addEventListener("DOMContentLoaded", function() {
         ) {
             alert("Por favor, completa todos los campos antes de registrarte.");
             event.preventDefault(); // Evita la redirección si no se completan los campos
+        } else {
+            // Obtén los datos de sesión almacenados en localStorage
+            let sessionData = localStorage.getItem("session");
+            if (sessionData) {
+                // Parsea los datos de sesión de JSON a un objeto JavaScript
+                let userData = JSON.parse(sessionData);
+
+                // Cambia el valor de "premium" a true en el objeto userData
+                userData.premium = true;
+
+                // Guarda el objeto actualizado en localStorage para la sesión
+                localStorage.setItem("session", JSON.stringify(userData));
+
+                // Cambia el valor de "premium" a true en el vector usuariosRegistrados
+                let usuariosRegistrados = JSON.parse(localStorage.getItem("usuariosRegistrados")) || {};
+
+                // Verifica si el usuario está definido en usuariosRegistrados
+                if (usuariosRegistrados[userData.usuario]) {
+                    usuariosRegistrados[userData.usuario].premium = true;
+
+                    // Guarda el vector actualizado en localStorage
+                    localStorage.setItem("usuariosRegistrados", JSON.stringify(usuariosRegistrados));
+
+                    // Mensaje de éxito (puedes personalizar esto)
+                    alert("¡Ahora eres un usuario premium!");
+
+                    // Redirige a la página de perfil u otra página según tus necesidades
+                    window.location.href = "vistaperfil.html";
+                } else {
+                    // Mensaje de error si el usuario no está definido en usuariosRegistrados
+                    alert("Error: Usuario no encontrado en la base de datos.");
+                }
+            } else {
+                // Mensaje de error si no hay datos de sesión en localStorage
+                alert("Error: No se encontraron datos de sesión.");
+            }
         }
     });
 });

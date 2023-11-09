@@ -15,6 +15,14 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("fechanacimiento").value = userData.fechanacimiento;
         document.getElementById("email").value = userData.email;
 
+        // Muestra u oculta el enlace "Premium" según el atributo "premium" del usuario
+        let linkPremium = document.querySelector(".linkpremium");
+        if (userData.premium) {
+            linkPremium.style.display = "none";
+        } else {
+            linkPremium.style.display = "block";
+        }
+
         // Guarda el nombre de usuario actual para saber cual es el usuario qu esta en session actualmente
         let prevUserName = userData.usuario;
 

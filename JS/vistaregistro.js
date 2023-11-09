@@ -5,7 +5,8 @@ const USERDATA = {
     email: "",
     albumsFav: [],
     cancionesFav: [],
-    logueado: false
+    logueado: false,
+    premium: false
 };
 function handleRegistration() {
     // Obtén los datos del formulario
@@ -47,7 +48,8 @@ function handleRegistration() {
         email: email,
         albumsFav: [],
         cancionesFav: [],
-        logueado: false
+        logueado: false,
+        premium: false
     };
 
     // Agrega el usuario a la lista de usuarios registrados
@@ -63,3 +65,4 @@ function handleRegistration() {
 // Agrega un event listener al botón de registro
 let registrationButton = document.querySelector("button");
 registrationButton.addEventListener("click", handleRegistration);
+
