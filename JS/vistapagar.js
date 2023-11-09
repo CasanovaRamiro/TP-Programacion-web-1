@@ -68,7 +68,13 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }); 
     
+    
+
     registrarmeButton.addEventListener("click", function(event) {
+        event.preventDefault();
+
+         // Obtén el modal
+        let modal = document.getElementById("modal");
         if (
             nombreInput.value.trim() === "" ||
             cardNumberInput.value.trim() === "" ||
@@ -76,7 +82,14 @@ document.addEventListener("DOMContentLoaded", function() {
             cvcInput.value.trim() === ""
         ) {
             alert("Por favor, completa todos los campos antes de registrarte.");
-            event.preventDefault(); // Evita la redirección si no se completan los campos
+        } else {
+            modal.showModal();
         }
+    });
+
+    // Agrega un evento de clic al botón "Ir a inicio" en el modal
+    let goHome = document.getElementById("goHome");
+    goHome.addEventListener("click", function () {
+        window.location.href = "vistapantallaprincipa.html";
     });
 });
