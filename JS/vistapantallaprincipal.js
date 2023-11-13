@@ -1,7 +1,44 @@
-
+var index = 0;
 const favoritos = [];
+var albumesTotales = [];
 const USER = JSON.parse(localStorage.getItem("session"));
 const USUARIOS_REGISTRADOS = JSON.parse(localStorage.getItem("usuariosRegistrados"));
+let ALBUMS_TOTAL = document.querySelectorAll('.albumes')[0]
+if(ALBUMS_TOTAL != undefined){
+   const listAlbumes = ALBUMS_TOTAL.children;
+   for (const album of listAlbumes) {
+      albumesTotales.push(album.lastElementChild.firstElementChild.id)
+   }
+
+   ALBUMS_TOTAL.addEventListener('click', e => {
+
+      let discoId = e.target.alt;
+   
+      if(discoId != undefined) {
+          localStorage.setItem('albumSonando', discoId);
+      }
+   });
+
+   ALBUMS_TOTAL.addEventListener('mouseover', (event) => {
+      //SI EL MOUSE SE POSA SOBRE LA ESTRELLA, SE AGITA POR 1 SEG
+      var star = document.getElementById(event.target.id);
+      if(star == null || star == undefined) return;
+      let starId = star.id;
+       if (albumesTotales.includes(starId)) {
+          
+          if(star.classList.contains("fa-shake")){
+             star.classList.remove("fa-shake");
+          }
+          else{
+             star.classList.add("fa-shake");
+             setTimeout(()=> {
+                 star.classList.remove("fa-shake");
+             }, 500)
+          }
+       }
+       return;
+  });
+}
 
 if(USER.albumsFav.length != 0){
     let albums = USER.albumsFav;
@@ -13,24 +50,10 @@ if(USER.albumsFav.length != 0){
     });
 }
 
-document.addEventListener('mouseover', (event) => {
-    //SI EL MOUSE SE POSA SOBRE LA ESTRELLA, SE AGITA POR 1 SEG
-     if (document.getElementById(event.target.id)) {
-        var star = document.getElementById(event.target.id);
-        if(star.classList.contains("fa-shake")){
-           star.classList.remove("fa-shake");
-        }
-        else{
-           star.classList.add("fa-shake");
-           setTimeout(()=> {
-               star.classList.remove("fa-shake");
-           }, 500)
-        }
-     }
-});
+
 
 document.addEventListener('click', (event) => {
-   if(window.location.href.includes('vistabuscar')) return;
+   // if(window.location.href.includes('vistabuscar')) return;
     //AL HACER CLICK EN LA ESTRELLA SE AGREGA AL ARRAY DE FAVORITOS
       const idObjetivo = event.target.id;
      if (document.getElementById(idObjetivo)) {
