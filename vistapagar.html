@@ -33,26 +33,26 @@
             <form action="vistapantallaprincipa.html">
                 <div class="container-grid2">
                     <div class="item-1">
-                        <label for="nombre">Nombre y apellido</label>
+                        <label for="nombre-input">Nombre y apellido</label>
                         
                     </div>
                     <div class="item-3">
                         <input type="text" placeholder="ingresa tu nombre" name="nombre" id="nombre-input"></input>
                     </div>
                     <div class="item-2">
-                        <label for="card-number">Numero tarjeta</label>
+                        <label for="card-number-input">Numero tarjeta</label>
                     </div>
                     <div class="item-4">
                         <input type="text" placeholder="ej 1234 1234 1234 1234" name="card-number" id="card-number-input"></input>
                     </div>
                     <div class="item-5">
-                        <label for="vencimiento">Vencimiento</label>
+                        <label for="vencimiento-input">Vencimiento</label>
                     </div>
                     <div class="item-6">
                         <input type="date" placeholder="ej 23-10-2023" name="vencimiento" id="vencimiento-input"></input>
                     </div>
                     <div class="item-7">
-                        <label for="cvc">CVC</label>
+                        <label for="cvc-input">CVC</label>
                     </div>
                     <div class="item-8">
                         <input type="text" placeholder="ej 123" name="cvc" id="cvc-input"></input>
@@ -71,5 +71,13 @@
     <iframe src="./reusables/footer.html" frameborder="0" scrolling="no" width="100%"></iframe>
     <script src="JS/vistapagar.js"></script>
     <script src="./reusables/getNombreUsuario.js"></script>
+
+    <dialog id="modal" class="modal">
+        <h2 style="width: 250px; text-align: center;">¡Pago exitoso!</h2>
+        <div class="modalButtons" style=" display: flex; justify-content: space-around">
+            <button id="goHome" class="goHome">Ir al Home</button>
+        </div>
+        
+    </dialog>
 </body>
 </html>

@@ -6,31 +6,28 @@ function handleLogin() {
     // Obtener los datos de usuarios registrados desde localStorage
     let usuariosRegistrados = JSON.parse(localStorage.getItem("usuariosRegistrados")) || {};
 
-    if (usuariosRegistrados.hasOwnProperty(usuarioIngresado)) {
-        // Obtener los datos del usuario registrado
-        let datosUsuario = usuariosRegistrados[usuarioIngresado];
-        let contraseñaAlmacenada = datosUsuario.contraseña;
+    // Obtener los datos del usuario registrado
+    let datosUsuario = usuariosRegistrados[usuarioIngresado];
 
-        // Verificar si la contraseña ingresada coincide con la contraseña almacenada
-        let contraseñaTransformada = contraseñaIngresada.slice(contraseñaIngresada.length / 2) + contraseñaIngresada.slice(0, contraseñaIngresada.length / 2).split('').reverse().join('');
+    if(datosUsuario == null || datosUsuario == undefined){
+        alert("El usuario y/o contraseña es incorrecto");
+        return;
+    }
+    let contraseñaAlmacenada = datosUsuario.contraseña;
 
-        if (contraseñaTransformada === contraseñaAlmacenada) {
-            // Iniciar la sesión del usuario en localStorage
-            datosUsuario.logueado = true;
-            localStorage.setItem("session", JSON.stringify(datosUsuario));
+    // Verificar si la contraseña ingresada coincide con la contraseña almacenada
+    let contraseñaTransformada = contraseñaIngresada.slice(contraseñaIngresada.length / 2) + contraseñaIngresada.slice(0, contraseñaIngresada.length / 2).split('').reverse().join('');
 
-            localStorage.setItem("usuariosRegistrados", JSON.stringify(usuariosRegistrados))
-            // Redirigir a la página principal
-            window.location.href = "vistapantallaprincipa.html";
-        } else {
-            // Contraseña incorrecta
-            alert("El usuario y/o contraseña es incorrecto");
-        }
-    } else {
-        // Usuario no encontrado
+    if (contraseñaTransformada === contraseñaAlmacenada) {
+        // Iniciar la sesión del usuario en localStorage
+        datosUsuario.logueado = true;
+        localStorage.setItem("session", JSON.stringify(datosUsuario));
+
+        localStorage.setItem("usuariosRegistrados", JSON.stringify(usuariosRegistrados))
+        // Redirigir a la página principal
+        window.location.href = "vistapantallaprincipa.html";
+    } else if(contraseñaTransformada != contraseñaAlmacenada || datosUsuario == null ){
+        // Contraseña incorrecta
         alert("El usuario y/o contraseña es incorrecto");
     }
 }
-
-let loginButton = document.querySelector(".boton");
-loginButton.addEventListener("click", handleLogin);

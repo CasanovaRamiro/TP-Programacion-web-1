@@ -1,6 +1,6 @@
 const USUARIO = JSON.parse(localStorage.getItem('session'));
 let sectionAlbumes = document.querySelector('.albumes');
-handleCreacionArticleDeAlbums(USUARIO.albumsFav, sectionAlbumes);
+
 
 function handleCreacionArticleDeAlbums(albumList, secAlbumes){
     
@@ -38,7 +38,7 @@ function handleCreacionArticleDeAlbums(albumList, secAlbumes){
                     let star = document.createElement('i');
                     let starClasses = ['fa-regular', 'fa-star', 'fa-2xl'];
                     starClasses.forEach(s => star.classList.add(s));
-                    if(USUARIO.albumsFav[album] == element)
+                    if(USUARIO.albumsFav.includes(element))
                     {star.classList.add('fa-solid');}
                     star.id = element;
                     // star.before() = null;
@@ -55,9 +55,11 @@ function handleCreacionArticleDeAlbums(albumList, secAlbumes){
 }
 
 sectionAlbumes.addEventListener('click', event => {
+    //PREVIENE QUE SE DISPARE DESDE VISTA BUSCAR
     if(window.location.href.includes('vistabuscar')) return;
+    //EVENTO PARA DESAGREGAR DE MIS ALBUMES AL TOCAR LA ESTRELLA
     let identifier= event.target.id;
-    if(identifier != null || identifier != undefined){
+    if(identifier != null && identifier != undefined && identifier != ""){
         let articuleToErase = document.getElementById(`article-${identifier}`);
         var estrellaDeAlbumFav = articuleToErase.getElementsByTagName('i');
 
@@ -80,6 +82,16 @@ sectionAlbumes.addEventListener('click', event => {
         USUARIOS_REGISTRADOS[USUARIO.usuario] = USUARIO;
         localStorage.setItem('usuariosRegistrados', JSON.stringify(USUARIOS_REGISTRADOS))
     }
+    //EVENTO PARA CUANDO CLICKEA ALGUN ALBUM DENTRO DE LA SECCION MIS ALBUMES
+    else if(identifier == ""){
+        identifier = event.target.alt;
+        localStorage.setItem('albumSonando', identifier);
+    }
+});
+document.addEventListener('DOMContentLoaded', e =>{
+    //PREVIENE QUE SE DISPARE DESDE VISTA BUSCAR
+    if(e.target.URL.includes('vistabuscar')) return;
+    handleCreacionArticleDeAlbums(USUARIO.albumsFav, sectionAlbumes);
 });
 
 function getSrcForImage(stringId){

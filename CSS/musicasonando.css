@@ -45,6 +45,9 @@
 .reproductor{
     width: 90%;
 }
+a{
+    text-decoration: none;
+}
 
 /* Estilos para tablet (ancho máximo de 768px) */
 @media screen and (max-width: 820px) {
