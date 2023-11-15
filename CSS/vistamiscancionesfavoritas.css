@@ -37,7 +37,18 @@
 .reproductor{
     width: 90%;
 }
-
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+}
+.titleSonando{
+    color: white;
+}
+.albumSonando{
+    color: purple;
+}
 /* Estilos para tablet (ancho máximo de 768px) */
 @media screen and (max-width: 768px) {
   

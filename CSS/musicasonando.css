@@ -48,7 +48,15 @@
 a{
     text-decoration: none;
 }
-
+a:hover{
+    color: white;
+}
+.titleSonando{
+    color: white;
+}
+.albumSonando{
+    color: purple;
+}
 /* Estilos para tablet (ancho máximo de 768px) */
 @media screen and (max-width: 820px) {
     .container-canciones{
@@ -65,6 +73,13 @@ a{
       width: 100%; /* Cambiar el ancho de la sección de canciones */
       height: auto; /* Cambiar la altura a automática */
       margin: 20px;
+    }
+    .titleSonando{
+        padding-left: 4%;
+        color: white;
+    }
+    .albumSonando{
+        padding-left: 4%;
     }
     iframe {
         display: flex;

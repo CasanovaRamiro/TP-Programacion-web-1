@@ -1,4 +1,4 @@
-const canciones = {
+const CANCIONES = {
     "discos":[
         {
             "artista": "Destruction",
@@ -64,7 +64,7 @@ const canciones = {
             "disco": "Burning Angel",
             "comment": "Burning Angel es un EP de la banda sueca Arch Enemy. Publicado el 6 de marzo de 2002, es el segundo álbum de Arch Enemy con Angela Gossow quien tomará el lugar de Johan Liiva en la banda. La canción «Starbreaker» de Judas Priest fue publicada originalmente en el álbum Sin After Sin.",
             "canciones": [
-                "Burning Angel",
+                "Burning Angels",
                 "Lament of a Mortal Soul",
                 "Starbreaker",
                 "Ravenous",
@@ -95,7 +95,7 @@ const canciones = {
                 "Foreclosure of a Dream",
                 "Sweating Bullets",
                 "This Was My Life",
-                "Countdown to Extinction",
+                "Countdown to Extintion",
                 "High Speed Dirt",
                 "Psychotron",
                 "Captive Honour",

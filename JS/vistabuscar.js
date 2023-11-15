@@ -25,6 +25,7 @@ buscarsearchBox.addEventListener('keyup', event => {
 
 albumes.addEventListener('click', e=>{
     let stars = albumes.getElementsByClassName('fa-star');
+    let dataDisco = CANCIONES.discos.find(d => d.disco.includes(e.target.id));
     let starId = e.target.id;
     let estrella = stars[starId];
 })

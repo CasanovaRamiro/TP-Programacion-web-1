@@ -13,6 +13,7 @@ function handleCreacionArticleDeAlbums(albumList, secAlbumes){
                 if (Object.hasOwnProperty.call(albumList, album)) {
                     let element = albumList[album];
                     element = element.includes('article') ? element.slice(8, element.length) : element;
+                    let dataDisco = CANCIONES.discos.find(d => d.disco.includes(element));
                     //creamos el article
                     let article = document.createElement('article');
                     article.classList.add('article-img');
@@ -24,7 +25,7 @@ function handleCreacionArticleDeAlbums(albumList, secAlbumes){
                     //creamos la imagen
                     let image = document.createElement('img');
                     image.classList.add('img-albumes');
-                    image.src = getSrcForImage(element);
+                    image.src = getSrcForImage(dataDisco.artistaId);
                     image.alt = element;
                     //metemos la imagen en el tag de link
                     //y el link en el article
@@ -38,9 +39,9 @@ function handleCreacionArticleDeAlbums(albumList, secAlbumes){
                     let star = document.createElement('i');
                     let starClasses = ['fa-regular', 'fa-star', 'fa-2xl'];
                     starClasses.forEach(s => star.classList.add(s));
-                    if(USUARIO.albumsFav.includes(element))
+                    if(USUARIO.albumsFav.includes(dataDisco.disco))
                     {star.classList.add('fa-solid');}
-                    star.id = element;
+                    star.id = dataDisco.disco;
                     // star.before() = null;
                     //le metemos la star en el span
                     //y el span en el article
@@ -85,7 +86,8 @@ sectionAlbumes.addEventListener('click', event => {
     //EVENTO PARA CUANDO CLICKEA ALGUN ALBUM DENTRO DE LA SECCION MIS ALBUMES
     else if(identifier == ""){
         identifier = event.target.alt;
-        localStorage.setItem('albumSonando', identifier);
+        let dataAlbum = discosDataJson.discos.find(d => d.disco.replace(/\s/g, '').includes(targetId));
+        localStorage.setItem('albumSonando', dataAlbum[0].disco);
     }
 });
 document.addEventListener('DOMContentLoaded', e =>{
