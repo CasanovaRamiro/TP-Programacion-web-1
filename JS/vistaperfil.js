@@ -108,5 +108,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 modal.close()
             });
         });
+
+        let planesPremium = document.querySelector(".planesPremium");
+        if(userData && userData?.datosPremium?.premium){
+            planesPremium.textContent = `Cambiar Plan Actual ( ${userData.datosPremium.tipoPremium} )`;
+        }
     }
 });
