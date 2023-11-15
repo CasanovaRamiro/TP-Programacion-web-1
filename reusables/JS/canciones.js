@@ -1,7 +1,8 @@
-const canciones = {
+const CANCIONES = {
     "discos":[
         {
             "artista": "Destruction",
+            "artistaId": "destruction",
             "artistaId": "destruction",
             "disco": "Thrash Anthems",
             "comment": "Thrash Anthems es un álbum publicado por la banda de Thrash metal Destruction en 2007. El álbum es una compilación de re-grabaciones de canciones antiguas y dos nuevas canciones: Deposition (Your Heads Will Roll) y Profanity.",
@@ -64,7 +65,7 @@ const canciones = {
             "disco": "Burning Angel",
             "comment": "Burning Angel es un EP de la banda sueca Arch Enemy. Publicado el 6 de marzo de 2002, es el segundo álbum de Arch Enemy con Angela Gossow quien tomará el lugar de Johan Liiva en la banda. La canción «Starbreaker» de Judas Priest fue publicada originalmente en el álbum Sin After Sin.",
             "canciones": [
-                "Burning Angel",
+                "Burning Angels",
                 "Lament of a Mortal Soul",
                 "Starbreaker",
                 "Ravenous",
@@ -95,7 +96,7 @@ const canciones = {
                 "Foreclosure of a Dream",
                 "Sweating Bullets",
                 "This Was My Life",
-                "Countdown to Extinction",
+                "Countdown to Extintion",
                 "High Speed Dirt",
                 "Psychotron",
                 "Captive Honour",
@@ -125,6 +126,9 @@ const canciones = {
                 "5:16",
                 "4:52",
                 "3:26",
+                "5:16",
+                "4:52",
+                "3:26",
             ],
             "reproducciones":[
                 "100.378",
@@ -141,6 +145,9 @@ const canciones = {
                 "69.678",
                 "109.875",
                 "61.170",
+                "502.667",
+                "5.102.667",
+                "2.667",
                 "502.667",
                 "5.102.667",
                 "2.667",
@@ -193,6 +200,11 @@ const canciones = {
                 "5:16",
                 "5:16",
                 "5:16",
+                "5:16",
+                "5:16",
+                "5:16",
+                "5:16",
+                "5:16",
             ],
             "reproducciones":[
                 "100.378",
@@ -214,11 +226,17 @@ const canciones = {
                 "2.502.667",
                 "2.502.667",
                 "2.502.667",
+                "2.502.667",
+                "2.502.667",
+                "2.502.667",
+                "2.502.667",
+                "2.502.667",
             ]
             
         },
         {
             "artista": "Hermetica",
+            "artistaId": "hermetica",
             "artistaId": "hermetica",
             "disco": "Acido Argentino",
             "comment": "Ácido argentino es el segundo álbum de estudio de la banda argentina de thrash metal Hermética, publicado en 1991 por el sello discográfico Radio Trípoli Discos.Es el primer álbum de la banda con el baterista Claudio Strunz. El disco contó con una mejor producción que el primero de la banda, Hermética. Posee en general un ritmo más rápido que este, sin embargo las letras del álbum abordan temáticas como los nativos argentinos, las diferencias sociales y la contaminación, similares al primer trabajo. Ácido argentino logró ser certificado como disco de oro.",
@@ -269,6 +287,7 @@ const canciones = {
         {
             "artista": "Horcas",
             "artistaId": "horcas",
+            "artistaId": "horcas",
             "disco": "Reviviendo Huestes",
             "comment": "Reviviendo Huestes es el octavo álbum de estudio de la banda argentina de heavy metal Horcas, publicado en 2008 por Tocka Discos/Sony BMG. Musicalmente, el álbum continúa con la línea de sus predecesores, Demencial y Asesino, siendo un disco orientado hacia el metal moderno, y siguiendo con la experimentación con afinaciones bajas, esta vez pasando de Do# a Do.",
             "canciones": [
@@ -318,6 +337,7 @@ const canciones = {
         {
             "artista": "Rancid",
             "artistaId": "rancid",
+            "artistaId": "rancid",
             "disco": "...And out come the wolves",
             "comment": "...And Out Come the Wolves es el tercer álbum de estudio de la banda de punk Rancid, publicado en agosto de 1995. El culto a la popularidad de Rancid y sus pegadizas canciones, los hizo objeto de una importante guerra entre las discográficas (de ahí el título, ...And Out Come the Wolves), que terminó con el grupo firmando en la discográfica independiente, Epitaph Records. Con un sonido muy influido por el ska, Rancid se convirtió en una de las pocas bandas de mediados y fines de los años 1990 en conservar gran parte de sus primeros fanes.",
             "canciones": [
@@ -361,6 +381,11 @@ const canciones = {
                 "5:16",
                 "5:16",
                 "5:16",
+                "5:16",
+                "5:16",
+                "5:16",
+                "5:16",
+                "5:16",
             ],
             "reproducciones":[
                 "100.378",
@@ -382,11 +407,17 @@ const canciones = {
                 "2.502.667",
                 "2.502.667",
                 "2.502.667",
+                "2.502.667",
+                "2.502.667",
+                "2.502.667",
+                "2.502.667",
+                "2.502.667",
             ]
             
         },
         {
             "artista": "Kataklysm",
+            "artistaId": "katalysm",
             "artistaId": "katalysm",
             "disco": "Meditations",
             "comment": "Kataklysm es una banda canadiense de death metal, fundada en 1991 en la ciudad de Montreal, Quebec. Ellos llaman a su estilo musical como \"northern hyperblast\" (\"hiperexplosión norteña\") después de un anuncio publicado en la revista M.E.A.T. describiendo a otra banda, Fear Factory, como \"hyperblast\". El término refiere a la extrema rapidez y energía en la percusión mostrada por su baterista, Max Duhamel, tanto en el estudio como en los shows en vivo.",
@@ -472,6 +503,10 @@ const canciones = {
                 "5:16",
                 "5:16",
                 "5:16",
+                "5:16",
+                "5:16",
+                "5:16",
+                "5:16",
             ],
             "reproducciones":[
                 "100.378",
@@ -492,11 +527,16 @@ const canciones = {
                 "2.502.667",
                 "2.502.667",
                 "2.502.667",
+                "2.502.667",
+                "2.502.667",
+                "2.502.667",
+                "2.502.667",
             ]
             
         },
         {
             "artista": "Nightwish",
+            "artistaId": "nightwish",
             "artistaId": "nightwish",
             "disco": "Decades",
             "comment": "Decades es el séptimo álbum recopilatorio de la banda finlandesa Nightwish, salió a la venta el 9 de marzo de 2018 y el mismo día en la banda comenzó la gira Decades: World Tour, la cual cuenta con un DVD en vivo cuya filmación fue en el Estadio Islas Malvinas en Buenos Aires, Argentina, el 30 de septiembre de 2018.",
@@ -547,6 +587,14 @@ const canciones = {
                 "5:16",
                 "5:16",
                 "5:16",
+                "5:16",
+                "5:16",
+                "5:16",
+                "5:16",
+                "5:16",
+                "5:16",
+                "5:16",
+                "5:16",
             ],
             "reproducciones":[
                 "100.378",
@@ -571,11 +619,20 @@ const canciones = {
                 "2.502.667",
                 "2.502.667",
                 "2.502.667",
+                "2.502.667",
+                "2.502.667",
+                "2.502.667",
+                "2.502.667",
+                "2.502.667",
+                "2.502.667",
+                "2.502.667",
+                "2.502.667",
             ]
             
         },
         {
             "artista": "Pantera",
+            "artistaId": "pantera",
             "artistaId": "pantera",
             "disco": "Essentials",
             "comment": "Pantera fue, sencillamente, una de las bandas de metal más grandes, mejores e influyentes de los años 90. Provenientes de Arlington, Texas, y fundada por el dios de la guitarra Dimebag Darrell y su hermano Vinnie Paul en la batería a principios de los 80. La alineación de la banda se completó con la adición del bajista Rex Brown y el enérgico líder Phil Anselmo, este último transformando el sonido de la banda del glamour de los 80 a una potencia de trash metal. Especialmente los tres primeros álbumes de un sello discográfico importante \"Cowboys From Hell\" (1990), \"Vulgar Display of Power\" (1992) y \"Far Beyond Driven\" (1994) son obras maestras del rock, que vale la pena escucharlas de principio a fin, pero que esta lista de reproducción sea una introducción a, posiblemente, el mejor metal sureño que los años 90 tenían para ofrecer.",
@@ -635,6 +692,7 @@ const canciones = {
         {
             "artista": "Sonata Artica",
             "artistaId": "sonataArtica",
+            "artistaId": "sonataArtica",
             "disco": "The Collection",
             "comment": "Sonata Arctica es una banda finlandesa formada en Kemi en 1996 bajo el nombre Tricky Beans, que después cambió a Tricky Means, y finalmente a Sonata Arctica en 1999. Sonata Arctica ha experimentado diversos cambios musicales a lo largo de su carrera, primero con el power metal melódico fusionado con metal neoclásico después adoptando un power con elementos de metal sinfónico hasta el día de hoy. Su cantante Tony Kakko ha comentado influencias de bandas como Stratovarius, Nightwish, Helloween, Scorpions, Iron Maiden, Metallica, Queen, X Japan, entre otras citadas por el grupo en diversas entrevistas.",
             "canciones": [
@@ -674,6 +732,9 @@ const canciones = {
                 "5:16",
                 "3:25",
                 "4:43",
+                "5:16",
+                "3:25",
+                "4:43",
             ],
             "reproducciones":[
                 "100.378",
@@ -690,6 +751,9 @@ const canciones = {
                 "69.678",
                 "109.875",
                 "61.170",
+                "2.502.667",
+                "1.502.667",
+                "3.502.667",
                 "2.502.667",
                 "1.502.667",
                 "3.502.667",
