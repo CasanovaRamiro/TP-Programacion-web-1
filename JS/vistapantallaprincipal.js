@@ -43,6 +43,40 @@ if(ALBUMS_TOTAL != undefined){
           return;
      });
    }
+   
+   if (listAlbumes.length != 1) {
+      for (const album of listAlbumes) {
+         albumesTotales.push(album.lastElementChild.firstElementChild.id)
+      }
+   
+      ALBUMS_TOTAL.addEventListener('click', e => {
+         //BUSCA POR IDENTIFICACION DE LA IMAGEN
+         let dataAlbum = discosData.discos.find(d => d.artistaId.replace(/\s/g, '').includes(e.target.alt));
+         if(dataAlbum != undefined || dataAlbum != null) {
+             localStorage.setItem('albumSonando', dataAlbum.disco);
+         }
+      });
+   
+      ALBUMS_TOTAL.addEventListener('mouseover', (event) => {
+         //SI EL MOUSE SE POSA SOBRE LA ESTRELLA, SE AGITA POR 1 SEG
+         var star = document.getElementById(event.target.id);
+         if(star == null || star == undefined) return;
+         let starId = star.id;
+          if (albumesTotales.includes(starId)) {
+             
+             if(star.classList.contains("fa-shake")){
+                star.classList.remove("fa-shake");
+             }
+             else{
+                star.classList.add("fa-shake");
+                setTimeout(()=> {
+                    star.classList.remove("fa-shake");
+                }, 500)
+             }
+          }
+          return;
+     });
+   }
 }
 
 if(USER.albumsFav.length != 0){
