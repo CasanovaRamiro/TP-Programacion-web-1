@@ -3,8 +3,8 @@ const USER_EN_SONANDO = JSON.parse(localStorage.getItem('session'));
 let seccion = document.getElementById("sectionMusicaSonando");
 let oldImage = seccion.querySelector('#imgNav');
 let albumActual = localStorage.getItem('albumSonando');
-let data = discosDataJson.discos.filter(d => d.disco.includes(albumActual));
-let cancionesEnSonando = data[0].canciones;
+let data = albumActual != null ? discosDataJson.discos.filter(d => d.disco.includes(albumActual)) : null;
+let cancionesEnSonando = data != null ? data[0].canciones : null;
 let seccionCanciones = document.querySelector('.canciones');
 
 function handleMusicaSonando(){
@@ -237,6 +237,7 @@ window.addEventListener("load", (event) => {
     //PREVIENE QUE SE DISPARE DESDE VISTA BUSCAR
     if(window.location.href.includes('vistabuscar')) return;
     else if(window.location.href.includes('cancionesfavoritass')) return;
+    else if(window.location.href.includes('pantallaprincipa') && albumActual == null) return;
     handleCancionesFromAlbum(cancionesEnSonando)
     handleMusicaSonando();
 });
