@@ -8,10 +8,11 @@ let cancionesEnSonando = data != null ? data[0].canciones : null;
 let seccionCanciones = document.querySelector('.canciones');
 
 function handleMusicaSonando(){
-    let discoId = data[0].disco;
+    let discoId = data != null ? data[0].disco : null;
     let newParrafo = "";
     let newImage = document.createElement("img");
     newImage.classList.add('imagenbajonav');
+    if(discoId == null) return;
     switch (discoId){
         case discosDataJson.discos[0].disco:{
             newImage.src = 'Img/2007 - Thrash Anthems 01.jpg';
@@ -123,8 +124,8 @@ function handleMusicaSonando(){
 function handleCancionesFromAlbum(listaCanciones, albumFromfav = 0){
     let index = 0;
     
-    let duraciones = data[0].duraciones;
-    let reproducciones = data[0].reproducciones;
+    let duraciones = data != null ? data[0].duraciones : null;
+    let reproducciones = data != null ? data[0].reproducciones : null;
     if(!seccionCanciones) return;
 
     for (const cancion of listaCanciones) {
@@ -172,7 +173,7 @@ function createArticleDeCancion(nombre){
     let nuevoIconEstrella = document.createElement('i');
     nuevoIconEstrella.id = estrellaId;
     let cancionIconClasses = ['fa-regular', 'fa-star', 'fa-lg'];
-    let discoActual = data[0].disco;
+    let discoActual = data != null ? data[0].disco : null;
     
     cancionIconClasses.forEach(c => nuevoIconEstrella.classList.add(c))
     //COLOCAR ESTRELLAS TILDADAS O NO SEGUN ESTEN COMO FAVS
@@ -190,7 +191,7 @@ function createArticleDeCancion(nombre){
 function createPlayArticle(nombreCancion){
     let nuevoArticleDePlay = document.createElement('article');
     nuevoArticleDePlay.classList.add('article-canciones');
-    nuevoArticleDePlay.id = `article-${nombreCancion.replace(/\s/g, '')}`;
+    nuevoArticleDePlay.id = `article-play-${nombreCancion.replace(/\s/g, '')}`;
     let nuevoSpan = document.createElement('span');
     nuevoSpan.classList.add('play-cancion');
 
