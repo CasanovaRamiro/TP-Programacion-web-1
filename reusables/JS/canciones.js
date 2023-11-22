@@ -1,4 +1,4 @@
-const CANCIONES = {
+var CANCIONES = {
     "discos":[
         {
             "artista": "Destruction",

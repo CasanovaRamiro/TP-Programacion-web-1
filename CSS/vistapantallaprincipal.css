@@ -6,7 +6,7 @@ body {
     height: auto;
     background-color: black; /* Fondo negro */
     color: purple;
-    margin: auto; /* Texto en morado */
+    margin: 1em; /* Texto en morado */
 }
 
 /* Estilos para los botones */
@@ -56,10 +56,9 @@ header {
     grid-area: a;
 }
 .navegador {
+    padding: 2%;
     grid-area: b;
-}
-.cuerpo-principal {
-    grid-area: c;
+    max-width: 14em;
 }
 iframe {
     margin-top: 5%;
@@ -99,7 +98,7 @@ h2{
         "b c c c c"
         "d d d d d";
     
-    justify-content: space-around;
+    /* justify-content: space-around; */
     align-items: start;
 }
 
@@ -127,12 +126,6 @@ h2{
 }
 /* Fin Header */
 
-/* NAV */
-.navegador {
-    padding: 3%;
-    /* width:100%; */
-}
-
 .sectionimgbajonav{
     display: flex;
     flex-direction: column;
@@ -154,20 +147,22 @@ h2{
 
 /* Cuerpo Principal */
 .cuerpo-principal {
-    width: 100%;
+    grid-area: c;
+    width: 80vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
 } 
 .albumes {
+    height: 480px;
+    width: 100%;
     position: relative;
     display: grid;
     justify-content: space-around;
     grid-template-columns: repeat(3, 1fr); /* 3 columnas de tamaño igual */
     grid-template-rows: repeat(4, 1fr); /* 4 filas de tamaño igual */
     gap: 10%;
-    height: 480px;
     overflow: auto;
     gap: 10px;
     overflow-y:auto;
@@ -228,7 +223,12 @@ h2{
                             "c"
                             "d";
     }
-
+    .navegador{
+        max-width: 100%;
+    }
+    .cuerpo-principal{
+        width: 100%;
+    }
     .buscadorinput{
         width: 70%;
     }

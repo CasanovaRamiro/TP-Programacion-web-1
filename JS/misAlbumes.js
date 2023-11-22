@@ -1,5 +1,6 @@
 const USUARIO = JSON.parse(localStorage.getItem('session'));
 let sectionAlbumes = document.querySelector('.albumes');
+const CANCIONES_MISALBUMS = JSON.parse(JSON.stringify(CANCIONES));
 
 
 function handleCreacionArticleDeAlbums(albumList, secAlbumes){
@@ -13,7 +14,8 @@ function handleCreacionArticleDeAlbums(albumList, secAlbumes){
                 if (Object.hasOwnProperty.call(albumList, album)) {
                     let element = albumList[album];
                     element = element.includes('article') ? element.slice(8, element.length) : element;
-                    let dataDisco = CANCIONES.discos.find(d => d.disco.includes(element));
+                    let dataDisco = CANCIONES_MISALBUMS.discos.find(d => d.artistaId.includes(element));
+                    if(dataDisco == undefined) dataDisco =CANCIONES_MISALBUMS.discos.find(d => d.disco.includes(element));
                     //creamos el article
                     let article = document.createElement('article');
                     article.classList.add('article-img');
@@ -77,8 +79,8 @@ sectionAlbumes.addEventListener('click', event => {
             sectionAlbumes.appendChild(articleNoContent);
         }
 
-        let index = USUARIO.albumList.indexOf(event.target.id);
-        USUARIO.albumList.splice( index, 1);
+        let index = USUARIO.albumsFav.indexOf(event.target.id);
+        USUARIO.albumsFav.splice( index, 1);
         localStorage.setItem('session', JSON.stringify(USUARIO));
         USUARIOS_REGISTRADOS[USUARIO.usuario] = USUARIO;
         localStorage.setItem('usuariosRegistrados', JSON.stringify(USUARIOS_REGISTRADOS))
