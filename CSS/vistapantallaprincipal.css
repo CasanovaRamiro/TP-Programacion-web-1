@@ -6,7 +6,7 @@ body {
     height: auto;
     background-color: black; /* Fondo negro */
     color: purple;
-    margin: auto; /* Texto en morado */
+    margin: 1em; /* Texto en morado */
 }
 
 /* Estilos para los botones */
@@ -56,7 +56,9 @@ header {
     grid-area: a;
 }
 .navegador {
+    padding: 2%;
     grid-area: b;
+    max-width: 14em;
 }
 .cuerpo-principal {
     grid-area: c;
@@ -99,7 +101,7 @@ h2{
         "b c c c c"
         "d d d d d";
     
-    justify-content: space-around;
+    /* justify-content: space-around; */
     align-items: start;
 }
 
@@ -126,12 +128,6 @@ h2{
     width: 50%;
 }
 /* Fin Header */
-
-/* NAV */
-.navegador {
-    padding: 3%;
-    /* width:100%; */
-}
 
 .sectionimgbajonav{
     display: flex;
