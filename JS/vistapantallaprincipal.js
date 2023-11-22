@@ -107,8 +107,29 @@ document.addEventListener('click', (event) => {
             
          }
         }
-        //SI JUSTO LA ESTRELLA Q DAMOS CLICK ES DE UN DISCO SONANDO
-        if(listaEstrellasHermanas.length > 1){
+        //SI JUSTO LA ESTRELLA Q DAMOS CLICK ES DESDE UN DISCO SONANDO
+        if(listaEstrellasHermanas.length > 2){
+
+         listaEstrellasHermanas.forEach(str => {
+            str.classList.contains('fa-solid') ? str.classList.remove('fa-solid') : str.classList.add('fa-solid');
+         });
+         if (listaEstrellasHermanas[0].classList.contains('fa-solid')) {
+            let dataAlbum = discosDataJson.discos.find(d => d.disco.replace(/\s/g, '').includes(idObjetivo));
+            USER.albumsFav.push(dataAlbum.disco);
+            localStorage.setItem('session', JSON.stringify(USER));
+            USUARIOS_REGISTRADOS[USER.usuario] = USER;
+            localStorage.setItem('usuariosRegistrados', JSON.stringify(USUARIOS_REGISTRADOS))
+            return true;
+         }
+         let dataDisco = USER.albumsFav.findIndex(d => d.replace(/\s/g, '').includes(idObjetivo));
+         USER.albumsFav.splice(dataDisco, 1);
+         localStorage.setItem('session', JSON.stringify(USER));
+         USUARIOS_REGISTRADOS[USER.usuario] = USER;
+         localStorage.setItem('usuariosRegistrados', JSON.stringify(USUARIOS_REGISTRADOS))
+         return true;
+        }
+        // O PUEDE SER DESDE UNA VISTA NORMAL CON DISCO SONANDO
+        else if(listaEstrellasHermanas.length > 1){
          listaEstrellasHermanas.forEach(str => addOrRemoveStar(str, idObjetivo))
          }
          //SI NO, SI ES UNA ESTRELLA DE UN DISCO CUALQUIERA
