@@ -162,7 +162,7 @@ function handleMusicaSonandoOrFav(estrella, targetId){
 
    //SI ES QUE YA NO LO TIENE EN SU LISTA DE FAVS
    
-   if (USER.albumsFav.includes(albumSonando) && targetId == albumSonando.replace(/\s/g, '')) return;
+   if (window.location.href.includes('musicasonando') && USER.albumsFav.includes(albumSonando) && targetId == albumSonando.replace(/\s/g, '')) return;
    // else if(!USER.albumsFav.includes(targetId)) return;
    else if(USER.cancionesFav.includes(targetId)) return;
 
@@ -174,6 +174,22 @@ function handleMusicaSonandoOrFav(estrella, targetId){
       discoDeFilaId = discoDeFilaEnFavs[0].disco.replace(/\s/g, '');
    }
    //SI ES ESTRELLA DE DISCO
+   if(window.location.href.includes('cancionesfavoritas') && targetId == discoActual && estrella.classList.contains("fa-solid")){
+      USER.albumsFav.push(discoDeFilaId);
+      localStorage.setItem('session', JSON.stringify(USER));
+      USUARIOS_REGISTRADOS[USER.usuario] = USER;
+      localStorage.setItem('usuariosRegistrados', JSON.stringify(USUARIOS_REGISTRADOS))
+      return true;
+   }
+   else if(window.location.href.includes('cancionesfavoritas') && targetId == discoActual && !estrella.classList.contains("fa-solid")){
+      let dataDisco = USER.albumsFav.findIndex(d => d.replace(/\s/g, '').includes(targetId));
+      USER.albumsFav.splice(dataDisco, 1);
+      localStorage.setItem('session', JSON.stringify(USER));
+      USUARIOS_REGISTRADOS[USER.usuario] = USER;
+      localStorage.setItem('usuariosRegistrados', JSON.stringify(USUARIOS_REGISTRADOS))
+      return true;
+   }
+
    if(targetId == discoActual ){
       USER.albumsFav.push(albumSonando);
       localStorage.setItem('session', JSON.stringify(USER));

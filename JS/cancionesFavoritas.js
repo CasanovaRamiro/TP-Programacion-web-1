@@ -28,6 +28,15 @@ function handleCancionesFavoritas(){
         seccionCancionesFav.appendChild(reproArticle);
         index++;
     }
+    if(seccionCancionesFav.children.length == 5){
+        let articleNoContent = document.createElement('article');
+        articleNoContent.className = 'noContent';
+        articleNoContent.id = 'article-noContent';
+        let h2 = document.createElement('h2');
+        h2.textContent = "Aun no tienes canciones favoritas.";
+        articleNoContent.appendChild(h2);
+        seccionCancionesFav.appendChild(articleNoContent);
+    }
 }
 seccionCancionesFav.addEventListener('click', e=> {
     if(e.target.id == null || e.target.id == undefined || e.target.id == "") return;
@@ -42,38 +51,39 @@ seccionCancionesFav.addEventListener('click', e=> {
     }
     //LUEGO DESTILDAMOS Y ELIMINAMOS ARTICULO DE FAVS AL SER DESTILDADA LA ESTRELLA.
     //
+    let articlePlay = document.getElementById(`article-play-${e.target.id}`);//ICONO PLAY DE LA FILA
     let articuleToErase = document.getElementById(`article-cancionAlbum-${e.target.id}`);
-    let articleCancion = articuleToErase.nextElementSibling;
-    let articleAlbum = articleCancion.nextElementSibling;
+    let articleAlbum = articuleToErase.nextElementSibling;
     let articleDuracion = articleAlbum.nextElementSibling;
     let articleReprod = articleDuracion.nextElementSibling;
     
-    var estrellaDeCancionFav = articleCancion.getElementsByTagName('i')[0];
+    var estrellaDeCancionFav = articuleToErase.getElementsByTagName('i')[0];
     let salioDeFavoritos = addOrRemoveStar(estrellaDeCancionFav, estrellaDeCancionFav.id);
 
     //ELIMINA FILA SI TIENE SOLO UNA ESTRELLA TILDADA
-    if(!articleCancion.lastChild.firstChild.classList.contains('fa-solid') && 
-       !articleAlbum.lastChild.firstChild.classList.contains('fa-solid')){
+    if(!articuleToErase.lastChild.firstChild.classList.contains('fa-solid') 
+    // && !articleAlbum.lastChild.firstChild.classList.contains('fa-solid')
+    ){
+        seccionCancionesFav.removeChild(articlePlay);
         seccionCancionesFav.removeChild(articuleToErase);
-        seccionCancionesFav.removeChild(articleCancion);
         seccionCancionesFav.removeChild(articleAlbum);
         seccionCancionesFav.removeChild(articleDuracion);
         seccionCancionesFav.removeChild(articleReprod);
     }
+    //CUANDO NO HAY FAVORITAS
+    if(seccionCancionesFav.children.length == 5){
+        let articleNoContent = document.createElement('article');
+        articleNoContent.className = 'noContent';
+        articleNoContent.id = 'article-noContent';
+        let h2 = document.createElement('h2');
+        h2.textContent = "Aun no tienes canciones favoritas.";
+        articleNoContent.appendChild(h2);
+        seccionCancionesFav.appendChild(articleNoContent);
+    }
 
-        if(seccionCancionesFav.children.length == 0){
-            let articleNoContent = document.createElement('article');
-            articleNoContent.className = 'noContent';
-            articleNoContent.id = 'article-noContent';
-            let h2 = document.createElement('h2');
-            h2.textContent = "Aun no tienes albums favoritos.";
-            articleNoContent.appendChild(h2);
-            seccionCancionesFav.appendChild(articleNoContent);
-        }
-
-        let index = USER.cancionesFav.findIndex( c => c.cancion.includes(e.target.id));
-        USER.cancionesFav.splice( index, 1);
-        localStorage.setItem('session', JSON.stringify(USER));
-        USUARIOS_REGISTRADOS[USER.usuario] = USER;
-        localStorage.setItem('usuariosRegistrados', JSON.stringify(USUARIOS_REGISTRADOS))
+    // let index = USER.cancionesFav.findIndex( c => c.cancion.includes(e.target.id));
+    // USER.cancionesFav.splice( index, 1);
+    // localStorage.setItem('session', JSON.stringify(USER));
+    // USUARIOS_REGISTRADOS[USER.usuario] = USER;
+    // localStorage.setItem('usuariosRegistrados', JSON.stringify(USUARIOS_REGISTRADOS))
 });
