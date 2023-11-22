@@ -193,6 +193,9 @@ a:hover{
     flex: 0%;
     height: 2em;
 }
+main{
+    margin: 10%;
+}
 label {
     display: flex;
     flex-direction: column;

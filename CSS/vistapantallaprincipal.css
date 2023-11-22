@@ -60,9 +60,6 @@ header {
     grid-area: b;
     max-width: 14em;
 }
-.cuerpo-principal {
-    grid-area: c;
-}
 iframe {
     margin-top: 5%;
     grid-area: d;
@@ -150,20 +147,22 @@ h2{
 
 /* Cuerpo Principal */
 .cuerpo-principal {
-    width: 100%;
+    grid-area: c;
+    width: 80vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
 } 
 .albumes {
+    height: 480px;
+    width: 100%;
     position: relative;
     display: grid;
     justify-content: space-around;
     grid-template-columns: repeat(3, 1fr); /* 3 columnas de tamaño igual */
     grid-template-rows: repeat(4, 1fr); /* 4 filas de tamaño igual */
     gap: 10%;
-    height: 480px;
     overflow: auto;
     gap: 10px;
     overflow-y:auto;
@@ -224,7 +223,12 @@ h2{
                             "c"
                             "d";
     }
-
+    .navegador{
+        max-width: 100%;
+    }
+    .cuerpo-principal{
+        width: 100%;
+    }
     .buscadorinput{
         width: 70%;
     }
