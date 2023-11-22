@@ -13,7 +13,7 @@ function handleCreacionArticleDeAlbums(albumList, secAlbumes){
                 if (Object.hasOwnProperty.call(albumList, album)) {
                     let element = albumList[album];
                     element = element.includes('article') ? element.slice(8, element.length) : element;
-                    let dataDisco = CANCIONES.discos.find(d => d.disco.includes(element));
+                    let dataDisco = CANCIONES.discos.find(d => d.artistaId.includes(element));
                     //creamos el article
                     let article = document.createElement('article');
                     article.classList.add('article-img');
